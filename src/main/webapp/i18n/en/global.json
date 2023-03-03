@@ -1,0 +1,177 @@
+{
+    "global": {
+        "title": "Your RSSP SelfCare Portal",
+        "nav": {
+            "title": "Detail"
+        },
+        "navbar": {
+            "userDetail": "User Details",
+            "actionHistory": "Action History",
+            "credential": "Credential",
+            "order": "Order",
+            "payment": "Payment",
+            "logout": "Log out"
+        },
+        "leftContent": {
+            "title": "WELCOME TO YOUR RSSP SELFCARE PORTAL!",
+            "service": {
+                "title": "SERVICES",
+                "desc": "Enable and disable access to your RSSP"
+            },
+            "actionHistory": {
+                "title": "ACTION HISTORY",
+                "desc": "Get clear accounts of your digital activities"
+            },
+            "manage": {
+                "title": "MANAGE",
+                "desc": "Control how to use your RSSP"
+            }
+        },
+        "selectLanguage": "Select your language",
+        "logoutConfirm": {
+            "title": "Do you want to log out?"
+        },
+        "button": {
+            "update": "UPDATE",
+            "cancel": "CANCEL",
+            "loadMore": "LOAD MORE...",
+            "reset": "RESET",
+            "confirm": "CONFIRM",
+            "register": "REGISTER",
+            "login": "LOGIN",
+            "change": "CHANGE",
+            "init": "INIT REQUEST",
+            "ok": "OK",
+            "payment": "PAYMENT"
+        },
+        "notification": {
+            "noData": "NO DATA AVAILABLE",
+            "initRequest": "INIT",
+            "confirmRequest": "FINISH",
+            "unlimited": "UNLIMITED",
+            "timeout": {
+                "1": "The login timeout has expired.",
+                "2": "Please log in again to continue."
+            },
+            "regis.stun": "This function hasn't been supported yet"
+        },
+        "popup": {
+            "history": "History",
+            "detail": "Detail"
+        },
+        "validate": {
+            "isRequired": "'{{field  | translate }}' is required",
+            "minlength": "'{{field  | translate }}'  is required to be at least {{length}} characters.",
+            "maxlength": "'{{field  | translate }}'  cannot be longer than {{length}} characters.",
+            "notMatch": "'{{field  | translate }}'  not match with '{{focus  | translate}}' .",
+            "notSame": "'{{field  | translate }}'  cannot be the same as the '{{focus | translate}}'.",
+            "newpassword": {
+                "required": "Your password is required.",
+                "minlength": "Your password is required to be at least 4 characters.",
+                "maxlength": "Your password cannot be longer than 50 characters.",
+                "strength": "Password strength:"
+            },
+            "confirmpassword": {
+                "required": "Your confirmation password is required.",
+                "minlength": "Your confirmation password is required to be at least 4 characters.",
+                "maxlength": "Your confirmation password cannot be longer than 50 characters."
+            },
+            "email": {
+                "required": "Your email is required.",
+                "invalid": "Your email is invalid.",
+                "minlength": "Your email is required to be at least 5 characters.",
+                "maxlength": "Your email cannot be longer than 50 characters."
+            },
+            "notMatchFormat": "'{{field  | translate }}' not correct format 'DD-MM-YYYY'",
+            "passwordStrength": "Password strength:"
+        },
+        "response": {
+            "notifi": {
+                "title": "Notification",
+                "info": "Order Infomation",
+                "amount": "Amount",
+                "notifia": "Notification",
+                "comfirm": "Comfirm"
+            }
+        },
+        "sendOTP": {
+            "mess": {
+                "success": "OTP code is sent",
+                "error": {
+                    "isInvalid": "OTP code is invalid"
+                }
+            }
+        },
+        "register": {
+            "step.1": "contact",
+            "step.2": "",
+            "step.3": "",
+            "step.4": ""
+        }
+    },
+    "company": {
+        "name": "RSSP SELFCARE PORTAL is a service provided by Remote Signing, a part of Mobile-ID™",
+        "address": "19 Dang Tien Dong, An Phu Ward, Thu Duc City, Ho Chi Minh City",
+        "website": "www.mobile-id.vn",
+
+        "contact": {
+            "title": "Contact",
+            "email": "info@mobile-id.vn",
+            "phone": "1900 6884"
+        },
+
+        "lca": {
+            "name": "RSSP SELFCARE PORTAL is a service provided by Remote Signing, a part of Lao LCA",
+            "address": "Saylom village, Chanthabouli district, Vientiane Capital, Lao PDR",
+            "website": "www.rssp.lca.la",
+            "contacts": {
+                "title": "Contact",
+                "email": "lanic_office@lanic.la",
+                "phone": "+856 254150"
+            }
+        }
+    },
+    "fpt": {
+        "company": {
+            "name": "FPT Digital Signature Certification Service Center",
+            "address": {
+                "hn": "22nd Floor, Keangnam Landmark Tower, E6, Pham Hung Street, Me Tri, Nam Tu Liem District, Hanoi",
+                "hcm": "M Floor, FPT Tan Thuan 3 Building, Lot B3, Creative Street, Tan Thuan Export Processing Zone, Tan Thuan Dong Ward, District 7, HCMC"
+            },
+            "website": "www.dichvudientu.fpt.com.vn",
+            "contact": {
+                "title": "Contact",
+                "email": "hotroca@fpt.com.vn",
+                "hotline": "1900 6625"
+            }
+        }
+    },
+    "cmc.ca" : {
+        "company": {
+            "name": "CMC TECHNOLOGY AND SOLUTION COMPANY LIMITED",
+            "address": "16th floor, CMC Tower, Duy Tan, Dich Vong Hau, Cau Giay, Hanoi",
+            "website": "https://ssa.csign.cmc.vn/",
+            "contact": {
+                "title": "Contact",
+                "email": "ca-support@cmc.vn",
+                "hotline": "1900 2323 62"
+            }
+        },
+        "left.content": {
+            "title": "WELCOME TO YOUR C.SIGN SELFCARE PORTAL!",
+            "service": {
+                "title": "SERVICES",
+                "desc": "Enable and disable access to your C.SIGN"
+            },
+            "actionHistory": {
+                "title": "ACTION HISTORY",
+                "desc": "Get clear accounts of your digital activities"
+            },
+            "manage": {
+                "title": "MANAGE",
+                "desc": "Control how to use your C.SIGN"
+            }
+        },
+        "title": "Your RSSP SelfCare Portal"
+    }
+}

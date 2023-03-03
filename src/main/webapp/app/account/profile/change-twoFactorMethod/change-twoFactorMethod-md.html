@@ -1,0 +1,97 @@
+<md-dialog aria-label="Change Auth Mode">
+
+    <md-toolbar layout="row" layout-align="center center" style="min-width: 300px">
+        <div class="md-toolbar-tools">
+            <h5 class="feid-heading" style="font-weight: 600;" translate="accountProfile.changeTwoFactor.title"></h5>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <form class="" id="frm" name="frm">
+            <div class="col-sm-12 container-720">
+                <div class="container">
+                    <div class="intiRequest" >
+                        <div class="form-group" style="margin-top:15px; margin-bottom: 0;">
+                            <label class="required" translate="accountProfile.changeTwoFactor.option"></label>
+                            <div class="form-group" style="margin: 1rem; margin-bottom: 0;">
+                                <md-radio-group ng-model="ctrl.request.twoFactorMethod"  aria-labelledby="authMode">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <!--ng-disabled="ctrl.data.twoFactorMethod == ctrl.twoFactorMethods[0].value"-->
+                                        <md-radio-button  class="md-primary" ng-value="ctrl.twoFactorMethods[0].value">
+                                            {{ctrl.twoFactorMethods[0].name}}
+                                        </md-radio-button>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <!--ng-disabled="ctrl.data.twoFactorMethod == ctrl.twoFactorMethods[1].value"-->
+                                        <md-radio-button  class="md-primary" ng-value="ctrl.twoFactorMethods[1].value">
+                                            {{ctrl.twoFactorMethods[1].name}}
+                                        </md-radio-button>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                        <md-radio-button ng-disabled="ctrl.twoFactorMethods[2].value" class="md-primary" ng-value="ctrl.twoFactorMethods[2].value">
+                                            {{ctrl.twoFactorMethods[2].name}}
+                                        </md-radio-button>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                        <md-radio-button ng-disabled="ctrl.twoFactorMethods[3].value" class="md-primary" ng-value="ctrl.twoFactorMethods[3].value">
+                                            {{ctrl.twoFactorMethods[3].name}}
+                                        </md-radio-button>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                        <md-radio-button ng-disabled="ctrl.twoFactorMethods[4].value" class="md-primary" ng-value="ctrl.twoFactorMethods[4].value" style="margin-bottom: 0;">
+                                            {{ctrl.twoFactorMethods[4].name}}
+                                        </md-radio-button>
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </md-radio-group>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center dis-flex-center" style="text-transform: uppercase; margin-bottom: 0;">
+                            <div class="alert alert-danger width-max-content margin-left-right" ng-show="ctrl.msgType == 1"
+                                 style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                {{ctrl.msg}}
+                            </div>
+                            <div class="alert alert-success width-max-content margin-left-right" ng-show="ctrl.msgType == 0"
+                                 style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                {{ctrl.msg}}
+                            </div>
+
+
+                        </div>
+                        <!--                    </fieldset>-->
+                        <div class="form-group dis-flex-center" style="margin: 24px 0;">
+                            <div style="text-align: center; margin: 0 1rem;">
+                                <button id="feid-modal-confirm-cancel-button" type="button" ng-click="ctrl.hide()"
+                                        class="feid-button button-indigo_inverse button-medium" aria-label="FeID button"
+                                        translate="global.button.cancel">CANCEL
+                                </button>
+                            </div>
+                            <div style="text-align: center; margin: 0 1rem;">
+                                <button id="feid-modal-confirm-confirm-button" type="button" ng-disabled="ctrl.request.twoFactorMethod == ctrl.data.twoFactorMethod"
+                                        ng-click="ctrl.confirmChangeTwoFactor()"
+                                        class="feid-button button-green button-medium" translate="global.button.confirm">
+                                    CONFIRM
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+        </form>
+    </md-dialog-content>
+
+
+</md-dialog>

@@ -1,0 +1,52 @@
+
+<div class="bgImg">
+	<div class="container loginColumns animated fadeInDown" >
+		<div class="row">
+			<div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+				<div class="card card-signin my-5">
+					<div class="card-body">
+						<form class="form-signin"  name="form" role="form" novalidate ng-submit="vm.requestReset()" show-validation>
+							<div class="text-center">
+								<img src="./content/images/remote-signing.png" alt="LOGO" style="width: 80%">
+							</div>
+							<h5 class="card-title text-center">Reset your password</h5>
+
+							<div class="alert alert-danger" ng-show="vm.error">
+								{{vm.errorMsg}}
+							</div>
+							<div class="form-group">
+								<label>User Type</label>
+								<select class="form-control" id="userType" name="userType" ng-model="vm.resetAccount.userType" ng-init="vm.resetAccount.userType='USERNAME'">
+									<option value="USERNAME">Username</option>
+									<option value="PERSONAL-ID">Personal Identity Card</option>
+									<option value="PASSPORT-ID">Passport Identity Card</option>
+									<option value="CITIZEN-IDENTITY-CARD">Citizen Identity Card</option>
+									<option value="BUDGET-CODE">Budget Code</option>
+									<option value="TAX-CODE">Tax Code</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label>User Name</label>
+								<input type="text" class="form-control" name="ssoId" required="" value="" placeholder="User Name"
+									   ng-model="vm.resetAccount.username">
+							</div>
+
+							<button type="submit" class="btn btn-primary block full-width m-b agility-fieldtech">Reset Password</button>
+							<p>
+								<a class="alert-link" ui-sref="login" ><span
+								>Back to login</span></a>
+								<br/>
+								<span >You don't have an account yet?</span> <a class="alert-link" href=""
+																				ng-click="vm.register()"><span>Register Now</span></a>
+							</p>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>

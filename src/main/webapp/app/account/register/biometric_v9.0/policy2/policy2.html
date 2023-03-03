@@ -1,0 +1,118 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="">
+        <div class="login-right-column-content-wrapper" style="align-items:flex-start;">
+            <div style="max-width: 400px; width: 100%;padding-top: 30px;padding-bottom: 30px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                    <div class="col-xs-12">
+                        <div style="margin: 15px 15px;">
+                            <div style="height: 285px;overflow: hidden" class="content-readmore" id="readmore" mouse-id="readmore2"   ng-mouse-wheel scroll="vm.isScroll">
+                                <div class="content-readmore" style="margin: 15px 15px;">
+                                    <h4 class="feid-heading heading-indigo heading-center f20"
+                                        data-translate="register.biometricIdentification.policy2.head"></h4>
+
+                                    <div style="text-align: justify; margin-top: 30px;">
+                                        <p>
+                                            I AGREE THAT MY PERSONAL DATA WHICH I HAVE PRESENTED IS
+                                            USED FOR GENERATING MY REMOTE SIGNING ACCOUNT AND
+                                            CERTIFICATES. I AGREE THAT MY REMOTE SIGNING ACCOUNT AND
+                                            CERTIFICATES ARE USED TO IDENTIFY ME IN E-SERVICES AND IN
+                                            ELECTRONIC SIGNATURES.
+                                        </p>
+                                        <p>
+                                            I AM AWARE THAT BY ENTERING MY PINCODE/TAPPING MY
+                                            FINGERYTIP EITHER FOR AUTHENTICATION OF FOR CREATING
+                                            ELECTRONIC SIGNATURES
+                                        </p>
+                                        <p>
+                                            - I VERIFY THAT I HAVE INITIATED A SESSION, AGREE WITH IT
+                                            AND THAT I AM RESPONSIBLE FOR ITS CONESEQUENCES
+                                        </p>
+                                        <p>
+                                            - I VERIFY THAT I HAVE MADE SURE THAT THE VERIFICATION
+                                            CODE SENT TO ME, IS CORRECT
+                                        </p>
+                                        <p>
+                                            - I ALLOW MY NAME AND PERSONAL CODE TO BE SENT TO THE
+                                            E-SERVICE PROVIDER
+                                        </p>
+                                        <p>
+                                            I AM ALSO AWARE THAT IF I HAVE LOST MY DEVICE OR MY PINCODES HAVE BECOME
+                                            KNOWN
+                                            TO
+                                            THIRD PARTIES, I AM OBLIGED
+                                            TO IMMEDIATELY REVOKE MY REMOTE SIGNING CERTIFICATES
+                                        </p>
+                                        <p>
+                                            INFORMATION ON DELETING REMOTE SIGNING ACCOUNT OR
+                                            REVOCATION OF THE CERTIFICATES IS AVAILABLE AT
+                                            <a href="HTTPS://RSSP.MOBILE-ID.VN">HTTPS://RSSP.MOBILE-ID.VN</a>
+
+                                        </p>
+                                        <p>
+                                            I AM AWARE THAT USE OF THE REMOTE SIGNING APPLICATION IS
+                                            DESCRIBED IN THE REMOTE SIGNING END-USER LICENSE
+                                            AGREEMENT
+                                        </p>
+                                        <p>
+                                            FULL VERSION OF THE TERMS AND CONDITIONS ON THE USE OF
+                                            THE REMOTE SIGNING CERTIFICATES IS AVAILABLE AT
+                                            <a href="HTTPS://RSSP.MOBILE-ID.VN/TERMS">HTTPS://RSSP.MOBILE-ID.VN/TERMS</a>
+                                        </p>
+                                        <p>
+                                            FULL VERSION OF THE END-USER LICENSE AGREEMENT IS
+                                            AVAILABLE AT <a href="HTTPS://RSSP.MOBILE-ID.VN/PRIVACY">HTTPS://RSSP.MOBILE-ID.VN/PRIVACY</a>
+                                        </p>
+                                        <p>
+                                            I AM AWARE THAT BY CHOOSING 'I AGREE' I CONFIRM THAT I AM
+                                            FAMILIAR AND AGREE WITH THE TERMS AND CONDITIONS ON THE
+                                            USE OF REMOTE SIGNING CERTIFICATES AND WITH THE REMOTE
+                                            SIGNING END-USER LICENSE AGREEMEN
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <read-more scroll="vm.isScroll" id-content="abc"></read-more>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="" type="button" ng-click="vm.acceptPolicy2()" ng-disabled="vm.isScroll"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                        aria-label="FeID button"
+                                        data-translate="register.button.i.agree">
+                                </button>
+                            </div>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <button id="" type="button" ui-sref="register"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                        aria-label="FeID button"
+                                        data-translate="register.button.i.not.agree">mobile
+                                </button>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                        ui-sref="policy1" ng-click="vm.back()"
+                                        class="feid-button button-indigo_text button-small "
+                                        aria-label="FeID button"
+                                        data-translate="register.biometricIdentification.btn.back">Back
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row middle-xs between-xs" ui-view="languageBottom"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

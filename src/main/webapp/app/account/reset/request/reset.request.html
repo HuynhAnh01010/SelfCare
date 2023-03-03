@@ -1,0 +1,115 @@
+<div class="login-container-wrapper">
+
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+
+    <div class="login-right-column-wrapper col-lg-6">
+        <div class="login-right-column-content-wrapper">
+            <div style="max-width: 400px; width: 100%; margin-top: 70px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <h5 class="feid-heading heading-indigo heading-center" style="margin-top: 24px">{{'reset.request.name' |
+                    translate}}</h5>
+
+
+                <div style="min-height: 278px;">
+                    <div class="row center-xs">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="box">
+                                <div class="g-scrolling-carousel feid-button-switch-group2">
+
+                                    <div class="items" ng-init="vm.userPlaceHolder = 'login.method.userName'">
+
+                                        <div class="feid-button-switch-item" data-checked="false"
+                                             ng-class="{'active': vm.userType == 'USERNAME'}"
+                                             ng-click="vm.userType = 'USERNAME';vm.userPlaceHolder = 'login.method.userName'">
+                                            <span class="feid-text text-indigo text-center">{{'login.method.userName' | translate}}</span>
+                                        </div>
+                                        <div class="feid-button-switch-item" data-checked="false"
+                                             ng-class="{'active': vm.userType == 'PERSONAL-ID'}"
+                                             ng-click="vm.userType = 'PERSONAL-ID';vm.userPlaceHolder = 'login.method.identityCard'">
+                                            <span class="feid-text text-indigo text-center">{{'login.method.identityCard' | translate}}</span>
+                                        </div>
+                                        <div class="feid-button-switch-item" data-checked="false"
+                                             ng-class="{'active': vm.userType == 'PASSPORT-ID'}"
+                                             ng-click="vm.userType = 'PASSPORT-ID';vm.userPlaceHolder = 'login.method.passport'">
+                                            <span class="feid-text text-indigo text-center">{{'login.method.passport' | translate}}</span>
+                                        </div>
+                                        <div class="feid-button-switch-item" data-checked="false"
+                                             ng-class="{'active': vm.userType == 'CITIZEN-IDENTITY-CARD'}"
+                                             ng-click="vm.userType = 'CITIZEN-IDENTITY-CARD';vm.userPlaceHolder = 'login.method.citizenCard'">
+                                            <span class="feid-text text-indigo text-center">{{'login.method.citizenCard' | translate}}</span>
+                                        </div>
+                                        <div class="feid-button-switch-item" data-checked="false"
+                                             ng-class="{'active': vm.userType == 'BUDGET-CODE'}"
+                                             ng-click="vm.userType = 'BUDGET-CODE';vm.userPlaceHolder = 'login.method.budgetCode'">
+                                            <span class="feid-text text-indigo text-center">{{'login.method.budgetCode' | translate}}</span>
+                                        </div>
+                                        <div class="feid-button-switch-item" data-checked="false"
+                                             ng-class="{'active': vm.userType == 'TAX-CODE'}"
+                                             ng-click="vm.userType = 'TAX-CODE';vm.userPlaceHolder = 'login.method.taxCode'">
+                                            <span class="feid-text text-indigo text-center">{{'login.method.taxCode' | translate}}</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div style="min-height: 260px;margin-top:24px">
+                                    <form class="form-signin" name="form" role="form" novalidate
+                                          ng-submit="vm.requestReset()"
+                                          show-validation>
+                                        <div class="form-group input-group-lg">
+                                            <input type="text" class="feid-input input-medium input-default feid-input-center " name="username" id="username"
+                                                   required="" value=""
+                                                   minlength="2" maxlength="50"
+                                                   placeholder="{{vm.userPlaceHolder | translate}}"
+                                                   ng-model="vm.resetAccount.username">
+                                            <div class="feid-label-warning"
+                                                 ng-show="form.username.$dirty && form.username.$invalid">
+                                                <p class="help-block"
+                                                   ng-show="form.username.$error.required"
+                                                   translate="global.validate.isRequired"
+                                                   translate-values='{ field: vm.userPlaceHolder }'>
+                                                    is required
+                                                </p>
+                                                <p class="help-block"
+                                                   ng-show="form.username.$error.minlength"
+                                                   translate="global.validate.minlength"
+                                                   translate-values='{ field: vm.userPlaceHolder , length: 2}'>
+                                                    is required to be at least 4 characters
+                                                </p>
+                                                <p class="help-block"
+                                                   ng-show="form.username.$error.maxlength"
+                                                   translate="global.validate.maxlength"
+                                                   translate-values='{ field: vm.userPlaceHolder , length: 50}'>
+                                                    cannot be longer than 50 characters
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" ng-disabled="form.$invalid"
+                                                    class="btn  button-primary  btn-lg"
+                                                    style="width: 240px;border-radius: 36px">
+                                                {{'reset.request.button.reset'| translate}}
+                                            </button>
+                                        </div>
+                                        <message-dialog style="text-transform: uppercase;" obj="vm.dialogMessage"></message-dialog>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div ui-view="footerLanguage" class="row middle-xs between-xs"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

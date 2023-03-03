@@ -1,0 +1,14 @@
+{
+    "home": {
+        "title": "Thông tin tài khoản",
+        "subtitle": "This is your homepage",
+        "nav": {
+            "title": "Hồ Sơ"
+        },
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "findme" : "find me on <a href=\"https://www.upwork.com/fl/parthkaria\">upwork!</a>",
+        "github": "GitHub"
+    }
+}

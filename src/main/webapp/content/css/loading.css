@@ -1,0 +1,373 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Nov 22, 2017, 3:40:13 PM
+    Author     : baotrv
+*/
+#circularG{
+    position:relative;
+    width:25px;
+    height:25px;
+    margin: auto;
+    display: inline-block;
+    top: 8px;
+    margin-right: 5px;
+}
+
+.circularG{
+    position:absolute;
+    background-color:#51b7f7;
+    width:6px;
+    height:6px;
+    border-radius:4px;
+    -o-border-radius:4px;
+    -ms-border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    animation-name:bounce_circularG;
+    -o-animation-name:bounce_circularG;
+    -ms-animation-name:bounce_circularG;
+    -webkit-animation-name:bounce_circularG;
+    -moz-animation-name:bounce_circularG;
+    animation-duration:1.1s;
+    -o-animation-duration:1.1s;
+    -ms-animation-duration:1.1s;
+    -webkit-animation-duration:1.1s;
+    -moz-animation-duration:1.1s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+}
+
+#circularG_1{
+    left:0;
+    top:10px;
+    /*.41*/
+    animation-delay:-.98s;
+    -o-animation-delay:-.98s;
+    -ms-animation-delay:-.98s;
+    -webkit-animation-delay:-.98s;
+    -moz-animation-delay:-.98s;
+}
+
+#circularG_2{
+    left:3px;
+    top:3px;
+    animation-delay:-.84s;
+    -o-animation-delay:-.84s;
+    -ms-animation-delay:-.84s;
+    -webkit-animation-delay:-.84s;
+    -moz-animation-delay:-.84s;
+}
+
+#circularG_3{
+    top:0;
+    left:10px;
+    animation-delay:-.7s;
+    -o-animation-delay:-.7s;
+    -ms-animation-delay:-.7s;
+    -webkit-animation-delay:-.7s;
+    -moz-animation-delay:-.7s;
+}
+
+#circularG_4{
+    right:3px;
+    top:3px;
+    animation-delay:-.56s;
+    -o-animation-delay:-.56s;
+    -ms-animation-delay:-.56s;
+    -webkit-animation-delay:-.56s;
+    -moz-animation-delay:-.56s;
+}
+
+#circularG_5{
+    right:0;
+    top:10px;
+    animation-delay:-.42s;
+    -o-animation-delay:-.42s;
+    -ms-animation-delay:-.42s;
+    -webkit-animation-delay:-.42s;
+    -moz-animation-delay:-.42s;
+}
+
+#circularG_6{
+    right:3px;
+    bottom:3px;
+    animation-delay:-.28s;
+    -o-animation-delay:-.28s;
+    -ms-animation-delay:-.28s;
+    -webkit-animation-delay:-.28s;
+    -moz-animation-delay:-.28s;
+}
+
+#circularG_7{
+    left:10px;
+    bottom:0;
+    animation-delay:-.14s;
+    -o-animation-delay:-.14s;
+    -ms-animation-delay:-.14s;
+    -webkit-animation-delay:-.14s;
+    -moz-animation-delay:-.14s;
+}
+
+#circularG_8{
+    left:3px;
+    bottom:3px;
+    animation-delay:0s;
+    -o-animation-delay:0s;
+    -ms-animation-delay:0s;
+    -webkit-animation-delay:0s;
+    -moz-animation-delay:0s;
+}
+
+
+
+@keyframes bounce_circularG{
+    0%{
+        transform:scale(1);
+    }
+
+    100%{
+        transform:scale(.3);
+    }
+}
+
+@-o-keyframes bounce_circularG{
+    0%{
+        -o-transform:scale(1);
+    }
+
+    100%{
+        -o-transform:scale(.3);
+    }
+}
+
+@-ms-keyframes bounce_circularG{
+    0%{
+        -ms-transform:scale(1);
+    }
+
+    100%{
+        -ms-transform:scale(.3);
+    }
+}
+
+@-webkit-keyframes bounce_circularG{
+    0%{
+        -webkit-transform:scale(1);
+    }
+
+    100%{
+        -webkit-transform:scale(.3);
+    }
+}
+
+@-moz-keyframes bounce_circularG{
+    0%{
+        -moz-transform:scale(1);
+    }
+
+    100%{
+        -moz-transform:scale(.3);
+    }
+}
+
+.mobile-signature-login-info-v2 {
+    display: none
+}
+.mobile-signature-login-info-v2._is_active {
+    display: block
+}
+.mobile-signature-login-info-v2__block {
+    text-align: center;
+    background-color: #ffffff;
+    /*border: 1px solid #dadada;*/
+    /*border-radius: 5px;*/
+    margin-bottom: 15px;
+    position: relative
+}
+.mobile-signature-login-info-v2__block__title {
+    font-size: 12px;
+    line-height: 1.67;
+    text-align: center;
+    color: #535353;
+    margin-top: 30px
+}
+.mobile-signature-login-info-v2__block__cancel:focus,
+.mobile-signature-login-info-v2__block__cancel:hover {
+    text-decoration: none
+}
+.mobile-signature-login-info-v2__block__text {
+    color: #5b5b5b;
+    /*padding: 10px 24px 24px 24px*/
+}
+.mobile-signature-login-info-v2__block__timer {
+    margin-bottom: 13px;
+    margin-top: 13px;
+    font-weight: 600;
+
+}
+.mobile-signature-login-info-v2__block__pin {
+    font-size: 45px;
+    color: #333333
+}
+.mobile-signature-login-info-v2__block__spinner {
+    font-size: 0;
+    display: inline-block;
+    -webkit-animation: outer 6600ms linear infinite;
+    animation: outer 6600ms linear infinite;
+    margin-top: 10px
+}
+.mobile-signature-login-info-v2__block__spinner i {
+    animation: inner 1320ms linear infinite
+}
+
+.mobile-signature-login-info-v2__block__spinner svg{
+    animation: inner 1320ms linear infinite;
+}
+
+.mobile-signature-login-info-v2__block__spinner svg circle{
+    fill: none;
+    stroke: #009ede;
+    stroke-linecap: square;
+    animation: arc 1320ms cubic-bezier(0.8, 0, 0.4, 0.8) infinite;
+}
+.mobile-signature-login-info-v2__block__spinner i circle {
+    fill: none;
+    stroke: #009ede;
+    stroke-linecap: square;
+    animation: arc 1320ms cubic-bezier(0.8, 0, 0.4, 0.8) infinite
+}
+
+
+/* This CSS file just define some default styles and loaders */
+/* You don't need to include it if you're working with your custom overlay loader element */
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    /*display: none;*/
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20000;
+    background: rgba(0,0,0,.75);
+}
+
+.loading-ctnr {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+    z-index: 20000;
+    margin: auto;
+    padding: 5px 10px 5px 10px;
+    color: #1d1d1d;
+    background: #f5f5f5;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 270px;
+    font-size: 13px;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    /*position: relative;*/
+    width: 80px;
+    /*height: 80px;*/
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+    z-index: 20000;
+    margin: auto;
+    padding: 5px 10px 5px 10px;
+    color: #1d1d1d;
+    /*background: #f5f5f5;*/
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /*width: 270px;*/
+    font-size: 13px;
+    /*-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.2);*/
+    /*box-shadow: 0 2px 4px rgba(0,0,0,.2);*/
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div>
+            <input th:value="${loginSSOErr}" id="loginSSOErr" style="display: none;"/>
+            <input th:value="${loginSSOErrMess}" id="loginSSOErrMess" style="display: none;" />
+            <script >
+                let loginSSOErr = document.getElementById("loginSSOErr").value;
+                let loginSSOErrMess = document.getElementById("loginSSOErrMess").value;
+
+                if (loginSSOErr == "3001") {
+                    document.cookie = "loginSSOErr=" + loginSSOErr;
+                    document.cookie = "loginSSOErrMess=" + loginSSOErrMess;
+                }
+
+                location.replace("/SelfCare/#/account/profile");
+            </script>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,668 @@
+<!doctype html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+    <head>
+        <meta charset="utf-8" />
+        <!--    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />-->
+        <title data-translate="global.title"></title>
+        <meta name="description" content="" />
+        <meta name="google" value="notranslate" />
+        <!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0' />
+        <!--    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />-->
+        <!--    <base href="/" >-->
+        <!--<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ajax.googleapis.com https://momentjs.com " />-->
+
+        <!-- <meta name="_csrf" th:content="${_csrf.token}" />
+        <meta name="_csrf_header" th:content="${_csrf.headerName}" />
+        <meta th:value="@{ssoEnabled}" /> -->
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css content/css/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" th:href="@{bower_components/bootstrap/dist/css/bootstrap.css}" />
+        <link rel="stylesheet" th:href="@{bower_components/angular-loading-bar/build/loading-bar.css}" />
+        <!--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />-->
+        <link rel="stylesheet" href="content/css/fontawesome.all.css" />
+        <link rel="stylesheet"
+              href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.css" />
+        <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css" />
+        <!--  <link rel="stylesheet" href="bower_components/intl-tel-input/build/css/intlTelInput.css">-->
+        <!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="content/js/plugins/jquery-g-scrolling-carousel/css/jquery.gScrollingCarousel.css" />
+        <link rel="stylesheet" href="content/js/plugins/select2/selectize.css" />
+        <!--    <link rel="stylesheet" href="content/js/plugins/select2/select2.v3.4.5.css">-->
+        <link rel="stylesheet" href="content/js/plugins/ui-select/dist/select.css" />
+        <!--  <link href="https://pay.vnpay.vn/lib/vnpay/vnpay.css" rel="stylesheet" />-->
+        <link rel="stylesheet" href="content/css/login.css" />
+        <!--    <link rel="stylesheet" href="content/js/plugins/sweetalert2/dist/sweetalert2.min.css">-->
+        <!--     <link rel="shortcut icon" href="images/Gfavicon.png"> -->
+        <link href="content/css/animate.css" rel="stylesheet" />
+        <!--    <link href="content/css/style.css" rel="stylesheet">-->
+        <!--        <link href="content/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet">-->
+        <!--<link rel="stylesheet" href="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/css/style.css">-->
+        <link href="content/css/fre.css" rel="stylesheet" />
+        <link href="content/css/style-custom.css" rel="stylesheet" />
+        <link href="content/css/loading.css" rel="stylesheet" />
+
+        <!--logo mobile id-->
+        <link rel="shortcut icon" href="content/images/iconsim.png" />
+        <!--/logo mobile id-->
+
+        <!--logo lca-->
+        <!--<link rel="shortcut icon" href="content/images/logo-lca/logo.png"/>-->
+        <!--/logo lca-->
+
+        <!-- endinject -->
+        <!-- endbuild -->
+        <!-- build:css content/css/main.css -->
+        <link rel="stylesheet" href="content/css/main.css" />
+        <style>
+            .en, .vi{
+                font-family:"Montserrat","Times New Roman", Times, serif;
+            }
+        </style>
+    </head>
+
+    <body class="backImage" ng-app="loginappApp">
+        <div class="wrapper " ng-controller="loginSSOisTse">
+            <div class="login-container-wrapper">
+
+                <!-- left content -->
+                <div class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block">
+                    <div class="login-left-column-content-wrapper">
+                        <div>
+                            <h4 class="feid-heading heading-light heading-left heading-caps f20" id="Login_InfoSection_Title">
+                                CHÀO MỪNG BẠN ĐÃ ĐẾN VỚI TRANG RSSP SELFCARE!
+                            </h4>
+                        </div>
+                        <div>
+                            <div class="row middle-xs">
+                                <div class="col-md-3">
+                                    <div class="box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="85px" height="85px" viewBox="0 0 24 24"
+                                             role="img" aria-labelledby="title desc" class="feid-icon icon-light hover-false "
+                                             preserveAspectRatio="xMidYMid meet">
+                                            <title id="title"></title>
+                                            <desc id="dec"></desc>
+                                            <g id="services" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="primary-color" transform="translate(-0.79999 -1)">
+                                                    <path
+                                                        d="M10.08736,17.38232a1.679,1.679,0,1,0,1.679,1.679A1.67893,1.67893,0,0,0,10.08736,17.38232Zm.7561,1.317-.82907.82915-.00147.00219-.00217.00146-.00976.00975,0,0-.10141.10141a.23763.23763,0,0,1-.336,0l-.25717-.25715a.16971.16971,0,1,1,.24-.24l.163.1629a.03141.03141,0,0,0,.04443,0l.0018-.00179.0146-.01463.83325-.83329a.16967.16967,0,0,1,.24.24ZM19.17154,3.32105A1.679,1.679,0,1,0,20.8505,5,1.67894,1.67894,0,0,0,19.17154,3.32105Zm.7561,1.317-.82907.82915-.00147.00219-.00218.00145-.00975.00976,0,0L18.9838,5.582a.23763.23763,0,0,1-.336,0l-.25717-.25715a.16971.16971,0,1,1,.24-.24l.163.1629a.03141.03141,0,0,0,.04443,0l.0018-.00179.01459-.01463.83325-.83329a.16968.16968,0,0,1,.24.24Z">
+                                                    </path>
+                                                </g>
+                                                <g id="secondary-color" transform="translate(-0.79999 -1)">
+                                                    <path
+                                                        d="M22,1H11.2A1.15537,1.15537,0,0,0,10,2.2V4.7H8.3a4.31079,4.31079,0,0,0-2,.7A3.18883,3.18883,0,0,0,4.9,8.1a3.322,3.322,0,0,0,.9,2.7A3.859,3.859,0,0,0,8.3,12H15a3.35038,3.35038,0,0,1,0,6.7H14V16.2A1.216,1.216,0,0,0,12.8,15H2A1.216,1.216,0,0,0,.8,16.2v5.6A1.216,1.216,0,0,0,2,23H12.8A1.15537,1.15537,0,0,0,14,21.8V19.5h1a4.06469,4.06469,0,0,0,4-4.1,4.1516,4.1516,0,0,0-4-4.2H8.3a2.72286,2.72286,0,0,1-1.9-.9,3.2272,3.2272,0,0,1-.8-2.1c0-2.4,2.7-2.7,2.7-2.7H10V7.8A1.216,1.216,0,0,0,11.2,9H22a1.29048,1.29048,0,0,0,1.2-1.2V2.2A1.216,1.216,0,0,0,22,1ZM13.2,21.8a.43018.43018,0,0,1-.4.4H2a.43018.43018,0,0,1-.4-.4V16.2a.43018.43018,0,0,1,.4-.4H12.8a.43018.43018,0,0,1,.4.4Zm9.2-14a.43018.43018,0,0,1-.4.4H11.2a.43018.43018,0,0,1-.4-.4V2.2a.43018.43018,0,0,1,.4-.4H22a.43018.43018,0,0,1,.4.4Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="box">
+                                        <h4 style="margin-top: 0px"
+                                            class="feid-heading login-page-info-header heading-light heading-left heading-caps f20"
+                                            id="Login_InfoSection_ServicesTitle">
+                                            DỊCH VỤ
+                                        </h4>
+                                        <p class="feid-text text-light text-left ">
+                                            Quản lý quyền truy cập vào tài khoản RSSP của bạn
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row middle-xs">
+                                <div class="col-md-3">
+                                    <div class="box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="85px" height="85px" viewBox="0 0 24 24"
+                                             role="img" aria-labelledby="title desc" class="feid-icon icon-light hover-false "
+                                             preserveAspectRatio="xMidYMid meet">
+                                            <title id="title"></title>
+                                            <desc id="dec"></desc>
+                                            <g id="actions" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="primary-color">
+                                                    <path
+                                                        d="M10.1,2.5C9.9,2.4,9.7,2.4,9.5,2.4c-2.4,0.5-4.4,2-5.7,4C3.7,6.6,3.7,6.8,3.7,6.9c0,0.2,0.1,0.3,0.3,0.4   c0.1,0.1,0.3,0.1,0.4,0.1c0.2,0,0.4-0.1,0.6-0.3c1.1-1.7,2.8-2.9,4.8-3.4c0.4-0.1,0.6-0.5,0.5-0.9C10.4,2.8,10.2,2.6,10.1,2.5z M14.3,3.8c2,0.5,3.7,1.7,4.8,3.4c0.1,0.2,0.3,0.3,0.6,0.3c0.2,0,0.3,0,0.4-0.2c0.2-0.1,0.3-0.3,0.3-0.4   c0-0.2,0-0.4-0.1-0.5c-1.3-2-3.3-3.4-5.7-4c-0.4-0.1-0.8,0.2-0.8,0.5C13.7,3.3,13.9,3.7,14.3,3.8z M12.1,1.8c-0.6,0-1.1,0.5-1.1,1.1C11,3.5,11.5,4,12.1,4c0.6,0,1.1-0.5,1.1-1.1C13.2,2.3,12.7,1.8,12.1,1.8z M19.7,8.3C17.7,8.3,16,10,16,12s1.7,3.7,3.7,3.7s3.7-1.7,3.7-3.7S21.8,8.3,19.7,8.3z M21.4,11.6l-2.3,2.1   c-0.1,0.1-0.2,0.1-0.3,0l-0.8-1c-0.2-0.2-0.1-0.5,0-0.6c0.2-0.2,0.5-0.1,0.6,0l0.3,0.4c0,0,0.1,0,0.1,0l1.7-1.6   c0.2-0.2,0.5-0.2,0.6,0C21.6,11.1,21.6,11.4,21.4,11.6z">
+                                                    </path>
+                                                </g>
+                                                <g id="secondary-color">
+                                                    <path
+                                                        d="M7.9,12c0-2.1-1.7-3.7-3.7-3.7S0.5,10,0.5,12s1.7,3.7,3.7,3.7S7.9,14.1,7.9,12z M4.1,12.8l-0.5,0.5   c-0.2,0.2-0.5,0.2-0.6,0c-0.2-0.2-0.2-0.5,0-0.6l0.5-0.5c0,0,0-0.1,0-0.1l-0.5-0.5c-0.2-0.2-0.2-0.5,0-0.6c0.2-0.2,0.5-0.2,0.6,0   l0.5,0.5c0,0,0.1,0,0.1,0L4.8,11c0.2-0.2,0.5-0.2,0.6,0c0.2,0.2,0.2,0.5,0,0.6l-0.5,0.5c0,0,0,0.1,0,0.1l0.5,0.5   c0.2,0.2,0.2,0.4,0,0.6c-0.2,0.2-0.5,0.2-0.6,0L4.1,12.8C4.2,12.7,4.2,12.7,4.1,12.8z M12.1,20c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C13.2,20.5,12.7,20,12.1,20z M20.1,16.7c-0.2-0.1-0.3-0.1-0.5-0.1c-0.2,0-0.3,0.1-0.4,0.3c-1.1,1.7-2.8,2.9-4.8,3.4c-0.2,0-0.3,0.1-0.4,0.3   c-0.1,0.2-0.1,0.4-0.1,0.6c0.1,0.3,0.4,0.5,0.7,0.5h0.1l0,0c2.4-0.6,4.4-2,5.7-4c0.1-0.2,0.1-0.3,0.1-0.5   C20.4,16.9,20.3,16.8,20.1,16.7z M9.9,20.3c-2-0.5-3.7-1.7-4.8-3.4c-0.2-0.3-0.6-0.4-1-0.2c-0.2,0.1-0.3,0.3-0.3,0.4c0,0.2,0,0.4,0.1,0.5   c1.3,2,3.3,3.4,5.7,4l0.2,0c0.3,0,0.6-0.2,0.7-0.5C10.5,20.7,10.2,20.3,9.9,20.3z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="box">
+                                        <h4 style="margin-top: 0px"
+                                            class="feid-heading login-page-info-header heading-light heading-left heading-caps f20"
+                                            id="Login_InfoSection_ActionHistoryTitle">
+                                            LỊCH SỬ HOẠT ĐỘNG
+                                        </h4>
+                                        <p class="feid-text text-light text-left ">
+                                            Xem chi tiết lịch sử hoạt động điện tử của bạn
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row middle-xs">
+                                <div class="col-md-3">
+                                    <div class="box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="85px" height="85px" viewBox="0 0 24 24"
+                                             role="img" aria-labelledby="title desc" class="feid-icon icon-light hover-false "
+                                             preserveAspectRatio="xMidYMid meet">
+                                            <title id="title"></title>
+                                            <desc id="dec"></desc>
+                                            <g id="manage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="primary-color" transform="translate(-1.8691 -1.67367)">
+                                                    <path
+                                                        d="M17.22835,11.74177A1.83832,1.83832,0,1,1,15.3901,9.90345,1.83838,1.83838,0,0,1,17.22835,11.74177Zm-5.515,8.824a.73532.73532,0,1,0,.73535.73535A.73542.73542,0,0,0,11.71334,20.56581Z">
+                                                    </path>
+                                                </g>
+                                                <g id="secondary-color" transform="translate(-1.8691 -1.67367)">
+                                                    <path
+                                                        d="M21.8691,10.69209a3.22861,3.22861,0,0,1-.67346,1.97619l-.00049.00055-.00049.00092-.00024-.00018a3.31668,3.31668,0,0,1-1.0177.87866.99248.99248,0,0,1-1.4646-.78479.9775.9775,0,0,1,.45605-.95056,1.29479,1.29479,0,0,0,.41162-.35132l.001-.00147a1.27438,1.27438,0,0,0,.09-1.41632,1.30064,1.30064,0,0,0-1.06055-.64184,1.32025,1.32025,0,0,1-1.04687-.687L16.44674,6.792a1.35122,1.35122,0,0,1-.04053-1.27221,1.28408,1.28408,0,0,0-.52405-1.6557,1.34077,1.34077,0,0,0-1.72375.37762,1.39006,1.39006,0,0,1-1.13819.58289h-.006l-2.27551-.00641a1.28136,1.28136,0,0,1-1.0918-.54492,1.315,1.315,0,0,0-1.75036-.43213,1.27879,1.27879,0,0,0-.531,1.65667A1.36154,1.36154,0,0,1,7.3171,6.76265L6.17086,8.71589a1.37475,1.37475,0,0,1-1.08081.66492,1.29675,1.29675,0,0,0-1.19556,1.27856,1.25969,1.25969,0,0,0,.173.64441,1.302,1.302,0,0,0,1.0614.642,1.32039,1.32039,0,0,1,1.046.68689l1.11645,1.92242a1.27051,1.27051,0,0,1,.06433,1.22559A1.28336,1.28336,0,0,0,7.857,17.48347l.23645.09216a.97784.97784,0,0,1,.64965.83033.99253.99253,0,0,1-1.26171,1.08123,3.33508,3.33508,0,0,1-.61365-.25348l-.0293-.02026a3.29263,3.29263,0,0,1-1.46362-3.93774l-.80408-1.38507a3.32464,3.32464,0,0,1-2.25464-1.5824,3.24547,3.24547,0,0,1-.447-1.65277,3.31679,3.31679,0,0,1,2.7146-3.224l.81885-1.39624a3.25626,3.25626,0,0,1,.261-2.72125A3.30062,3.30062,0,0,1,6.88692,2.10627a3.37567,3.37567,0,0,1,4.18506.71179l1.63965.0044a3.43963,3.43963,0,0,1,4.18811-.68836,3.29194,3.29194,0,0,1,1.46362,3.93726l.804,1.38507a3.3225,3.3225,0,0,1,2.25476,1.58289A3.24541,3.24541,0,0,1,21.8691,10.69209ZM14.83224,14.3498a4.53172,4.53172,0,0,0-3.85437,4.55445V19.095a.73535.73535,0,0,0,1.4707,0v-.36767a2.94444,2.94444,0,0,1,3.21081-2.92926A3.04663,3.04663,0,0,1,18.33126,18.882V20.2715a.29413.29413,0,0,1-.29419.29412H13.91915a.73536.73536,0,0,0,0,1.47071h4.85327A1.02952,1.02952,0,0,0,19.802,21.00685V18.72731A4.41718,4.41718,0,0,0,14.83224,14.3498Zm-3.66138-.43573a.99989.99989,0,0,0-.36621-1.36621,2.12875,2.12875,0,0,1,2.1289-3.687.99974.99974,0,1,0,1-1.73144,4.12864,4.12864,0,1,0-4.1289,7.15087,1.0006,1.0006,0,0,0,1.36621-.36621Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="box">
+                                        <h4 style="margin-top: 0px"
+                                            class="feid-heading login-page-info-header heading-light heading-left heading-caps f20">
+                                            QUẢN LÝ
+                                        </h4>
+                                        <p class="feid-text text-light text-left">
+                                            Kiểm soát cách thức sử dụng RSSP
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row middle-xs">
+                                <div class="col-md-3">
+                                    <div class="box">
+                                        <img src="./content/images/qr-code.png" style="width: 85%" alt="SelfCare mID logo">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <ul class="big-btns list-unstyled inline" style="margin: auto">
+                                        <!--<li><a class=" btn btn-primary btn-custom" href="itms-services://?action=download-manifest&url=https://192.168.31.238:8081/rssp/file/tse/plist/ipad">-->
+                                        <li class="list-inline-item" style="margin-right: 0">
+                                            <a class="btn btn-primary btn-custom" title="DOWNLOAD FOR iOS"
+                                               href="https://rssp.mobile-id.vn/downloads">
+                                                <!--                           href="itms-services://?action=download-manifest&url=https://rssp.mobile-id.vn/downloads/ipa/ipad.plist">-->
+                                                <i class="fab fa-fw fa-lg fa-app-store-ios  "></i>
+                                            </a>
+                                        </li>
+                                        <!--<li> <a   class=' btn btn-primary btn-custom' th:href='@{./file/tse/apk/tsemobileid}'>-->
+                                        <li style="margin-right: 0" class="list-inline-item"><a
+                                                class=' btn btn-primary btn-custom' title="DOWNLOAD FOR ANDROID"
+                                                href='https://rssp.mobile-id.vn/downloads'>
+                                                <i class="fab fa-fw fa-lg fa-google-play"></i>
+                                            </a></li>
+                                        <li style="margin-right: 0" class="list-inline-item">
+                                            <a class='btn btn-primary  btn-custom' title="DOWNLOAD FOR WINDOWS"
+                                               href='https://rssp.mobile-id.vn/downloads'>
+                                                <i class="fab fa-fw fa-lg fa-windows  "></i></a>
+                                        </li>
+                                        <li style="margin-right: 0" class="list-inline-item">
+                                            <a class='btn btn-primary  btn-custom' title="DOWNLOAD FOR MAC OSX"
+                                               href='https://rssp.mobile-id.vn/downloads'>
+                                                <i class="fab fa-fw  fa-lg fa-apple "></i> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- // left content -->
+
+                <div class="login-right-column-wrapper col-lg-6">
+                    <div class="login-right-column-content-wrapper">
+                        <div style="max-width: 400px; width: 100%; margin-top: 50px;">
+                            <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                               style="text-align: center; margin-top: 15px;">
+                                <div class="feid-logo-img logo-img-large">
+                                    <img src="./content/images/remote-signing.png" alt="SelfCare mID logo">
+                                </div>
+                            </a>
+                            <div>
+                                <div>
+
+                                    <div>
+                                        <form>
+                                            <div class=" center-xs">
+                                                <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="box" style="max-width: 400px">
+                                                        <div class="text-center">
+                                                            <p style="margin: 24px 20px" class="f15"
+                                                               translate="login.vcCode.description">
+                                                                Vui lòng kiểm tra ứng dụng di động TSE của bạn
+                                                            </p>
+                                                            <div class="mobile-signature-login-info-v2__block__timer">
+                                                                <span class="btn-verification" th:text="${vCode}"></span>
+                                                                <!--<i class="fa fa-spinner fa-spin"></i>-->
+                                                                <div id="circularG">
+                                                                    <div id="circularG_1" class="circularG"></div>
+                                                                    <div id="circularG_2" class="circularG"></div>
+                                                                    <div id="circularG_3" class="circularG"></div>
+                                                                    <div id="circularG_4" class="circularG"></div>
+                                                                    <div id="circularG_5" class="circularG"></div>
+                                                                    <div id="circularG_6" class="circularG"></div>
+                                                                    <div id="circularG_7" class="circularG"></div>
+                                                                    <div id="circularG_8" class="circularG"></div>
+                                                                </div>
+                                                                <span class="feid-text">Hết hạn sau
+                                                                    <span class="timeout" id="vTimer" ></span> giây</span>
+
+                                                                <div style="display: none;">
+                                                                    <!--                                                                    <input id="validityPeriod" name="validityPeriod" th:value="${notification.validityPeriod}" />
+                                                                                                                                        <input id="json" name="json" th:value="${json}" />
+                                                                                                                                        <input id="isTse" name="isTse" th:value="${isTse}" />
+                                                                                                                                        <input id="hashValue" name="notification" th:value="${notification.hashValue}" />-->
+                                                                    <input id="validityPeriod" name="validityPeriod" th:value="${validityPeriod}" />
+                                                                    <input id="ckLosinSSO" name="ckLosinSSO" th:value="${ckLosinSSO}" />
+                                                                </div>
+                                                            </div>
+                                                            <button type="button" style="margin:24px 0px"
+                                                                    class="feid-button button-indigo_inverse button-medium"
+                                                                    onclick="cancelLogin()">
+                                                                CANCEL
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ui-view="footerLanguage" class="row middle-xs between-xs">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- build:js app/vendor.js -->
+        <!-- bower:js -->
+
+        <script src="bower_components/jquery/dist/jquery.js?t=210503"></script>
+        <script src="content/js/core/bootstrap.min.js?t=210503"></script>
+        <script src="bower_components/messageformat/messageformat.js?t=210503"></script>
+        <script src="bower_components/json3/lib/json3.js?t=210503"></script>
+
+        <!--<script src="bower_components/angular/angular.js?t=210503"></script>-->
+
+        <script src="content/js/core/popper.min.js?t=210503"></script>
+
+        <script src="content/js/plugins/perfect-scrollbar.jquery.min.js?t=210503"></script>
+        <script src="content/js/plugins/bootstrap-notify.js?t=210503"></script>
+
+        <!--<link rel="stylesheet" href="content/js/plugins/sweetalert2/dist/sweetalert2.all.min.js">-->
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js?t=210503"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js?t=210503"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js?t=210503"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js?t=210503"></script>
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js?t=210503"></script>
+        <script src="content/js/plugins/ui-select/dist/select.min.js?t=210503"></script>
+        <script src="bower_components/angular-aria/angular-aria.js?t=210503"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js?t=210503"></script>
+        <script src="bower_components/angular-cache-buster/angular-cache-buster.js?t=210503"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js?t=210503"></script>
+        <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js?t=210503"></script>
+        <script src="bower_components/ngstorage/ngStorage.js?t=210503"></script>
+        <script src="bower_components/angular-loading-bar/build/loading-bar.js?t=210503"></script>
+        <script src="bower_components/angular-resource/angular-resource.js?t=210503"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js?t=210503"></script>
+        <script src="bower_components/angular-translate/angular-translate.js?t=210503"></script>
+        <script
+        src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js?t=210503"></script>
+        <script
+        src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js?t=210503"></script>
+        <script
+        src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js?t=210503"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js?t=210503"></script>
+        <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js?t=210503"></script>
+        <script src="content/js/plugins/jquery-g-scrolling-carousel/js/jquery.gScrollingCarousel.js?t=210503"></script>
+        <script src="content/js/core/moment.min.js?t=210503"></script>
+        <!--<script src="bower_components/intl-tel-input/build/js/intlTelInput.js?t=210503"></script>-->
+        <!--<script src="bower_components/intl-tel-input/build/js/utils.js?t=210503"></script>-->
+        <!--<script src="bower_components/ng-intl-tel-input/dist/ng-intl-tel-input.min.js?t=210503"></script>-->
+
+        <script src="node_modules/intl-tel-input/build/js/intlTelInput.js?t=210503"></script>
+        <!--<script src="node_modules/intl-tel-input/build/js/utils.js?t=210503"></script>-->
+        <script src="bower_components/ng-intl-tel-input/dist/ng-intl-tel-input.js?t=210503"></script>
+
+        <script src="bower_components/re-tree/re-tree.min.js?t=210503"></script>
+        <script src="bower_components/ng-device-detector/ng-device-detector.min.js?t=210503"></script>
+        <script src="bower_components/ua-device-detector/ua-device-detector.min.js?t=210503"></script>
+
+        <script src="node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
+
+        <!--<script src="https://pay.vnpay.vn/lib/vnpay/vnpay.min.js?t=210503"></script>-->
+        <!-- endinject -->
+        <!-- endbuild -->
+
+        <!-- build:js app/app.js  -->
+        <!-- inject:js -->
+        <script src="app/app.module.js?t=210503"></script>
+
+        <!--//directive-->
+        <script src="app/components/util/directive.util.js?t=210503"></script>
+        <script src="app/components/util/component.util.js?t=210503"></script>
+        <!--<script src="app/components/util/loading.js?t=210503"></script>-->
+
+
+        <script src="app/services/auth/two-factor.service.js?t=210503"></script>
+        <script src="app/services/user/user.service.js?t=210503"></script>
+        <script src="app/services/auth/register.service.js?t=210503"></script>
+        <script src="app/services/auth/principal.service.js?t=210503"></script>
+        <script src="app/services/auth/password-reset-init.service.js?t=210503"></script>
+        <script src="app/services/auth/password-reset-finish.service.js?t=210503"></script>
+        <!--<script src="app/services/auth/password.service.js?t=210503"></script>-->
+        <script src="app/services/auth/auth.service.js?t=210503"></script>
+        <script src="app/services/auth/auth.jwt.service.js?t=210503"></script>
+        <!--<script src="app/services/auth/activate.service.js?t=210503"></script>-->
+        <script src="app/services/auth/account.service.js?t=210503"></script>
+        <script src="app/services/auth/refresh.service.js?t=210503"></script>
+        <script src="app/services/auth/certificate.service.js?t=210503"></script>
+
+        <!--//// VN PAY-->
+        <!--<script src="app/services/vnpay/vnpay.factory.js?t=210503"></script>-->
+        <!--<script src="app/services/vnpay/vnpay.service.js?t=210503"></script>-->
+
+        <!--<script src="app/vnpay/vnpay.state.js?t=210503"></script>-->
+        <!--<script src="app/vnpay/vnpay.controller.js?t=210503"></script>-->
+
+        <!--<script src="app/vnpay/return/vnpay.return.state.js?t=210503"></script>-->
+        <!--<script src="app/vnpay/return/vnpay.return.controller.js?t=210503"></script>-->
+
+        <script src="app/services/tse-data/tse.data.factory.js?t=210503"></script>
+        <script src="app/services/tse-data/tse.service.js?t=210503"></script>
+        <script src="app/services/eidentity/eidentity.factory.js?t=210503"></script>
+        <script src="app/services/eidentity/eidentity.service.js?t=210503"></script>
+
+        <script src="app/services/history/owner.logging.service.js?t=210503"></script>
+        <script src="app/services/history/history.service.js?t=210503"></script>
+
+        <script src="app/services/credential/credential.factory.js?t=210503"></script>
+        <script src="app/services/credential/credential.service.js?t=210503"></script>
+        <script src="app/services/login-sso/login.sso.factory.js?t=210503"></script>
+        <script src="app/services/login-sso/login.sso.service.js?t=210503"></script>
+
+
+
+        <script src="app/layouts/navbar-top/navbar.top.controller.js?t=210503"></script>
+        <script src="app/layouts/navbar/navbar.controller.js?t=210503"></script>
+        <script src="app/layouts/navbar/active-menu.directive.js?t=210503"></script>
+        <script src="app/layouts/footer/footer.controller.js?t=210503"></script>
+
+        <script src="app/layouts/error/error.state.js?t=210503"></script>
+        <script src="app/account/profile/profile.state.js?t=210503"></script>
+        <script src="app/account/profile/profile.controller.js?t=210503"></script>
+        <script src="app/components/util/truncate-words.filter.js?t=210503"></script>
+        <script src="app/components/util/truncate-characters.filter.js?t=210503"></script>
+        <script src="app/components/util/parse-links.service.js?t=210503"></script>
+        <script src="app/components/util/date-util.service.js?t=210503"></script>
+        <script src="app/components/util/data-util.service.js?t=210503"></script>
+        <script src="app/components/util/capitalize.filter.js?t=210503"></script>
+        <script src="app/components/util/base64.service.js?t=210503"></script>
+        <script src="app/components/util/filter.config.js?t=210503"></script>
+        <script src="app/components/util/notify.service.js?t=210503"></script>
+        <script src="app/components/util/data-service.config.js?t=210503"></script>
+
+
+        <!-- approved -->
+        <script src="app/components/login/login.state.js?t=210503"></script>
+        <script src="app/components/login/login.controller.js?t=210503"></script>
+        <!-- approved ends-->
+
+        <script src="app/components/language/language.service.js?t=210503"></script>
+        <script src="app/components/language/language.filter.js?t=210503"></script>
+        <script src="app/components/language/language.controller.js?t=210503"></script>
+        <script src="app/components/language/language.constants.js?t=210503"></script>
+        <script src="app/components/form/show-validation.directive.js?t=210503"></script>
+        <script src="app/components/form/minbytes.directive.js?t=210503"></script>
+        <script src="app/components/form/maxbytes.directive.js?t=210503"></script>
+        <script src="app/blocks/interceptor/errorhandler.interceptor.js?t=210503"></script>
+        <script src="app/blocks/interceptor/auth-expired.interceptor.js?t=210503"></script>
+        <script src="app/blocks/interceptor/auth.interceptor.js?t=210503"></script>
+        <script src="app/blocks/handlers/translation.handler.js?t=210503"></script>
+        <script src="app/blocks/handlers/state.handler.js?t=210503"></script>
+
+        <script src="app/blocks/config/translation-storage.provider.js?t=210503"></script>
+        <script src="app/blocks/config/translation.config.js?t=210503"></script>
+        <script src="app/blocks/config/localstorage.config.js?t=210503"></script>
+        <script src="app/blocks/config/http.config.js?t=210503"></script>
+        <script src="app/blocks/config/compile.config.js?t=210503"></script>
+        <script src="app/blocks/config/ngIntlTelInput.config.js?t=210503"></script>
+        <script src="app/app.state.js?t=210503"></script>
+        <script src="app/app.constants.js?t=210503"></script>
+
+        <script src="app/history/history.state.js?t=210503"></script>
+        <script src="app/history/history.controller.js?t=210503"></script>
+
+
+        <script src="app/credential/list/list.state.js?t=210503"></script>
+        <script src="app/credential/list/list.controller.js?t=210503"></script>
+
+        <script src="app/credential/detail/detail.state.js?t=210503"></script>
+        <script src="app/credential/detail/detail.controller.js?t=210503"></script>
+
+        <script src="app/credential/history/history.state.js?t=210503"></script>
+        <script src="app/credential/history/history.controller.js?t=210503"></script>
+
+        <script src="app/credential/credential.state.js?t=210503"></script>
+
+
+
+        <!--<script src="app/account/settings/settings.state.js?t=210503"></script>-->
+        <!--<script src="app/account/settings/settings.controller.js?t=210503"></script>-->
+        <script src="app/account/reset/request/reset.request.state.js?t=210503"></script>
+        <script src="app/account/reset/request/reset.request.controller.js?t=210503"></script>
+        <script src="app/account/reset/finish/reset.finish.state.js?t=210503"></script>
+        <script src="app/account/reset/finish/reset.finish.controller.js?t=210503"></script>
+        <script src="app/account/register/register.state.js?t=210503"></script>
+        <script src="app/account/register/register.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/biometric.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/biometric.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy1/policy1.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy1/policy1.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy2/policy2.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy2/policy2.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/authenticate/authenticate.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/authenticate/authenticate.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/choose-document.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/choose-document.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/passport/passport.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/passport/passport.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/idCard/idcard.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/idCard/idcard.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/reach/reach.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/reach/reach.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/confirm/confirm.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/confirm/confirm.controller.js?t=210503"></script>
+        <!--<script src="app/account/register/biometric/confirm/confirm.controller.js?t=210503"></script>-->
+        <script src="app/account/mobile/mobile.state.js?t=210503"></script>
+        <script src="app/account/mobile/mobile.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/pkicard.state.js?t=210503"></script>
+        <script src="app/account/register/pkicard/pkicard.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/pkicard.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/policy/policy.state.js?t=210503"></script>
+        <script src="app/account/register/pkicard/policy/policy.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/choose-pin/choose-pin.state.js?t=210503"></script>
+        <script src="app/account/register/pkicard/choose-pin/choose-pin.controller.js?t=210503"></script>
+
+        <script src="app/account/register/certificate/certificate.state.js?t=210503"></script>
+        <script src="app/account/register/certificate/certificate.service.js?t=210503"></script>
+        <script src="app/account/register/certificate/certificate.controller.js?t=210503"></script>
+
+        <script src="app/account/register/certificate/detail/detail.state.js?t=210503"></script>
+        <script src="app/account/register/certificate/detail/detail.controller.js?t=210503"></script>
+
+        <script src="app/account/password/password-strength-bar.directive.js?t=210503"></script>
+        <!--<script src="app/account/password/password.state.js?t=210503"></script>-->
+        <!--<script src="app/account/password/password.controller.js?t=210503"></script>-->
+        <!--<script src="app/account/activate/activate.state.js?t=210503"></script>-->
+        <!--<script src="app/account/activate/activate.controller.js?t=210503"></script>-->
+        <script src="app/account/account.public.state.js?t=210503"></script>
+        <script src="app/account/account.state.js?t=210503"></script>
+
+        <!--<script type="text/javascript" src="content/factec/js/very-old-browser-check.js?t=210503"></script>-->
+        <!--<script src="app/components/facetec/core-sdk/FaceTecSDK.js/result.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/facetec.utilities.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/facetec.config.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/session.review.screen.config.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/theme.helpers.config.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/process/LivenessCheckProcessor.service.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/process/PhotoIDMatchProcessor.service.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/process/facetec.main.js?t=210503"></script>-->
+
+
+        <script type="module">
+            import { Config } from "./app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/Config.js"
+            window.Config = Config
+        </script>
+        <script
+        src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/core-sdk/FaceTecSDK.js/FaceTecSDK_result_raw.js?t=210503"></script>
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/AuthenticateProcessor.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/EnrollmentProcessor.js?t=210503"></script>-->
+        <script type="text/javascript"
+        src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/LivenessCheckProcessor.js?t=210503"></script>
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/PhotoIDMatchProcessor.js?t=210503"></script>-->
+        <script type="text/javascript"
+        src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/PhotoIDMatchProcessor.service.js?t=210503"></script>
+        <script type="text/javascript"
+        src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/utilities/SampleAppUIFunctions.js?t=210503"></script>
+        <script type="text/javascript"
+        src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/utilities/SampleAppUtilities.js?t=210503"></script>
+        <script type="text/javascript"
+        src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/utilities/ThemeHelpers.js?t=210503"></script>
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/sampleAppController.js?v1"></script>-->
+        <script type="text/javascript"
+        src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/facetec.main.js?t=210503"></script>
+        <script src="content/js/now-ui-dashboard.js?v=1.5.0"></script>
+
+        <script src="content/js/js-sub-file.js"></script>
+
+        <script src="app/credential/detail/upgrade/upgrade.state.js"></script>
+        <script src="app/credential/detail/upgrade/upgrade.controller.js"></script>
+        <script src="app/services/upgrade/upgrade.data.factory.js"></script>
+        <script src="app/services/upgrade/upgrade.service.js"></script>
+
+        <script src="app/credential/detail/upgrade/resTemplate/res.state.js"></script>
+        <!--<script src="app/credential/detail/upgrade/resTemplate/res.controller.js"></script>-->
+
+        <script src="app/credential/detail/renew/renew.state.js"></script>
+        <script src="app/credential/detail/renew/renew.controller.js"></script>
+
+        <script src="app/credential/list/new-certi/new-certi.state.js"></script>
+        <script src="app/credential/list/new-certi/new-certi.controller.js"></script>
+
+        <script src="app/order/order.state.js"></script>
+        <script src="app/order/list/list.state.js"></script>
+        <script src="app/services/order/order.factory.js"></script>
+        <script src="app/services/order/order.service.js"></script>
+        <script src="app/order/list/list.controller.js"></script>
+
+        <script src="app/order/detail/detail.state.js"></script>
+        <script src="app/order/detail/detail.controller.js"></script>
+
+        <script src="app/credential/detail/signing-counter/signingCounter.state.js"></script>
+        <script src="app/credential/detail/signing-counter/signingCounter.controller.js"></script>
+
+<!--        <script src="app/components/login/loginSSO/login.sso.state.js"></script>
+        <script src="app/components/login/loginSSO/login.sso.controller.js"></script>-->
+
+        <script src="content/js/js-lg-sso.js"></script>
+        <br/>
+        <script>
+
+                                                                        (function () {
+                                                                            'use strict';
+
+                                                                            let app = angular.module('loginappApp', ['ngResource', 'ngStorage', 'ui.router']);
+
+                                                                            app.controller('loginSSOisTse', ['loginSSOService', '$scope', '$window', function (loginSSOService, $scope, $window) {
+                                                                                    postLoginSSOisTse();
+
+                                                                                    function postLoginSSOisTse() {
+                                                                                        let value = document.getElementById("ckLosinSSO").value;
+//                                                                                        console.log("VALUE LOSS: ", value);
+                                                                                        if (value) {
+                                                                                            loginSSOService.postLoginSSO({
+                                                                                                mapData: value
+                                                                                            }).then(function (res) {
+                                                                                                console.log("RES RES: ", res);
+                                                                                                if (res.error === 0) {
+//                                                                                                    $window.location.href = "/selfcare/#/account/profile";
+                                                                                                    $window.location.href = "/SelfCare/#/account/profile";
+                                                                                                }
+                                                                                            }).catch(function (err) {
+                                                                                                console.log("ERR ERR: ", err);
+                                                                                                if (err.error === 3039) {
+//                                                                                                    $window.location.href = "/selfcare/#/";
+                                                                                                    $window.location.href = "/SelfCare/#/";
+                                                                                                }
+                                                                                            });
+                                                                                        }
+
+                                                                                    }
+                                                                                }]).factory('loginSSOService', ['loginSSOFactory', function (loginSSOFactory) {
+                                                                                    let service = {
+                                                                                        postLoginSSO: postLoginSSO
+                                                                                    }
+                                                                                    return service;
+
+                                                                                    function postLoginSSO(key, callback) {
+                                                                                        var cb = callback || angular.noop;
+
+                                                                                        return loginSSOFactory.postLoginSSO(key,
+                                                                                                function (response) {
+                                                                                                    return cb(response);
+                                                                                                },
+                                                                                                function (err) {
+                                                                                                    return cb(err);
+                                                                                                }.bind(this)).$promise;
+                                                                                    }
+                                                                                }]).factory('loginSSOFactory', ['$resource', function ($resource) {
+                                                                                    return $resource('', {}, {
+                                                                                        'postLoginSSO': {method: 'POST', url: 'api/login-sso-isTse'}
+                                                                                    });
+                                                                                }]);
+                                                                        })();
+        </script>
+    </body>
+
+</html>

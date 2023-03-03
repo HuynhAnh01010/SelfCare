@@ -1,0 +1,104 @@
+<div class="bgImg">
+    <div class="container loginColumns animated fadeInDown">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <form class="form" name="form" role="form" novalidate ng-submit="vm.finishReset()"
+                              show-validation>
+                            <div class="text-center">
+                                <img src="./content/images/remote-signing.png" alt="LOGO" style="width: 80%">
+                            </div>
+                            <h5 class="card-title text-center">Reset your password</h5>
+
+                            <div class="alert alert-danger" ng-show="vm.error">
+                                {{vm.errorMsg}}
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="otpCode">OTP Code</label>
+                                <input type="text" class="form-control" name="otpCode" id="otpCode" required
+                                       ng-minlength=4 ng-maxlength=50 placeholder="OTP Code"
+                                       ng-model="vm.resetAccount.otpCode">
+                                <div ng-show="form.otpCode.$dirty && form.otpCode.$invalid">
+                                    <p class="help-block"
+                                       ng-show="form.otpCode.$error.required">
+                                        OTP Code is required
+                                    </p>
+                                    <p class="help-block"
+                                       ng-show="form.otpCode.$error.minlength">
+                                        OTP Code is required to be at least 4 characters
+                                    </p>
+                                    <p class="help-block"
+                                       ng-show="form.otpCode.$error.maxlength">
+                                        OTP Code cannot be longer than 50 characters.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>New password</label>
+                                <input type="password" class="form-control" name="password" required="required" value=""
+                                       placeholder="New password"
+                                       ng-model="vm.resetAccount.password">
+                                <div ng-show="form.password.$dirty && form.password.$invalid">
+                                    <p class="help-block"
+                                       ng-show="form.password.$error.required"
+                                       data-translate="global.messages.validate.newpassword.required">
+                                        Your password is required.
+                                    </p>
+                                    <p class="help-block"
+                                       ng-show="form.password.$error.minlength"
+                                       data-translate="global.messages.validate.newpassword.minlength">
+                                        Your password is required to be at least 4 characters.
+                                    </p>
+                                    <p class="help-block"
+                                       ng-show="form.password.$error.maxlength"
+                                       data-translate="global.messages.validate.newpassword.maxlength">
+                                        Your password cannot be longer than 50 characters.
+                                    </p>
+                                </div>
+                                <password-strength-bar
+                                        password-to-check="vm.resetAccount.password"></password-strength-bar>
+                            </div>
+                            <div class="form-group">
+                                <label>New password confirmation</label>
+                                <input type="password" class="form-control" name="confirmPassword" required="required"
+                                       value="" placeholder="New password confirmation"
+                                       ng-model="vm.resetAccount.confirmPassword">
+                                <div ng-show="form.confirmPassword.$dirty && form.confirmPassword.$invalid">
+                                    <p class="help-block"
+                                       ng-show="form.confirmPassword.$error.required"
+                                       data-translate="global.messages.validate.confirmpassword.required">
+                                        Your password confirmation is required.
+                                    </p>
+                                    <p class="help-block"
+                                       ng-show="form.confirmPassword.$error.minlength"
+                                       data-translate="global.messages.validate.confirmpassword.minlength">
+                                        Your password confirmation is required to be at least 4 characters.
+                                    </p>
+                                    <p class="help-block"
+                                       ng-show="form.confirmPassword.$error.maxlength"
+                                       data-translate="global.messages.validate.confirmpassword.maxlength">
+                                        Your password confirmation cannot be longer than 50 characters.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary block full-width m-b agility-fieldtech"
+                                    ng-disabled="form.$invalid">Validate new password
+                            </button>
+                            <p>
+                                <a class="alert-link" ui-sref="login"><span
+                                >Back to login</span></a>
+                                <br/>
+                                <span>You don't have an account yet?</span> <a class="alert-link" href=""
+                                                                               ng-click="vm.register()"><span>Register Now</span></a>
+                            </p>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

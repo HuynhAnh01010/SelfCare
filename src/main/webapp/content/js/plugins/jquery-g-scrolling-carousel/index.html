@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/jquery.gScrollingCarousel.css" rel="stylesheet" />
+  <title> G Scrolling Carousel</title>
+    <style>
+        body{
+            padding: 5px 13px;
+			user-select: none;
+        }
+        .g-scrolling-carousel .items{
+            padding: 5px 0;
+			
+        }
+        .g-scrolling-carousel .items img{
+            display: inline-block; /* notice the comments between inline-block items */
+			
+            margin-right: 10px;
+            width: 170px;
+            height: 150px;
+			line-height: 150px;
+            box-shadow: 0 0 5px #000;
+            text-align: center;
+        }
+		h1{ 
+		text-align:center; 
+		margin-top: 30px;
+		padding: 20px;
+		color: #515151;
+		}
+		@media only screen and (min-width: 720px){
+		 main{
+		 background: #f9f9f9;
+		    width: 650px;
+			padding: 40px;
+			margin-left:auto;
+			margin-right:auto;
+			box-shadow: 2px 1px 6px #777;
+			padding-bottom: 50px;
+		  }
+		
+		 }
+    </style>
+</head>
+<body>
+
+<main>
+<h1> G Scrolling Carousel Example</h1>
+<div class="g-scrolling-carousel">
+  <div class="items">
+        <img src="https://source.unsplash.com/600x300/?prayer">
+		<img src="https://source.unsplash.com/600x300/?walking">
+		<img src="https://source.unsplash.com/600x300/?rose">
+		<img src="https://source.unsplash.com/600x300/?man">
+		<img src="https://source.unsplash.com/600x300/?cat">
+        <img src="https://source.unsplash.com/600x300/?flower">
+		<img src="https://source.unsplash.com/600x300/?student">
+		<img src="https://source.unsplash.com/600x300/?way">
+		<img src="https://source.unsplash.com/600x300/?river">
+		<img src="https://source.unsplash.com/600x300/?crow">
+ </div>
+</div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> 
+<script src="js/jquery.gScrollingCarousel.js"></script> 
+<script>
+  $(document).ready(function(){
+    $(".g-scrolling-carousel .items").gScrollingCarousel();
+  });
+</script>
+</body>
+</html>

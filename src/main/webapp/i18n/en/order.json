@@ -1,0 +1,41 @@
+{
+    "order": {
+        "title": "Action Order",
+        "description": "In Order, you can see information of your order respectively.",
+        "lastActions": "Last actions",
+        "list": "List Order",
+        "detail": {
+            "title": "Detail",
+            "item": "Items",
+            "description": "Descriptions",
+            "info": "Infomation",
+            "serialNumber": "Serial Number",
+            "paymentDate": "Date of Payment",
+            "certiProfile": "Certificate Profile",
+            "certiProfileDes": "Certificate Profile Description",
+            "signingCounter": "Remaining Signing Counter",
+            "amount": "Amount",
+            "status": "Status",
+            "requestIP": "IP Address",
+            "operatingSystem": "Operating System",
+            "browser": "Browser",
+            "rpName": "RP Name",
+            "orderUUID": "Order Code",
+            "sidebar": {
+                "title":"Order Detail",
+                "description":"In Order Detail, you can see information of your order and pay for your unpaid orders."
+            }
+        },
+        "cancel": "Cancel",
+        "back":"Back",
+        "device": "Device",
+        "about": "About Device",
+        "credentialDetail": "Credential Detail",
+        "payment": "Payment",
+        "getPayment": {
+            "name": "Electronic wallet",
+            "pmPro2": "ATM card/Internet Banking",
+            "pmPro3": "Credit Card/Debit Card"
+        }
+    }
+}

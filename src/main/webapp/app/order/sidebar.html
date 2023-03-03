@@ -1,0 +1,74 @@
+<div>
+    <div class="undefined feid-hero-wrapper-mobile feid-hero-mode-dark  d-lg-none d-md-none">
+        <div id="feid-collapsible">
+            <div class="row start-xs middle-xs between-xs">
+                <div class="col-xs-10">
+                    <div class="box">
+                        <h4 class="feid-heading heading-indigo heading-left heading-strong" translate="global.navbar.order">
+                            Credential</h4>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="box">
+                        <button aria-label="button expand" ng-init="vm.expandIcon = false" ng-click="vm.expandIcon = !vm.expandIcon"
+                                class="feid-button-icon "
+                                ng-class="{'feid-collapsible-expand-open': vm.expandIcon, 'feid-collapsible-expand-close': !vm.expandIcon}">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                                 viewBox="0 0 24 24" role="img" preserveAspectRatio="xMidYMid meet">
+                                <path id="expand"
+                                      d="M13.19,18.35,23.5,8a1.68,1.68,0,0,0-2.37-2.38L12,14.78,2.87,5.65A1.68,1.68,0,0,0,.5,8L10.81,18.35a1.69,1.69,0,0,0,2.38,0Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row start-xs middle-xs  d-md-block d-lg-block" ng-class="{'d-none': vm.expandIcon}">
+                <div class="">
+                    <div class="box">
+                        <h6 class="feid-heading heading-indigo heading-left"  translate="order.description">
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="undefined feid-hero-wrapper feid-hero-mode-light d-sm-none d-none d-md-block">
+
+        <div class="row start-xs middle-xs">
+            <div class="col-sm-2 col-md-2 col-lg-1">
+                <div class="box dis-flex-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-cart2 payment" viewBox="0 0 16 16">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box">
+                    <div class="start middle between d-block" >
+                        <div class="dis-flex">
+                            <h2 class="feid-heading heading-light heading-left"  translate="global.navbar.order"></h2>
+                            <div class="cursor-pointer" style="display: flex; align-items: center;">
+                                <button aria-label="button expand" ng-init="vm.expandIconLg = false" ng-click="vm.expandIconLg = !vm.expandIconLg"
+                                        class="feid-button-icon " style="background-color: transparent;"
+                                        ng-class="{
+                                                'feid-collapsible-expand-open': vm.expandIconLg, 'feid-collapsible-expand-close': !vm.expandIconLg}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                                         viewBox="0 0 24 24" role="img" preserveAspectRatio="xMidYMid meet">
+                                        <path id="expand" style="fill: #fff;"
+                                              d="M13.19,18.35,23.5,8a1.68,1.68,0,0,0-2.37-2.38L12,14.78,2.87,5.65A1.68,1.68,0,0,0,.5,8L10.81,18.35a1.69,1.69,0,0,0,2.38,0Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="start middle" ng-class="{'d-none': !vm.expandIconLg}">
+                        <h5 class="feid-heading heading-light heading-left" translate="order.description"></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

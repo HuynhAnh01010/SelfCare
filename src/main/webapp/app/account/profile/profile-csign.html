@@ -1,0 +1,355 @@
+<div class="box-wrapper">
+    <div>
+        <div>
+            <div class="undefined feid-hero-wrapper-mobile feid-hero-mode-dark  d-lg-none d-md-none">
+                <div id="feid-collapsible">
+                    <div class="row start-xs middle-xs between-xs">
+                        <div class="col-xs-10">
+                            <div class="box">
+                                <h4 class="feid-heading heading-indigo heading-left heading-strong">
+                                    {{'global.navbar.userDetail'| translate}}
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="box">
+                                <button aria-label="button expand" ng-init="vm.expandIcon = false" ng-click="vm.expandIcon = !vm.expandIcon"
+                                        class="feid-button-icon "
+                                        ng-class="{
+                                                'feid-collapsible-expand-open': vm.expandIcon, 'feid-collapsible-expand-close': !vm.expandIcon}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                                         viewBox="0 0 24 24" role="img" preserveAspectRatio="xMidYMid meet">
+                                        <path id="expand"
+                                              d="M13.19,18.35,23.5,8a1.68,1.68,0,0,0-2.37-2.38L12,14.78,2.87,5.65A1.68,1.68,0,0,0,.5,8L10.81,18.35a1.69,1.69,0,0,0,2.38,0Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row start-xs middle-xs  d-md-block d-lg-block" ng-class="{
+                            'd-none': vm.expandIcon}">
+                        <div class="">
+                            <div class="box">
+                                <h6 class="feid-heading heading-indigo heading-left">
+                                    {{'accountProfile.csign.description'| translate}}
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="undefined feid-hero-wrapper feid-hero-mode-light d-sm-none d-none d-md-block">
+
+                <div class="row start-xs middle-xs">
+                    <div class="col-sm-2 col-md-2 col-lg-1">
+                        <div class="box dis-flex-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 20 20"
+                                 role="img" aria-labelledby="title desc" class="feid-icon icon-light hover-false "
+                                 preserveAspectRatio="xMidYMid meet"><title id="title"></title>
+                                <desc id="dec"></desc>
+                                <g id="manage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="primary-color" transform="translate(-1.8691 -1.67367)">
+                                        <path d="M17.22835,11.74177A1.83832,1.83832,0,1,1,15.3901,9.90345,1.83838,1.83838,0,0,1,17.22835,11.74177Zm-5.515,8.824a.73532.73532,0,1,0,.73535.73535A.73542.73542,0,0,0,11.71334,20.56581Z"></path>
+                                    </g>
+                                    <g id="secondary-color" transform="translate(-1.8691 -1.67367)">
+                                        <path d="M21.8691,10.69209a3.22861,3.22861,0,0,1-.67346,1.97619l-.00049.00055-.00049.00092-.00024-.00018a3.31668,3.31668,0,0,1-1.0177.87866.99248.99248,0,0,1-1.4646-.78479.9775.9775,0,0,1,.45605-.95056,1.29479,1.29479,0,0,0,.41162-.35132l.001-.00147a1.27438,1.27438,0,0,0,.09-1.41632,1.30064,1.30064,0,0,0-1.06055-.64184,1.32025,1.32025,0,0,1-1.04687-.687L16.44674,6.792a1.35122,1.35122,0,0,1-.04053-1.27221,1.28408,1.28408,0,0,0-.52405-1.6557,1.34077,1.34077,0,0,0-1.72375.37762,1.39006,1.39006,0,0,1-1.13819.58289h-.006l-2.27551-.00641a1.28136,1.28136,0,0,1-1.0918-.54492,1.315,1.315,0,0,0-1.75036-.43213,1.27879,1.27879,0,0,0-.531,1.65667A1.36154,1.36154,0,0,1,7.3171,6.76265L6.17086,8.71589a1.37475,1.37475,0,0,1-1.08081.66492,1.29675,1.29675,0,0,0-1.19556,1.27856,1.25969,1.25969,0,0,0,.173.64441,1.302,1.302,0,0,0,1.0614.642,1.32039,1.32039,0,0,1,1.046.68689l1.11645,1.92242a1.27051,1.27051,0,0,1,.06433,1.22559A1.28336,1.28336,0,0,0,7.857,17.48347l.23645.09216a.97784.97784,0,0,1,.64965.83033.99253.99253,0,0,1-1.26171,1.08123,3.33508,3.33508,0,0,1-.61365-.25348l-.0293-.02026a3.29263,3.29263,0,0,1-1.46362-3.93774l-.80408-1.38507a3.32464,3.32464,0,0,1-2.25464-1.5824,3.24547,3.24547,0,0,1-.447-1.65277,3.31679,3.31679,0,0,1,2.7146-3.224l.81885-1.39624a3.25626,3.25626,0,0,1,.261-2.72125A3.30062,3.30062,0,0,1,6.88692,2.10627a3.37567,3.37567,0,0,1,4.18506.71179l1.63965.0044a3.43963,3.43963,0,0,1,4.18811-.68836,3.29194,3.29194,0,0,1,1.46362,3.93726l.804,1.38507a3.3225,3.3225,0,0,1,2.25476,1.58289A3.24541,3.24541,0,0,1,21.8691,10.69209ZM14.83224,14.3498a4.53172,4.53172,0,0,0-3.85437,4.55445V19.095a.73535.73535,0,0,0,1.4707,0v-.36767a2.94444,2.94444,0,0,1,3.21081-2.92926A3.04663,3.04663,0,0,1,18.33126,18.882V20.2715a.29413.29413,0,0,1-.29419.29412H13.91915a.73536.73536,0,0,0,0,1.47071h4.85327A1.02952,1.02952,0,0,0,19.802,21.00685V18.72731A4.41718,4.41718,0,0,0,14.83224,14.3498Zm-3.66138-.43573a.99989.99989,0,0,0-.36621-1.36621,2.12875,2.12875,0,0,1,2.1289-3.687.99974.99974,0,1,0,1-1.73144,4.12864,4.12864,0,1,0-4.1289,7.15087,1.0006,1.0006,0,0,0,1.36621-.36621Z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="start middle between d-block" >
+                                <div class="dis-flex">
+                                    <h2 class="feid-heading heading-light heading-left ">
+                                        {{'global.navbar.userDetail'| translate}}
+                                    </h2>
+                                    <div class="cursor-pointer" style="display: flex; align-items: center;">
+                                        <button aria-label="button expand" ng-init="vm.expandIconLg = false" ng-click="vm.expandIconLg = !vm.expandIconLg"
+                                                class="feid-button-icon " style="background-color: transparent;"
+                                                ng-class="{
+                                                'feid-collapsible-expand-open': vm.expandIconLg, 'feid-collapsible-expand-close': !vm.expandIconLg}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                                                 viewBox="0 0 24 24" role="img" preserveAspectRatio="xMidYMid meet">
+                                                <path id="expand" style="fill: #fff;"
+                                                      d="M13.19,18.35,23.5,8a1.68,1.68,0,0,0-2.37-2.38L12,14.78,2.87,5.65A1.68,1.68,0,0,0,.5,8L10.81,18.35a1.69,1.69,0,0,0,2.38,0Z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="start middle" ng-class="{'d-none': !vm.expandIconLg}">
+                                <h5 class="feid-heading heading-light heading-left">
+                                    {{'accountProfile.csign.description'| translate}}
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px; padding-left: 10px; padding-right: 10px;">
+            <div class="scroll-user-detail" ng-class="{'scroll-user-detail-tseInfo': !vm.account.tseInfo}">
+                <div class="row">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div class="box">
+                            <h4 class="feid-heading heading-indigo heading-left heading-strong">
+                                {{'accountProfile.profile.title'| translate}}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div class="box">
+                            <div>
+                                <div class="card-body bg-white">
+
+                                    <ul class="list-unstyled">
+                                        <li class="">
+                                            <div class="row middle-xs action-wrapper ">
+                                                <div class="col-6 col-xs-5 col-sm-5 col-lg-6 col-md-6 text-right xs-text-left">
+                                                    <div class="box padding-right">
+                                                        {{'accountProfile.profile.userName'| translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-7 col-sm-7 col-lg-6 col-md-6">
+                                                    <div class="box font-weight-bold padding-left">
+                                                        {{vm.account.username}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li class="">
+                                            <div class="row middle-xs action-wrapper ">
+                                                <div class="col-6 text-right col-xs-5 col-sm-5 col-lg-6 col-md-6 xs-text-left">
+                                                    <div class="box padding-right">
+                                                        {{'accountProfile.profile.password'| translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-7 col-sm-7 col-lg-6 col-md-6" >
+                                                    <div class="box font-weight-bold padding-left" ng-show="!vm.account.ssoEnabled">
+                                                        <button class="btn btn-primary btn-sm" ng-click="vm.popupChangePassword()">
+                                                            <i class="fa fa-edit"></i> {{'accountProfile.profile.btnChange'| translate}}
+                                                        </button>
+                                                    </div>
+                                                    <div class="box font-weight-bold padding-left" ng-show="vm.account.ssoEnabled">
+                                                        <a class="btn btn-primary btn-sm" ng-attr-target ng-click="vm.plankChangePassword();" style="color: #fff;">
+                                                            <i class="fa fa-edit"></i> {{'accountProfile.profile.btnChange'| translate}}
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li class="">
+                                            <div class="row middle-xs action-wrapper ">
+                                                <div class="col-6 text-right col-xs-5 col-sm-5 col-lg-6 col-md-6 xs-text-left">
+                                                    <div class="box padding-right">
+                                                        {{'accountProfile.profile.fullName'| translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-7 col-sm-7 col-lg-6 col-md-6">
+                                                    <div class="box font-weight-bold padding-left" ng-show="!vm.account.ssoEnabled">
+                                                        <button class="btn btn-primary btn-sm" ng-click="vm.popupChangeFullName()">
+                                                            <i class="fa fa-edit"></i>
+                                                        </button>
+                                                        {{vm.account.fullname}}
+                                                    </div>
+                                                    <div class="box font-weight-bold padding-left" ng-show="vm.account.ssoEnabled">
+                                                        <a class="btn btn-primary btn-sm" ng-attr-target ng-click="vm.plankChangeFullname();" style="color: #fff;">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+                                                        {{vm.account.fullname}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li class="">
+                                            <div class="row middle-xs action-wrapper ">
+                                                <div class="col-6 text-right col-xs-5 col-sm-5 col-lg-6 col-md-6 xs-text-left">
+                                                    <div class="box padding-right">
+                                                        {{'accountProfile.profile.email'| translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-7 col-sm-7 col-lg-6 col-md-6">
+                                                    <div class="box font-weight-bold padding-left" ng-show="!vm.account.ssoEnabled">
+                                                        <button class="btn btn-primary btn-sm" ng-click="vm.popupChangeEmail()">
+                                                            <i class="fa fa-edit"></i>
+                                                        </button>
+                                                        {{vm.account.email}}
+
+                                                    </div>
+                                                    <div class="box font-weight-bold padding-left" ng-show="vm.account.ssoEnabled">
+                                                        <a class="btn btn-primary btn-sm" ng-attr-target ng-click="vm.plankChangeEmail();" style="color: #fff;">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+                                                        {{vm.account.email}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li class="">
+                                            <div class="row middle-xs action-wrapper ">
+                                                <div class="col-6 text-right col-xs-5 col-sm-5 col-lg-6 col-md-6 xs-text-left">
+                                                    <div class="box padding-right">
+                                                        {{'accountProfile.profile.phoneNumber'| translate}}
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-7 col-sm-7 col-lg-6 col-md-6">
+                                                    <div class="box font-weight-bold padding-left">
+                                                        <!--                                                        <button class="btn btn-primary btn-sm" disabled ng-click="vm.popupChangePhone()">
+                                                                                                                    <i class="fa fa-edit"></i>
+                                                                                                                </button>-->
+                                                        {{vm.account.phone}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li class="">
+                                            <div class="row middle-xs action-wrapper ">
+                                                <div class="col-6 text-right col-xs-5 col-sm-5 col-lg-6 col-md-6 xs-text-left">
+                                                    <div class="box padding-right">
+                                                        {{'accountProfile.profile.identification'| translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-7 col-sm-7 col-lg-6 col-md-6">
+                                                    <div class="box font-weight-bold padding-left">
+                                                        <!--                                                        <button class="btn btn-primary btn-sm" disabled ng-click="vm.popupChangeIdentification()">
+                                                                                                                    <i class="fa fa-edit"></i>
+                                                                                                                </button>-->
+                                                        {{vm.account.identification}}
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li class="">
+                                            <div class="row middle-xs action-wrapper ">
+                                                <div class="col-6 text-right col-xs-5 col-sm-5 col-lg-6 col-md-6 xs-text-left">
+                                                    <div class="box padding-right">
+                                                        {{'accountProfile.profile.twoFactorAuthentication'| translate}}
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xs-7 col-sm-7 col-lg-6 col-md-6">
+                                                    <div class="box font-weight-bold padding-left">
+                                                        <button class="btn btn-primary btn-sm" ng-click="vm.popupChangeTwoFactorMethod()">
+                                                            <i class="fa fa-edit"></i>
+                                                        </button>
+                                                        {{vm.account.twoFactorMethod}}
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--                            <div>-->
+
+
+                            <!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row"  ng-if="vm.account.tseInfo">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div class="box">
+                            <h4 class="feid-heading heading-indigo heading-left heading-strong">
+                                {{'accountProfile.devices.title'| translate}}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"  ng-if="vm.account.tseInfo">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div id="UserInfo_DeviceInfo" >
+                            <div id="UserInfo_DeviceInfo_DeviceWrapper">
+                                <div class="row">
+                                    <div class="col-lg">
+                                        <div class="box">
+                                            <div id="UserInfo_DeviceInfo_Device_0" class="feid-device-card">
+                                                <div class="row between-xs">
+                                                    <div class="col-xs">
+                                                        <div class="box"><img
+                                                                src="data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='130px' height='130px' viewBox='0 0 130 130' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 58 (84663) - https://sketch.com --%3E %3Ctitle%3EDevices/Iphone/X-XS-XR%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cg id='Devices/Iphone/X-XS-XR' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='Group-5'%3E %3Cpath d='M45.3867,26.5 C45.3867,26.5 39.4997,26.5 39.4997,32.871 L39.4997,123.129 C39.4997,123.129 39.4997,129.5 45.3867,129.5 L85.6137,129.5 C85.6137,129.5 91.4997,129.5 91.4997,123.129 L91.4997,32.871 C91.4997,32.871 91.4997,26.5 85.6137,26.5 L45.3867,26.5 Z' id='Stroke-1' stroke='%233E3A94'%3E%3C/path%3E %3Cpath d='M83.6797,29 L78.7717,29 C78.2597,29 77.8457,29.404 77.8457,29.903 L77.8457,31.238 C77.8457,32.756 76.5847,33.987 75.0297,33.987 L55.9707,33.987 C54.4147,33.987 53.1547,32.756 53.1547,31.238 L53.1547,29.903 C53.1547,29.404 52.7407,29 52.2287,29 L47.3207,29 C47.3207,29 41.9997,29 41.9997,35.046 L41.9997,120.704 C41.9997,120.704 41.9997,126.75 47.3207,126.75 L83.6797,126.75 C83.6797,126.75 88.9997,126.75 88.9997,120.704 L88.9997,35.046 C88.9997,35.046 88.9997,29 83.6797,29 Z' id='Stroke-3' stroke='%237065C5' stroke-width='0.75'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/svg%3E"
+                                                                alt="mobile device" class="">
+                                                                <h5 class="feid-heading heading-indigo heading-center heading-strong">
+                                                                    {{vm.account.tseInfo.model}} &nbsp;</h5>
+                                                                <span class="feid-device-card-active "
+                                                                      ng-class="{
+                                                                              'feid-device-card-active': vm.account.tseInfo.state == 'ACTIVATED', 'feid-device-card-not-active': vm.account.tseInfo.state != 'ACTIVATED'}"></span>
+                                                                <span class="feid-small-text feid-device-status-text text-indigo text-left">{{vm.account.tseInfo.state}}</span>
+
+                                                                <p class="feid-text text-indigo text-center text-strong">
+                                                                    {{'accountProfile.devices.about'| translate}}
+                                                                </p>
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="feid-small-text text-indigo text-left">{{'accountProfile.devices.osType'| translate}}</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span
+                                                                                    class="feid-small-text text-indigo text-left text-strong">{{vm.account.tseInfo.osType}}</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <span class="feid-small-text text-indigo text-left">{{'accountProfile.devices.osVersion'| translate}}</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span
+                                                                                    class="feid-small-text text-indigo text-left text-strong">{{vm.account.tseInfo.osVersion}}</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><span
+                                                                                    class="feid-small-text text-indigo text-left">{{'accountProfile.devices.uafEnabled'| translate}}</span>
+                                                                            </td>
+                                                                            <td><span
+                                                                                    class="feid-small-text text-indigo text-left text-strong">{{vm.account.tseInfo.uafEnabled}}</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><span
+                                                                                    class="feid-small-text text-indigo text-left">{{'accountProfile.devices.deviceUuid'| translate}}</span>
+                                                                            </td>
+                                                                            <td><span
+                                                                                    class="feid-small-text text-indigo text-left text-strong">{{vm.account.tseInfo.deviceUUID}}</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <!--                                                    <button type="submit"-->
+                                                                <!--                                                            class="feid-button button-indigo_inverse button-small"-->
+                                                                <!--                                                            aria-label="FeID button">Remove Device-->
+                                                                <!--                                                    </button>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

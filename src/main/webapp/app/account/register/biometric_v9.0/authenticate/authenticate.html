@@ -1,0 +1,56 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="">
+        <div class="login-right-column-content-wrapper" style="align-items:flex-start;">
+            <div style="max-width: 400px; width: 100%;padding-top: 30px;padding-bottom: 30px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                        <div class="col-xs-12">
+                        <div style="margin: 15px 15px">
+                            <h4 class="feid-heading heading-indigo heading-center f20"
+                                data-translate="register.biometricIdentification.authenticateEmailPhone.head"></h4>
+
+                            <div style="text-align: justify; margin-top: 30px;margin-bottom: 60px">
+                                <p>
+                                    WE RECOMMEND AUTHENTICATING WITH YOUR E-MAIL ADDRESS
+                                    AND/OR PHONE NUMBER, AND PLEASE ENTER YOUR PHONE
+                                    NUMBER AND/OR E-MAIL ADDRESS IN CASE WE NEED TO
+                                    CONTACT YOU
+                                </p>
+
+                            </div>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="" type="button" ng-click="vm.gotoReachEmailPhone()"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                        aria-label="FeID button"
+                                        data-translate="register.button.emailOrPhone">
+                                </button>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                        ui-sref="policy2"
+                                        class="feid-button button-indigo_text button-small "
+                                        aria-label="FeID button"
+                                        data-translate="register.biometricIdentification.btn.back">Back
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row middle-xs between-xs" ui-view="languageBottom"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

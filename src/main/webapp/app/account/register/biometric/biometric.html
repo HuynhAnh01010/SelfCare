@@ -1,0 +1,68 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6">
+        <div class="login-right-column-content-wrapper">
+            <div style="max-width: 400px; width: 100%; margin-top: 50px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div>
+                    <div style="margin: 15px 15px">
+                        <h4 class="feid-heading heading-indigo heading-center f20"
+                            data-translate="register.biometricIdentification.head"></h4>
+
+                        <div style="text-align: center; margin-top: 30px;">
+                           <table class="table-desc">
+                               <tr>
+                                   <td>1.</td>
+                                   <td>{{'register.biometricIdentification.desc.step1' | translate}}</td>
+                               </tr>
+                               <tr>
+                                   <td>2.</td>
+                                   <td>{{'register.biometricIdentification.desc.step2' | translate}}</td>
+                               </tr>
+                               <tr>
+                                   <td>3.</td>
+                                   <td>{{'register.biometricIdentification.desc.step3' | translate}}</td>
+                               </tr>
+                           </table>
+                        </div>
+
+                       
+                        <div style="text-align: center; margin-top: 20px;">
+                            <button  type="button" ui-sref="policy1"
+                                    class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                    aria-label="SelfCare button"
+                                    data-translate="register.biometricIdentification.btn.continue">mobile
+                            </button>
+                        </div>
+                       <div style="text-align: center; margin-top: 15px;">
+                            <button type="button" disabled
+                                    class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                    aria-label="SelfCare button"
+                                    data-translate="register.biometricIdentification.btn.watchVideo">watch video
+                            </button>
+                        </div>
+                        <div style="text-align: center; margin-top: 15px;">
+                            <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                    ui-sref="register"
+                                    class="feid-button button-indigo_text button-small "
+                                    aria-label="FeID button"
+                                    data-translate="register.biometricIdentification.btn.back">Back
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div ui-view="footerLanguage" class="row middle-xs between-xs"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

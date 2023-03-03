@@ -1,0 +1,14 @@
+{
+    "home": {
+        "title": "User Detail",
+        "subtitle": "This is your homepage",
+        "nav": {
+            "title": "User Profile"
+        },
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "findme" : "find me on <a href=\"https://www.upwork.com/fl/parthkaria\">upwork!</a>",
+        "github": "GitHub"
+    }
+}

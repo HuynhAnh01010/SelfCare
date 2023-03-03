@@ -1,0 +1,370 @@
+server:
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-store-type: pkcs12
+    key-alias: tomcat
+    key-password: password
+  servlet:
+    context-path: /SelfCare
+  port: 8643
+
+static:
+  assets:
+    location: src/main/webapp/
+spring:
+  servlet:
+    multipart:
+      max-request-size: 50MB
+      max-file-size: 50MB
+  application:
+    name: AuthApp
+  messages:
+    basename : i18n/messages
+    
+#shenyu:
+#  sync:
+#    http:
+#      enabled: true
+#      url: /
+    
+#       dev: local
+#       live: rssp
+#       fpt: fpt
+#       lca: lca
+#       softdream: soft
+#       cmc: cmc
+#       vgca: vgca
+
+  profiles:
+    active: local
+  main:
+    banner-mode: off
+  thymeleaf:
+    prefix: /
+
+---
+spring:
+  profiles: local
+selfcare:
+  url: http://192.168.2.247:9080/rssp/v2
+  urlPay: http://192.168.2.247:9080/rssp/payment
+  profile: rssp-119.432-v2.0
+  relyingPartyName: SELFCARE
+  relyingPartyUser: selfcare
+  relyingPartyPass: iR!=GBfWdct5zmbLL&Eb^U08MG4vYPRB
+  relyingPartySignature: G8mH3GerC5c81u6RZqnMFNuy/ziDxmIkW415p5Vlgvkfsq43O7qq9N9xEIU50tOEQbuO8QWAteN1UKIzMaMp6hndQGfN5hVALhttKXRB+DKl+yrfiD4K04zzH/ZSJPY8FyVlyb2faRn9RsVM0dFsZsPUMc/ASPykf7w50AXTrADLsZmOOpkQUXEDQQecTFHjFZ+tp0YUWjVwxRmjE6HONpZKbTQIAK9qYzMQbtx0c0YZ4+4+z13APdeT2cBtJlaglmMSVEZPYHReLxsd76O2xYv1QiD16dpvV/Z2kpm8HNugCXuvIepzSRxJfhBBsHthGxNEuMJ3ILq1xeALouqoFA==
+  p12Path: classpath:files/p12/selfcare_ySonfKv7OZ)eM(zHd^3R_9&6tFJGek6S.p12
+  p12Password: ySonfKv7OZ)eM(zHd^3R*9&6tFJGek6S
+  p12Alias: selfcare
+  notification:
+    scalIdentity: SELFCARE
+    hashAlgorithmOID: 2.16.840.1.101.3.4.2.1
+    notificationMessage: LOGIN SELFCARE
+    messageCaption: LOGIN SELFCARE
+    message: AUTHENTICATION USER
+    rpName: rp
+    validityPeriod: 60
+    vcEnabled: true
+    showCancelButton: false
+  certificate:
+    profileName: "T2PSB23Y"
+    signingProfile: "UNLIMITED"
+    sharedMode: "PRIVATE_MODE"
+#    authMode: "EXPLICIT/PIN"
+    authMode: "EXPLICIT/PIN"
+    multiSign: 1
+    type: "PERSONAL"
+    scal: 1
+eidentity:
+  awsIamAccessKey: 7SZF5TQLU4LCQRDT-VZY
+  awsIamSecretKey: QOpxz94FPJ4NWqU30KmGPCRxdBH6akvGjeQFB48U
+  awsRegion: vn-south-1
+  awsApiGatewayEndpoint: https://192.168.2.249:10443/dtis
+  xApiKey: KOBcBCKfgLJlDWcg5NSMOBvozf_0vZKYNFQmWsxb
+  xAmzSecurityToken: "Basic U0VMRkNBUkU6UU9weHo5NEZQSjROV3FVMzBLbUdQQ1J4ZEJINmFrdkdqZVFGQjQ4VQ=="
+  apiGatewaySeviceName: dtis-20.10.05
+  api:
+    processType: "MOBILEVERIFICATION"
+#    MOBILEVERIFICATION EMAILVERIFICATION
+    documentType: "CITIZENCARD"
+#    //CITIZENCARD //IDENTITYCARD
+  logOCR:
+    enabled: true
+    path: E:\selfcare_video_liveness
+---
+spring:
+  profiles: rssp
+selfcare:
+  url: https://rssp.mobile-id.vn/rssp/v2
+  urlPay: https://rssp.mobile-id.vn/rssp/payment
+  profile: rssp-119.432-v2.0
+  relyingPartyName: SELFCARE
+  relyingPartyUser: selfcare
+  #  relyingPartyPass: iR!=GBfWdct5zmbLL&Eb^U08MG4vYPRB
+  relyingPartyPass: WQYXd+D2x=HVz54N
+  relyingPartySignature: LdjzRJa6h3yUhXFl9bCkKvFOiA5h7/EsSz+NM2G7b461juWahcXVpuKeXuI4JiZQWBtwAHkUOS8hAVJScHB2wuHTWpUhfq6exMYcqoqbX6JI0ptfeoe4cNz3/PMdlBMEI/LYV3v3o7IHRY1ERn0N/FHccXwOnmCqHNUwI8iQHZZ+97l1EpUgu1OdwnauM2Mh+F6RMgvndhUXoDP4Uvat4CeS5B1NmE1ouFFbXe+uFT9MTiMnfMAn48no5uUI78kbXm2QSS7OWCl68W9UDVTapqXQGjMus/sk1kQxVHG6KkV2KUpBRoNjvW8q3obpnICaiL0c64NIo97LKpIW/gsINA==
+  #  relyingPartySignature: G8mH3GerC5c81u6RZqnMFNuy/ziDxmIkW415p5Vlgvkfsq43O7qq9N9xEIU50tOEQbuO8QWAteN1UKIzMaMp6hndQGfN5hVALhttKXRB+DKl+yrfiD4K04zzH/ZSJPY8FyVlyb2faRn9RsVM0dFsZsPUMc/ASPykf7w50AXTrADLsZmOOpkQUXEDQQecTFHjFZ+tp0YUWjVwxRmjE6HONpZKbTQIAK9qYzMQbtx0c0YZ4+4+z13APdeT2cBtJlaglmMSVEZPYHReLxsd76O2xYv1QiD16dpvV/Z2kpm8HNugCXuvIepzSRxJfhBBsHthGxNEuMJ3ILq1xeALouqoFA==
+  p12Path: classpath:files/p12/selfcare_Vn6TBV2s%=Y-Gs9Z.p12
+  #  p12Path: classpath:files/p12/selfcare_ySonfKv7OZ)eM(zHd^3R_9&6tFJGek6S.p12
+  p12Password: Vn6TBV2s%=Y-Gs9Z
+  #  p12Password: ySonfKv7OZ)eM(zHd^3R*9&6tFJGek6S
+  p12Alias: selfcare
+  notification:
+    scalIdentity: SELFCARE
+    hashAlgorithmOID: 2.16.840.1.101.3.4.2.1
+    notificationMessage: LOGIN SELFCARE
+    messageCaption: LOGIN SELFCARE
+    message: AUTHENTICATION USER
+    rpName: rp
+    validityPeriod: 60
+    vcEnabled: true
+    showCancelButton: false
+  certificate:
+    profileName: "T2PSB23Y"
+    signingProfile: "UNLIMITED"
+    sharedMode: "PRIVATE_MODE"
+    authMode: "EXPLICIT/PIN"
+    multisign: 1
+    type: "PERSONAL"
+    scal: 1
+eidentity:
+  awsIamAccessKey: 7SZF5TQLU4LCQRDT-VZY
+  awsIamSecretKey: QOpxz94FPJ4NWqU30KmGPCRxdBH6akvGjeQFB48U
+  awsRegion: vn-south-1
+  awsApiGatewayEndpoint: https://id.mobile-id.vn/dtis
+  #  awsApiGatewayEndpoint: https://192.168.2.249:10443/dtis
+  xApiKey: KOBcBCKfgLJlDWcg5NSMOBvozf_0vZKYNFQmWsxb
+  xAmzSecurityToken: "Basic U0VMRkNBUkU6UU9weHo5NEZQSjROV3FVMzBLbUdQQ1J4ZEJINmFrdkdqZVFGQjQ4VQ=="
+  apiGatewaySeviceName: dtis-20.10.05
+  api:
+    processType: "MOBILEVERIFICATION"
+    #    MOBILEVERIFICATION EMAILVERIFICATION
+    documentType: "CITIZENCARD"
+  #    //CITIZENCARD //IDENTITYCARD
+  logOCR:
+    enabled: true
+    path: /home/rssp/selfcare
+
+---
+spring:
+  profiles: fpt
+selfcare:
+  url: https://rssp.fis.com.vn/rssp/v2
+  urlPay: https://rssp.fis.com.vn/rssp/payment
+  profile: rssp-119.432-v2.0
+  relyingPartyName: SELFCARE
+  relyingPartyUser: selfcare
+  relyingPartyPass: BsUxsGfawTbfgCj84FNSkLDg7NVwNzcK
+  relyingPartySignature: XldP8rXTnZALcMceF8k5sX81YLLEYgHVDX8DEe/k2KiSwtpU6Ulty3x1jio6GKcmsNhoQnDJUeBfX5Xq+Oj92Q99rJsokulN6IsQoI3Le+aoLymtL/EVh9ovSMKxhFMoZ/aiggigCscK8K7U5CeGG0ARnGATGHLTunT42eH/yOQ7wIFZQBzPadFvkwyv5rV34DShgt68TVi05xZrcAhjh8Io9IyccI+XwW6zmmIp5XWPUIpt2cytQsPuVvSNYvc5mpi10tO5+HDzAR0kfqeB2IxlGyFhYiwjSEVtktJtVsU9l28gtdshOmeWXpXxOc62RH03r9ZVfNWDQCTBmEZoDw==
+  p12Path: classpath:files/p12/selfcare-fpt.p12
+  p12Password: rBT5qLgGCrx39WUuzaCFnQYAn8dZfZQd
+  p12Alias: selfcare
+  notification:
+    scalIdentity: SELFCARE
+    hashAlgorithmOID: 2.16.840.1.101.3.4.2.1
+    notificationMessage: LOGIN SELFCARE
+    messageCaption: LOGIN SELFCARE
+    message: AUTHENTICATION USER
+    rpName: rp
+    validityPeriod: 60
+    vcEnabled: true
+    showCancelButton: false
+  certificate:
+    profileName: "T2PSB23Y"
+    signingProfile: "UNLIMITED"
+    sharedMode: "PRIVATE_MODE"
+    authMode: "IMPLICIT/TSE"
+    multisign: 1
+    type: "PERSONAL"
+    scal: 1
+eidentity:
+  awsIamAccessKey: 7SZF5TQLU4LCQRDT-VZY
+  awsIamSecretKey: QOpxz94FPJ4NWqU30KmGPCRxdBH6akvGjeQFB48U
+  awsRegion: vn-south-1
+  awsApiGatewayEndpoint: https://id.mobile-id.vn/dtis
+  xApiKey: KOBcBCKfgLJlDWcg5NSMOBvozf_0vZKYNFQmWsxb
+  xAmzSecurityToken: "Basic U0VMRkNBUkU6UU9weHo5NEZQSjROV3FVMzBLbUdQQ1J4ZEJINmFrdkdqZVFGQjQ4VQ=="
+  apiGatewaySeviceName: dtis-20.10.05
+  api:
+    processType: "MOBILEVERIFICATION"
+    #    MOBILEVERIFICATION EMAILVERIFICATION
+    documentType: "CITIZENCARD"
+  #    //CITIZENCARD //IDENTITYCARD
+  logOCR:
+    enabled: false
+    path: E:\selfcare_video_liveness
+    
+    
+    
+#
+---
+
+spring:
+  profiles: soft
+selfcare:
+  url: http://localhost/rssp/v2
+  profile: rssp-119.432-v2.0
+  relyingPartyName: SELFCARE_RP
+  relyingPartyUser: selfcare
+  relyingPartyPass: 6BCfpxgRNKdyUpf3VFck8rQLvJjBTkyD
+  relyingPartySignature: Tj3VaGVC1W3UT76zuF7ENCZEQlxOGt0pYEBSKS3SC0TWgTNw4K/RDCFVDWfJu5ohbqaUd0WRlWHV4oHbARJxtDSaGSuchwwUaJ2I7qGK4ONX7sl84ib4xwQi8X7bE+9k3fGZZ7UZH4fXui1yGVYA0WtUnolzA1dqkGFr854f+rVffAANojVF9n/LyeGQrJMqthbgwC2eGd4dZUhmuNKaorvtSEDF1Hq/pceDipduchD5jQ77uhTnescHJeXlKqx0T6poP3JlJ1KzHBAu3AYd5pTfRVGOjxg75SO2X2+osBZXVzCbhMb/KO3x0BoULv/5FZH2bdXOyqRTonUpAPCI0A==
+  p12Path: classpath:files/p12/selfcare-softdream.p12
+  p12Password: 5GCDGJ5D8XzUs54RhQtcfYH7XWweCg3d
+  p12Alias: selfcare
+  notification:
+    scalIdentity: SELFCARE
+    hashAlgorithmOID: 2.16.840.1.101.3.4.2.1
+    notificationMessage: LOGIN SELFCARE
+    messageCaption: LOGIN SELFCARE
+    message: AUTHENTICATION USER
+    rpName: rp
+    validityPeriod: 60
+    vcEnabled: true
+    showCancelButton: false
+  certificate:
+    profileName: "T2PSB23Y"
+    signingProfile: "UNLIMITED"
+    sharedMode: "PRIVATE_MODE"
+    authMode: "IMPLICIT/TSE"
+    multisign: 1
+    type: "PERSONAL"
+    scal: 1
+eidentity:
+  awsIamAccessKey: 7SZF5TQLU4LCQRDT-VZY
+  awsIamSecretKey: QOpxz94FPJ4NWqU30KmGPCRxdBH6akvGjeQFB48U
+  awsRegion: vn-south-1
+  awsApiGatewayEndpoint: https://id.mobile-id.vn/dtis
+  xApiKey: KOBcBCKfgLJlDWcg5NSMOBvozf_0vZKYNFQmWsxb
+  xAmzSecurityToken: "Basic U0VMRkNBUkU6UU9weHo5NEZQSjROV3FVMzBLbUdQQ1J4ZEJINmFrdkdqZVFGQjQ4VQ=="
+  apiGatewaySeviceName: dtis-20.10.05
+  api:
+    processType: "MOBILEVERIFICATION"
+    #    MOBILEVERIFICATION EMAILVERIFICATION
+    documentType: "CITIZENCARD"
+  #    //CITIZENCARD //IDENTITYCARD
+  logOCR:
+    enabled: false
+    path: E:\selfcare_video_liveness
+    
+
+#
+---
+
+spring:
+  profiles: lca
+selfcare:
+#  url: http://dr.lca.rssp.local/rssp/v2
+  url: http://dc.lca.rssp.local/rssp/v2
+  profile: rssp-119.432-v2.0
+  relyingPartyName: SELFCARE_RP
+  relyingPartyUser: selfcare
+  relyingPartyPass: aEm6bK1aBnVspsBAlLihUhtG7hHFPyeu
+  relyingPartySignature: NAL8OX4ZIYFVNhlMdfbb3gnCJWTJKrbkl1VFP+JM4w/3xsw8EdifZG7c1P+kM+SmCZmikopHOpRWFgJWkRbDsARTwDqCw4PPjLzH6KijsU6NyJi+j1Z9vjRQoMZ7Z1e/cwx7K1iuW7WBq43NHfQac0TqohwdbjD8wokS8R7x1Ygflax7x5Pa2HINKeSkhOji6F4zCs3Jn6vrS07DNrQHkEVoC3bWQvpZc/4QmlNzL6qbPS0lAd5bJgFMnjLLe0bLyHiKkDmkhPBHDnb9SBv8QhXlIx9j40vJjJugWmEKEF6lBk93joJFH9+Qr7lJ5g1daQDWcDXXR04E3g/ZX+JHIA==
+  p12Path: classpath:files/p12/selfcare.p12
+  p12Password: AIqbIRYTD2Si9ZmsvsbPHuz5b6TjG1qZ
+  p12Alias: selfcare
+  notification:
+    scalIdentity: SELFCARE
+    hashAlgorithmOID: 2.16.840.1.101.3.4.2.1
+    notificationMessage: LOGIN SELFCARE
+    messageCaption: LOGIN SELFCARE
+    message: AUTHENTICATION USER
+    rpName: rp
+    validityPeriod: 60
+    vcEnabled: true
+    showCancelButton: false
+  certificate:
+    profileName: "T2PSB23Y"
+    signingProfile: "UNLIMITED"
+    sharedMode: "PRIVATE_MODE"
+    authMode: "IMPLICIT/TSE"
+    multisign: 1
+    type: "PERSONAL"
+    scal: 1
+eidentity:
+  awsIamAccessKey: 7SZF5TQLU4LCQRDT-VZY
+  awsIamSecretKey: QOpxz94FPJ4NWqU30KmGPCRxdBH6akvGjeQFB48U
+  awsRegion: vn-south-1
+  awsApiGatewayEndpoint: https://id.mobile-id.vn/dtis
+  xApiKey: KOBcBCKfgLJlDWcg5NSMOBvozf_0vZKYNFQmWsxb
+  xAmzSecurityToken: "Basic U0VMRkNBUkU6UU9weHo5NEZQSjROV3FVMzBLbUdQQ1J4ZEJINmFrdkdqZVFGQjQ4VQ=="
+  apiGatewaySeviceName: dtis-20.10.05
+  api:
+    processType: "MOBILEVERIFICATION"
+    #    MOBILEVERIFICATION EMAILVERIFICATION
+    documentType: "CITIZENCARD"
+  #    //CITIZENCARD //IDENTITYCARD
+  logOCR:
+    enabled: false
+    path: E:\selfcare_video_liveness
+
+#
+---
+
+spring:
+  profiles: cmc
+selfcare:
+  url: https://localhost:8443/rssp/v2
+  urlPay: https://localhost:8443/rssp/payment
+  profile: rssp-119.432-v2.0
+  relyingPartyName: SELFCARE
+  relyingPartyUser: selfcare
+  relyingPartyPass: c2VsZmNhcmVDTUM=
+  relyingPartySignature: F4II8EAitWIEhVqflmDb2DpkUPwnkzKQXkUSoL0yToBTtdR6NapOsLO+CxIigH+oDhgJYk4QkRHfhsu35Xi0aZ5oQlVSDBp+YStbH6LZ5yqf0DcpUXik+SqL+4FcxecX8qWfO+F8JwpIGmrCeRl8FTLxr/qbzBz1OXJ9/MooUp8281JI1ZWi9NqaIUs9Wih+xTxavrQnVtBVLs5o3xwTlazhIhn+rhVpFfQSxdw/3b/nRsIU30nC+ulz06+i05ovovn/ce7vmXS4rpHosDOXRD/oQxuzPtsWvYW762cycAswkPlCdoGT4nGkkin7AWl6ZMpubco3kLkw8UzPVsMDTA==
+  p12Path: classpath:files/p12/selfcare-cmc.p12
+  p12Password: c2VsZmNhcmVDTUM=
+  p12Alias: selfcare
+  notification:
+    scalIdentity: SELFCARE
+    hashAlgorithmOID: 2.16.840.1.101.3.4.2.1
+    notificationMessage: LOGIN SELFCARE
+    messageCaption: LOGIN SELFCARE
+    message: AUTHENTICATION USER
+    rpName: rp
+    validityPeriod: 60
+    vcEnabled: true
+    showCancelButton: false
+  certificate:
+    profileName: "T2PSB23Y"
+    signingProfile: "UNLIMITED"
+    sharedMode: "PRIVATE_MODE"
+    authMode: "IMPLICIT/TSE"
+    multisign: 1
+    type: "PERSONAL"
+    scal: 1
+    
+    #
+---
+
+spring:
+  profiles: vgca
+selfcare:
+  url: https://ssa.ca.gov.vn:8443/rssp/v2
+  urlPay: https://ssa.ca.gov.vn:8443/rssp/payment
+  profile: rssp-119.432-v2.0
+  relyingPartyName: SELFCARE_RP
+  relyingPartyUser: SELFCARE_RP
+  relyingPartyPass: 6RmgfZJn
+  relyingPartySignature: nFDmZz/N3+2K8ZtRdx+fOQHVQoYJj0rDSv7bzlCJOZ4bxgAeIawGcQ5UoOFboHasEEuFLtCBk1Rdzv/cPY5lzneu+mm5jkckO3ypfEtLyq/KhPs6WsczwlC6y6sxJsAFFehXJ018votIr3u0Nghzae+YohENH+4C5iqgcLpFO0R1LibGKa7uAsRT5zCPtDDBk03gMzvhVYYrXOPPzh1355yK3h+2HpjOesTERGcfhrhkqZTkHfHxrBsnxsWX6EtKCMuUDNkYVoQvEt8YmuRuiSIYRh5/nd7ikyucitUvBFIj25MhUqwt3JY+2Ob6GgduDnb7R8nO3RmJ/uZbFwhbNg==
+  p12Path: classpath:/home/vgca/p12_selfcare/SELFCARE_RP.p12
+  p12Password: UCceMyAH
+  p12Alias: selfcare
+  notification:
+    scalIdentity: SELFCARE
+    hashAlgorithmOID: 2.16.840.1.101.3.4.2.1
+    notificationMessage: LOGIN SELFCARE
+    messageCaption: LOGIN SELFCARE
+    message: AUTHENTICATION USER
+    rpName: rp
+    validityPeriod: 60
+    vcEnabled: true
+    showCancelButton: false
+  certificate:
+    profileName: "T2PSB23Y"
+    signingProfile: "UNLIMITED"
+    sharedMode: "PRIVATE_MODE"
+    authMode: "IMPLICIT/TSE"
+    multisign: 1
+    type: "PERSONAL"
+    scal: 1

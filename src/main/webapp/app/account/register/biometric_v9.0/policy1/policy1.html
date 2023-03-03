@@ -1,0 +1,119 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="">
+        <div class="login-right-column-content-wrapper" style="align-items:flex-start;">
+            <div style="max-width: 400px; width: 100%;padding-bottom: 30px;  margin-top: 50px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                        <div class="col-xs-12">
+                        <div style="margin: 15px 15px;"  ng-mouse-wheel scroll="vm.isScroll">
+                            <div style="height: 285px;-webkit-overflow-scrolling: touch;overflow: hidden;" class="content-readmore" id="readmore">
+                                <div class="content-readmore" style="margin: 15px 15px;">
+                                    <h4 class="feid-heading heading-indigo heading-center f20"
+                                        data-translate="register.biometricIdentification.policy1.head"></h4>
+
+                                    <div style="text-align: justify; margin-top: 30px;">
+                                        <p>
+                                            AS YOU HAVE CHOSEN AUTOMATED BIOMETRIC IDENTITY
+                                            VERIFICATION FOR AUTHENTICATION METHOD, PLEASE READ THE
+                                            FOLLOWING CONDITIONS VERY CAREFULLY AND PROCEED ONLY IF
+                                            YOU HAVE FULLY UNDERSTOOD AND AGREED WITH THE
+                                            CONDITIONS.
+                                        </p>
+                                        <p>
+                                            IF YOU DO NOT AGREE WITH THE PROCESSING OF YOUR
+                                            BIOMETRIC PERSONAL DATA (YOUR FACIAL IMAGE) AND THE
+                                            MAKING OF AUTOMATED DECISIONS BASED ON THIS DATA FOR
+                                            IDENTIFICATION PURPOSES, PLEASE CHOOSE ANOTHER
+                                            AUTHENTICATION METHOD FOR REGISTRATION
+                                        </p>
+                                        <p>
+                                            PLEASE BE AWARE THAT YOU HAVE THE RIGHT TO WITHDRAW
+                                            YOUR CONSENT AT ANY TIME. NOTE THAT AS TRUST SERVICE
+                                            PROVIDER WE ARE UNDER LEGAL OBLIGATION TO STORE YOUR
+                                            PERSONAL DATA WITHIN THE PERIOD PRESCRIBED IN THE LAW
+                                        </p>
+                                        <ul>
+                                            <li> <strong>I CONFIRM THAT I AM AT LEAST 18 YEARS OLD</strong></li>
+                                            <li>  <strong>I CONFIRM THAT MOBILE-ID MAY PROCESS MY BIOMETRIC
+                                                PERSONAL DATA (FACIAL IMAGE) AND CARRY OUT AUTOMATED
+                                                DECISION-MAKING BASED ON THIS DATA TO IDENTIFY ME FOR
+                                                REMOTE SIGNING ACCOUNT REGISTION PURPOSES</strong>
+                                            </li>
+                                            <li>
+                                                <strong>I CONFIRM THAT MOBILE-ID MAY PERFORM VERIFICATION
+                                                    BASED ON MY BIOMETRIC PERSONAL DATA IN ORDER TO ENSURE
+                                                    THE SECURITY OF MY ELECTRONIC IDENTITY AND TEST THE
+                                                    QUALITY OF THE TECHNICAL SOLUTIONS THAT ARE USED</strong>
+                                            </li>
+
+                                        </ul>
+                                        <p>
+                                            SHOULD YOU HAVE ANY QUESTIONS RELATING TO THE
+                                            PROCESSING OF YOUR PERSONAL DATA, PLEASE DO NOT HESITATE
+                                            TO CONTACT US
+                                        </p>
+                                        <p>
+                                            MOBILE-ID TECHNOLOGIES AND SERVICE JSC (DATA CONTROLLER,
+                                            HEREAFTER "MOBILE-ID")
+                                        </p>
+                                        <p>
+                                            <strong>ADDRESS:</strong> 19 DANG TIEN DONG STREET, AN PHU WARD, DISTRICT
+                                            2, HO CHI MINH CITY, VIETNAM
+                                        </p>
+                                        <p><strong>REGISTRY CODE:</strong> 0313994173</p>
+                                        <p><strong>EMAIL:</strong> INFO@MOBILE-ID.VN</p>
+                                        <p><strong>HOTLINE:</strong> 1900 6884</p>
+                                    </div>
+                                </div>
+
+                            </div>
+<!--                            <a  href=""  class="scroll-down" ng-class="{'scroll-down-disabled': !vm.isScroll}" address="true"  ng-click="vm.readMore()">-->
+<!--                                <div class="scroll-down-bg"></div>-->
+<!--                                <span class="scroll-arrow-first"></span>-->
+<!--                                <span class="scroll-arrow-last"></span>-->
+<!--                            </a>-->
+<!--                            -->
+                            <read-more scroll="vm.isScroll" id-content="abc"></read-more>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="" type="button" ng-click="vm.agree()" ng-disabled="vm.isScroll"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                        aria-label="FeID button"
+                                        data-translate="register.button.i.agree">
+                                </button>
+                            </div>
+                            <div style="text-align: center; margin-top: 20px;">
+                                <button id="" type="button" ui-sref="register"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                        aria-label="FeID button"
+                                        data-translate="register.button.i.not.agree">mobile
+                                </button>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                        ui-sref="biometric"
+                                        class="feid-button button-indigo_text button-small "
+                                        aria-label="FeID button"
+                                        data-translate="register.biometricIdentification.btn.back">Back
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row middle-xs between-xs" ui-view="languageBottom"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

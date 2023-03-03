@@ -1,0 +1,161 @@
+{
+    "global": {
+        "title": "Your RSSP SelfCare Portal",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+        "nav": {
+            "title": "Detail"
+        },
+        "navbar": {
+            "userDetail": "Tài khoản",
+            "actionHistory": "Lịch sử",
+            "credential": "Chứng thư số",
+            "order":"Đặt hàng",
+            "payment":"Thanh toán",
+            "logout": "Đăng xuất"
+        },
+        "leftContent": {
+            "title": "CHÀO MỪNG BẠN ĐÃ ĐẾN VỚI TRANG RSSP SELFCARE!",
+            "service": {
+                "title": "DỊCH VỤ",
+                "desc": "Quản lý quyền truy cập vào tài khoản RSSP của bạn"
+            },
+            "actionHistory": {
+                "title": "LỊCH SỬ HOẠT ĐỘNG",
+                "desc": "Xem chi tiết lịch sử hoạt động điện tử của bạn"
+            },
+            "manage": {
+                "title": "QUẢN LÝ",
+                "desc": "Kiểm soát cách thức sử dụng RSSP"
+            }
+        },
+        "selectLanguage": "Chọn ngôn ngữ",
+        "logoutConfirm": {
+            "title": "Bạn có muốn đăng xuất?"
+        },
+        "button": {
+            "update": "CẬP NHẬT",
+            "cancel": "HỦY",
+            "loadMore": "TẢI THÊM...",
+            "reset": "ĐẶT LẠI",
+            "confirm": "XÁC NHẬN",
+            "register": "ĐĂNG KÝ",
+            "login": "ĐĂNG NHẬP",
+            "change": "ĐỔI",
+            "init": "KHỞI TẠO",
+            "ok": "CHẤP NHẬN",
+            "payment": "THANH TOÁN"
+        },
+        "notification": {
+            "noData": "KHÔNG CÒN DỮ LIỆU",
+            "initRequest": "KHỞI TẠO",
+            "confirmRequest": "KẾT THÚC",
+            "unlimited": "KHÔNG GIỚI HẠN",
+            "timeout": {
+                "1": "Thời gian chờ đăng nhập đã hết hạn.",
+                "2": "Vui lòng đăng nhập lại để tiếp tục."
+            },
+            "regis.stun": "Chức năng này chưa được hỗ trợ"
+        },
+        "popup": {
+            "history": "Lịch sử",
+            "detail": "Chi tiết"
+        },
+        "validate": {
+            "isRequired": "'{{field  | translate }}' không được để trống",
+            "minlength": "'{{field  | translate }}' cần nhập ít nhất {{length}} ký tự.",
+            "maxlength": "'{{field  | translate }}' không được lớn hơn {{length}} ký tự.",
+            "notMatch": "'{{field  | translate }}'  không giống với trường '{{focus  | translate}}' .",
+            "notSame": "'{{field  | translate }}'  không được giống với '{{focus  | translate}}' .",
+            "newpassword": {
+                "required": "Mật khẩu của bạn không được để trống.",
+                "minlength": "Mật khẩu của bạn bắt buộc phải có ít nhất 4 ký tự.",
+                "maxlength": "Mật khẩu của bạn không được dài hơn 50 ký tự.",
+                "strength": "Mật khẩu mạnh:"
+            },
+            "confirmpassword": {
+                "required": "Mật khẩu xác nhận của bạn không được để trống.",
+                "minlength": "Mật khẩu xác nhận của bạn bắt buộc phải có ít nhất 4 ký tự.",
+                "maxlength": "Mật khẩu xác nhận của bạn không được dài hơn 50 ký tự."
+            },
+            "email": {
+                "required": "Email của bạn không được để trống.",
+                "invalid": "Email của bạn không hợp lệ.",
+                "minlength": "Email của bạn bắt buộc phải có ít nhất 5 ký tự.",
+                "maxlength": "Email của bạn không được dài hơn 50 ký tự."
+            },
+            "notMatchFormat": "'{{field  | translate }}' không đúng định dạng 'DD-MM-YYYY'",
+            "passwordStrength": "Độ mạnh mật khẩu:"
+        },
+        "response": {
+            "notifi": {
+                "title": "Thông báo",
+                "info":"Thông tin đặt hàng",
+                "amount":"Giá tiền",
+                "notifia": "Chú ý",
+                "comfirm": "Xác nhận"
+            }
+        },
+        "sendOTP": {
+            "mess": {
+                "success": "Mã OTP đã được gửi",
+                "error": {
+                    "isInvalid": "Mã OTP không đúng"
+                }
+            }
+        }
+    },
+    "company":{
+        "name": "RSSP SELFCARE PORTAL là dịch vụ được cung cấp bởi Remote Signing, thành viên của Mobile-ID™",
+        "address": "19 Đặng Tiến Đông, Phường An Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh",
+        "website": "www.mobile-id.vn",
+        "contact": {
+            "title": "Liên hệ",
+            "email": "info@mobile-id.vn",
+            "phone": "1900 6884"
+        }
+    },
+    "fpt": {
+        "company": {
+            "name": "Trung tâm dịch vụ chứng thực chữ ký số FPT",
+            "address": {
+                "hn": "Tầng 22, Keangnam Landmark Tower, E6, Phạm Hùng, Mễ Trì, Q. Nam Từ Liêm, Hà Nội",
+                "hcm": "Tầng M, Tòa nhà FPT Tân Thuận 3, Lô B3, Đường Sáng Tạo, Khu Chế Xuất Tân Thuận, Phường Tân Thuận Đông, Quận 7, TP.HCM"
+            },
+            "website": "www.dichvudientu.fpt.com.vn",
+            "contact": {
+                "title": "Liên hệ",
+                "email": "hotroca@fpt.com.vn",
+                "hotline": "1900 6625"
+            }
+        }
+    },
+    "cmc.ca" : {
+        "company": {
+            "name": "TỔNG CÔNG TY CÔNG NGHỆ VÀ GIẢI PHÁP CMC - CMC TS",
+            "address": "Tầng 16, Tòa nhà CMC, Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội",
+            "website": "https://ssa.csign.cmc.vn/",
+            "contact": {
+                "title": "Liên hệ",
+                "email": "ca-support@cmc.vn",
+                "hotline": "1900 2323 62"
+            }
+        },
+        "left.content": {
+            "title": "CHÀO MỪNG BẠN ĐÃ ĐẾN VỚI TRANG C.SIGN SELFCARE!",
+            "service": {
+                "title": "DỊCH VỤ",
+                "desc": "Quản lý quyền truy cập vào tài khoản C.SIGN của bạn"
+            },
+            "actionHistory": {
+                "title": "LỊCH SỬ HOẠT ĐỘNG",
+                "desc": "Xem chi tiết lịch sử hoạt động điện tử của bạn"
+            },
+            "manage": {
+                "title": "QUẢN LÝ",
+                "desc": "Kiểm soát cách thức sử dụng C.SIGN"
+            }
+        },
+        "title": "Your CSIGN SelfCare Portal"
+    }
+
+}

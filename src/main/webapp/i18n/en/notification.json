@@ -1,0 +1,11 @@
+{
+    "notification": {
+        "login": {
+            "success": "Logged in successfully",
+            "error": "The user account or password is incorrect. Please re-enter"
+        },
+        "forgot.password": {
+            "suscess": "Change password successfully"
+        }
+    }
+}

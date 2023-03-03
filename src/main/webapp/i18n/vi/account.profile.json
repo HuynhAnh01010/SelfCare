@@ -1,0 +1,74 @@
+{
+    "accountProfile": {
+        "title": "Tài khoản",
+        "description": "Kiểm soát cách bạn sử dụng RSSP. Quản lý các email, số điện thoại hoặc thiết bị bổ sung mà bạn có thể kết nối với tài khoản RSSP của mình. Ngoài ra, có một cái nhìn tổng quan về dữ liệu bạn đã đăng ký trong RSSP.",
+        "nav": {
+            "title": "Hồ sơ"
+        },
+        "profile": {
+            "title": "Hồ sơ",
+            "userName": "Tài khoản",
+            "password": "Mật khẩu",
+            "fullName": "Tên đầy đủ",
+            "email": "Email",
+            "phoneNumber": "Số điện thoại",
+            "identification": "Định danh",
+            "twoFactorAuthentication": "Xác thực 2 lớp",
+            "btnChange": "Thay đổi"
+        },
+        "devices": {
+            "title": "Thiết bị của tôi",
+            "about": "Thông tin thiết bị",
+            "osType": "Hệ điều hành:",
+            "osVersion": "Phiên bản hệ điều hành:",
+            "uafEnabled": "Trạng thái UAF:",
+            "deviceUuid": "Mã UUID thiết bị:"
+        },
+        "changePassword": {
+            "title": "Đổi mật khẩu",
+            "oldPassword": "Mật khẩu cũ",
+            "newPassword": "Mật khẩu mới",
+            "retypeNewPassword": "Nhập lại mật khẩu mới",
+            "error": "Mật khẩu mới không được giống với mật khẩu cũ"
+        },
+        "changeEmail": {
+            "title": "Đổi Email",
+            "newEmail": "Email mới",
+            "currentEmail": "Email hiện tại",
+            "otpCurrentEmail": "Mã OTP của email hiện tại",
+            "otpNewEmail": "Mã OTP của email mới",
+            "emailInvalid": "Email không đúng",
+            "error": {
+                "invalid": "Định dạng email không hợp lệ"
+            }
+        },
+        "changeFullName": {
+            "title": "Đổi tên đầy đủ",
+            "newFullName": "Tên đầy đủ mới"
+        },
+        "changeIdentifi": {
+            "title": "Đổi định danh",
+            "newIdentifi": "Định danh mới",
+            "oldIdentifi": "định danh cũ",
+            "identificationType": "Kiểu định danh",
+            "identificationTypes": {
+                "PERSONAL-ID": "Chứng Minh Thư Nhân Dân",
+                "CITIZEN-IDENTITY-CARD": "Thẻ Căn Cước Công Dân",
+                "PASSPORT-ID": "Số Hộ Chiếu",
+                "BUDGET-CODE": "Mã Ngân Sách",
+                "TAX-CODE": "Mã Số Thuế"
+            }
+        },
+        "changeTwoFactor": {
+            "title": "Thay đổi phương thức nhập 2 lớp xác thực",
+            "option": "Xác thực 2 lớp"
+        },
+        "changePhone": {
+            "title": "Thay đổi số điện thoại",
+            "message": "Chức năng này chưa được hỗ trợ"
+        },
+        "csign": {
+            "description": "Kiểm soát cách bạn sử dụng CSIGN. Quản lý các email, số điện thoại hoặc thiết bị bổ sung mà bạn có thể kết nối với tài khoản CSIGN của mình. Ngoài ra, có một cái nhìn tổng quan về dữ liệu bạn đã đăng ký trong CSIGN."
+        }
+    }
+}

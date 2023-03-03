@@ -1,0 +1,10 @@
+{
+    "history": {
+        "title": "Lịch sử tài khoản",
+        "description": "Với lịch sử tài khoản, bạn có thể coi các thông tin đăng nhập, giao dịch, chấp nhận hoặc từ chối đăng nhập với RSSP, mỗi thông tin sẽ có trạng thái hoạt động và thời gian thực hiện hoạt động.",
+        "lastActions": "Hoạt động gần nhất",
+        "csign": {
+            "description": "Với lịch sử tài khoản, bạn có thể coi các thông tin đăng nhập, giao dịch, chấp nhận hoặc từ chối đăng nhập với CSIGN, mỗi thông tin sẽ có trạng thái hoạt động và thời gian thực hiện hoạt động."
+        }
+    }
+}

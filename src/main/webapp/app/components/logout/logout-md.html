@@ -1,0 +1,27 @@
+<md-dialog aria-label="Language" >
+    <form ng-cloak>
+        <md-toolbar layout="row" layout-align="center center" style="min-width: 300px">
+            <div class="md-toolbar-tools" >
+                <h5 class="feid-heading" style="font-weight: 600;margin-bottom: 0px" data-translate="global.logoutConfirm.title"</h5>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <md-dialog-actions layout="row" align="center" style="justify-content: center; padding: 25px 16px">
+                <!--                <span flex></span>-->
+                <button  ng-click="vm.abort()" style="margin: 0 10px"
+                         class="feid-button button-indigo_inverse button-medium btn-sx"
+                         aria-label="FeID email submit button">
+                    {{'global.button.cancel'| translate}}
+                </button>
+                <button  ng-click="vm.confirm()" style="margin: 0 10px"
+                         class="feid-button button-green button-medium btn-sx"
+                         aria-label="FeID email submit button">
+                    {{'global.button.ok'| translate}}
+                </button>
+                
+            </md-dialog-actions>
+        </md-dialog-content>
+
+    </form>
+</md-dialog>

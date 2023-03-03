@@ -1,0 +1,114 @@
+<md-dialog aria-label="Change Auth Mode" >
+
+    <md-toolbar layout="row" layout-align="center center" style="min-width: 300px">
+        <div class="md-toolbar-tools">
+            <h5 class="feid-heading" style="font-weight: 600;" translate="accountProfile.changeIdentifi.title"></h5>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <form class="" id="frm" name="frm">
+            <div class="col-sm-12 container-720">
+                <div class="col">
+
+                    <div style="margin-top: 15px;">
+                        <md-radio-group ng-model="ctrl.request.identificationType">
+                            <table>
+                                <tbody ng-if=" ctrl.data.identificationType == 'PERSONAL-ID' || ctrl.data.identificationType == 'PASSPORT-ID' || ctrl.data.identificationType == 'CITIZEN-IDENTITY-CARD'">
+                                    <tr>
+                                        <td>
+                                <md-radio-button class="md-primary" ng-value="ctrl.identificationTypes[0].value">{{'accountProfile.changeIdentifi.identificationTypes.PERSONAL-ID'| translate}}</md-radio-button>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                <md-radio-button class="md-primary" ng-value="ctrl.identificationTypes[1].value">{{'accountProfile.changeIdentifi.identificationTypes.PASSPORT-ID'| translate}}</md-radio-button>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                <md-radio-button class="md-primary" ng-value="ctrl.identificationTypes[2].value">{{'accountProfile.changeIdentifi.identificationTypes.CITIZEN-IDENTITY-CARD'| translate}}</md-radio-button>
+                                </td>
+                                </tr>
+                                </tbody>
+                                <tbody ng-if=" ctrl.data.identificationType == 'BUDGET-CODE' || ctrl.data.identificationType == 'TAX-CODE'">
+                                    <tr>
+                                        <td>
+                                <md-radio-button class="md-primary" ng-value="ctrl.identificationTypes[3].value">{{'accountProfile.changeIdentifi.identificationTypes.BUDGET-CODE'| translate}}</md-radio-button>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                <md-radio-button class="md-primary" ng-value="ctrl.identificationTypes[4].value">{{'accountProfile.changeIdentifi.identificationTypes.TAX-CODE'| translate}}</md-radio-button>
+                                </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </md-radio-group>
+
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label class="required" translate="accountProfile.changeIdentifi.newIdentifi"></label>
+                            <input name="newIdentifi" id="newIdentifi" type="text" required="true"
+                                   class="feid-input input-medium input-default feid-input-center "
+                                   placeholder="" ng-model="ctrl.request.identification" minlength="1" maxlength="50"
+                                   value=""
+                                   aria-invalid="false" style="">
+                            <label class="feid-label feid-label-default feid-label-warning"
+                                   ng-class="{'feid-label-show' : !(frm.newIdentifi.$dirty && frm.newIdentifi.$invalid)}">
+                                <span class="help-block"
+                                      ng-show="frm.newIdentifi.$invalid"
+                                      translate="global.validate.isRequired"
+                                      translate-values='{ field: "accountProfile.changeIdentifi.newIdentifi" }'>
+                                    Invalid
+                                </span>
+                            </label>
+                            <label class="feid-label feid-label-default feid-label-warning"
+                                   ng-class="{'feid-label-show' : !(ctrl.request.identification == ctrl.identifi)}">
+                                <span class="help-block"
+                                      translate="global.validate.notSame"
+                                      translate-values='{ field: "accountProfile.changeIdentifi.newIdentifi" , focus: "accountProfile.changeIdentifi.oldIdentifi"}'
+                                      >
+                                    Invalid
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center dis-flex-center">
+                        <div ng-if="ctrl.timeoutMsg" style="text-transform: uppercase;" class="dis-flex-center">
+                            <div class="alert alert-danger width-max-content margin-left-right" ng-show="ctrl.msgType == 1"
+                                 style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                {{ctrl.msg}}
+                            </div>
+                            <div class="alert alert-success width-max-content margin-left-right" ng-show="ctrl.msgType == 0"
+                                 style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                {{ctrl.msg}}
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="form-group dis-flex-center" style="margin: 24px 0; ">
+                        <div style="text-align: center;margin: 0 1rem;">
+                            <button id="feid-modal-confirm-cancel-button" type="button" ng-click="ctrl.hide()"
+                                    class="feid-button button-indigo_inverse button-medium" aria-label="FeID button"
+                                    translate="global.button.cancel">CANCEL
+                            </button>
+                        </div>
+                        <div style="text-align: center;margin: 0 1rem;">
+                            <button id="feid-modal-confirm-confirm-button" type="button" ng-disabled="frm.$invalid || ctrl.step == 2 || ctrl.request.identification == ctrl.identifi"
+                                    ng-click="ctrl.confirmChangeIdentifi()"
+                                    class="feid-button button-green button-medium" translate="global.button.confirm">
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </md-dialog-content>
+
+
+</md-dialog>

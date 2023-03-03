@@ -1,0 +1,138 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="overflow-y: scroll;">
+        <div class="login-right-column-content-wrapper" style="align-items:flex-start;">
+            <div style="max-width: 400px; width: 100%;padding-bottom: 30px; margin-top: 50px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                    <div class="col-xs-12">
+                        <div style="margin: 15px 15px">
+                            <h4 class="feid-heading heading-indigo heading-center f20"
+                            >CONFIRM YOUR INFORMATION</h4>
+
+                            <!--                            <div style="text-align: center; margin-top: 30px;margin-bottom: 30px">-->
+                            <!--                                <p>-->
+                            <!--                                    PLEASE CHECK YOUR INFORMATION CORRECT-->
+                            <!--                                </p>-->
+
+                            <!--                            </div>-->
+                            <div style="margin-top: 30px;">
+                                <form id="confirmForm" name="confirmForm">
+                                    <table class="table table-confirm">
+                                        <tr ng-if="!vm.editUsername">
+                                            <td>Username</td>
+                                            <th><i class="fa fa-edit" ng-click="vm.editUsername = true"></i>
+                                                {{vm.registerCertificateObject.username}}
+                                            </th>
+                                        </tr>
+                                        <tr ng-if="vm.editUsername">
+                                            <td colspan="2" style="padding: 0px">
+                                                <label class="feid-label feid-label-default feid-label-warning"
+                                                       ng-class="{'feid-label-hidden' : !(confirmForm.username.$dirty && confirmForm.username.$invalid)}">
+
+                                         <span class="help-block "
+                                               ng-show="confirmForm.username.$error.required"
+                                               translate="global.validate.isRequired"
+                                               translate-values='{ field: "register.confirm.username" }'>
+                                      Invalid
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.username.$error.minlength"
+                                                          translate="global.validate.minlength"
+                                                          translate-values='{ field: "register.confirm.username" , length: 4}'>
+                                        at least 4 characters
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.username.$error.maxlength"
+                                                          translate="global.validate.maxlength"
+                                                          translate-values='{ field: "register.confirm.username" , length: 20}'>
+                                        cannot be longer than 50 characters
+                                        </span>
+                                                </label>
+                                                <input type="text" name="username" id="username" minlength="4" input-letter-number
+                                                       maxlength="20" auto-focus="{{vm.editUsername}}"
+                                                       required="required"
+                                                       ng-blur=" !(confirmForm.username.$dirty && confirmForm.username.$invalid) ? vm.editUsername = false : ''"
+                                                       class="form-control"
+                                                       ng-model="vm.registerCertificateObject.username">
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Phone Number</td>
+                                            <th>
+                                                {{vm.registerCertificateObject.phone}}
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>Email</td>
+                                            <th>{{vm.registerCertificateObject.email}}</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Identity</td>
+                                            <th>{{vm.registerCertificateObject.identification}}</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Full Name</td>
+                                            <th>{{vm.registerCertificateObject.fullname}}</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Sex</td>
+                                            <th>{{vm.registerCertificateObject.gender}}</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Date of birth</td>
+                                            <th>{{vm.registerCertificateObject.dob}}</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Address</td>
+                                            <th>{{vm.registerCertificateObject.location}}</th>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                            <div class="alert alert-danger" ng-show="vm.error"
+                                 style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                {{vm.errorMsg}}
+                            </div>
+                            <div class="alert alert-success" ng-show="vm.success"
+                                 style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                {{vm.errorMsg}}
+                            </div>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <!--                                ng-disabled="contactForm.$invalid || (!vm.contactEmail && !vm.contactTel)"-->
+                                <button id="id-scan-button" type="button" ng-disabled="confirmForm.$invalid || vm.editUsername" ng-click="vm.tryIt()"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                        aria-label="FeID button"
+                                >TRY IT FOR FREE
+                                </button>
+                            </div>
+
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                        ui-sref="policy2"
+                                        class="feid-button button-indigo_text button-small "
+                                        aria-label="FeID button"
+                                        data-translate="register.biometricIdentification.btn.back">Back
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row middle-xs between-xs" ui-view="languageBottom"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

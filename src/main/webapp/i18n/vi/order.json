@@ -1,0 +1,41 @@
+{
+    "order": {
+        "title": "Lịch sử đặt hàng",
+        "description": "Trong đặt hàng, bạn có thể xem thông tin đặt hàng tương ứng.",
+        "lastActions": "Hoạt động gần nhất",
+        "list": "Danh sách",
+        "detail": {
+            "title": "Chi tiết",
+            "item": "Mục",
+            "description": "Mô tả",
+            "info": "Thông tin",
+            "serialNumber": "Số Serial",
+            "paymentDate": "Ngày thanh toán",
+            "certiProfile": "Gói chứng thư số",
+            "certiProfileDes": "Tên gói chứng thư số",
+            "signingCounter": "Số lần ký còn lại",
+            "amount": "Số tiền",
+            "status": "Trạng thái",
+            "requestIP": "Địa chỉ IP",
+            "operatingSystem": "Hệ điều hành",
+            "browser": "Trình duyệt",
+            "rpName": "Kênh tạo đơn hàng",
+            "orderUUID": "Mã đặt hàng",
+            "sidebar": {
+                "title":"Thông tin đặt hàng",
+                "description":"Tại đây, bạn có thể xem thông tin đơn hàng đã đặt và thanh toán đơn hàng chưa được thanh toán"
+            }
+        },
+        "cancel": "Huỷ",
+        "back":"Trở về",
+        "device": "Thiết bị",
+        "about": "Thông tin thiết bị",
+        "credentialDetail": "Thông tin chứng thư số",
+        "payment": "Thanh toán",
+        "getPayment": {
+            "name": "Ví điện tử",
+            "pmPro2": "Thẻ ATM/Internet Banking",
+            "pmPro3": "Thẻ tín dụng(Credit Card)/Thẻ ghi nợ(Debit Card)"
+        }
+    }
+}

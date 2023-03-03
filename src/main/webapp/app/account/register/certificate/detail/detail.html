@@ -1,0 +1,183 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="overflow: scroll;overflow-x: hidden">
+        <div class="login-right-column-content-wrapper" style="align-items:flex-start;">
+            <div style="max-width: 400px; width: 100%;padding-top: 30px;padding-bottom: 30px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                    <div class="col-xs-12">
+                        <div style="margin: 15px 15px">
+                            <h4 class="feid-heading heading-indigo heading-center f20"
+                            >Certificate Profile Info</h4>
+                            <form id="form" name="form">
+                                <div style="text-align: left; margin-top: 30px;">
+
+                                    <div ng-repeat="item in vm.registerCertificateObject.certificateProfile.attributes track by $index">
+                                        <div ng-switch="item.name">
+                                            <div class="form-group" ng-switch-when="CMND"
+                                                 ng-switch-when-separator="|">
+                                                <error-messages field="form.cmnd" minlength="4"
+                                                                maxlength="50"></error-messages>
+                                                <div class="input-group mb-3">
+                                                    <select class="form-control form-control-lg"
+                                                            ng-model="vm.registerCertificateObject.certDetails.identifications[0].type">
+                                                        <option ng-repeat="child in item.attributes"
+                                                                value="{{child.prefix}}">{{child.description}}
+                                                        </option>
+                                                    </select>
+                                                    <input type="text" name="cmnd" id="cmnd" ng-required="item.require"
+                                                           ng-model="vm.registerCertificateObject.certDetails.identifications[0].value"
+                                                           minlength="4" maxlength="50"
+                                                           class="form-control form-control-lg">
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-switch-when="MST"
+                                                 ng-switch-when-separator="|">
+                                                <error-messages field="form.mst"  minlength="4" maxlength="50"></error-messages>
+                                                <div class="input-group mb-3">
+                                                    <select class="form-control form-control-lg" id="inputGroupSelect01"
+                                                            ng-model="vm.registerCertificateObject.certDetails.identifications[1].type">
+                                                        <option ng-repeat="child in item.attributes"
+                                                                value="{{child.prefix}}">{{child.description}}
+                                                        </option>
+
+                                                    </select>
+                                                    <input type="text" name="mst" ng-required="item.require"
+                                                           ng-model="vm.registerCertificateObject.certDetails.identifications[1].value"
+                                                           minlength="4" maxlength="50"
+                                                           class="form-control form-control-lg">
+                                                </div>
+                                            </div>
+                                            <div ng-switch-when="CN" class="form-group">
+                                                <error-messages field="form.commonName"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="text" name="commonName"
+                                                       ng-model="vm.registerCertificateObject.certDetails.commonName"
+                                                       ng-required="item.require"
+                                                       minlength="4" maxlength="50"
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}">
+                                            </div>
+                                            <div ng-switch-when="E" class="form-group">
+                                                <error-messages field="form.email"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="email" name="email"
+                                                       ng-model="vm.registerCertificateObject.certDetails.email"
+                                                       ng-required="item.require"
+                                                       minlength="4" maxlength="50"
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}">
+                                            </div>
+                                            <div ng-switch-when="T" class="form-group">
+                                                <error-messages field="form.title"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="text" name="title"
+                                                       ng-model="vm.registerCertificateObject.certDetails.title"
+                                                       ng-required="item.require"
+                                                       minlength="4" maxlength="50"
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}">
+                                            </div>
+                                            <div ng-switch-when="L" class="form-group">
+                                                <error-messages field="form.location"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="text" name="location"
+                                                       ng-model="vm.registerCertificateObject.certDetails.location"
+                                                       minlength="4" maxlength="50"
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}">
+                                            </div>
+                                            <div ng-switch-when="C" class="form-group">
+                                                <error-messages field="form.country"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="text" name="country" readonly
+                                                       ng-model="vm.registerCertificateObject.certDetails.country"
+                                                       ng-required="item.require"
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}">
+                                            </div>
+                                            <div ng-switch-when="O" class="form-group">
+                                                <error-messages field="form.organization"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="text" name="organization"
+                                                       ng-model="vm.registerCertificateObject.certDetails.organization"
+                                                       ng-required="item.require"
+                                                       minlength="4" maxlength="50"
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}">
+                                            </div>
+                                            <div ng-switch-when="OU" class="form-group">
+                                                <error-messages field="form.organizationUnit"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="text" name="organizationUnit"
+                                                       ng-model="vm.registerCertificateObject.certDetails.organizationUnit"
+                                                       ng-required="item.require"
+                                                       ng-required="item.require"
+                                                       minlength="4" maxlength="50"
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}">
+                                            </div>
+                                            <div ng-switch-when="telephoneNumber" class="form-group">
+                                                <error-messages field="form.telephoneNumber"  minlength="4" maxlength="50"></error-messages>
+                                                <input type="text" name="telephoneNumber" id="phone"
+                                                       ng-required="item.require" tooltip-input
+                                                       class="form-control form-control-lg"
+                                                       placeholder="{{item.description}}"
+                                                       ng-model="vm.registerCertificateObject.certDetails.telephoneNumber"
+                                                       ng-intl-tel-input>
+                                            </div>
+                                            <div ng-switch-when="ST" class="form-group">
+                                                <error-messages field="form.certificateProfiles" ></error-messages>
+                                                <ui-select name="certificateProfiles" id="certificateProfiles"
+                                                           ng-model="vm.registerCertificateObject.certDetails.stateOrProvince"
+                                                           ng-required="item.require" tooltip-input
+                                                           placeholder="Select State or Province in the list..."
+                                                           theme="selectize">
+                                                    <ui-select-match
+                                                            placeholder="Select  State or Province in the list...">
+                                                        {{$select.selected.name}}
+                                                    </ui-select-match>
+                                                    <ui-select-choices
+                                                            repeat="item in vm.provinces | filter: $select.search track by $index">
+                                                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="alert alert-danger" ng-show="vm.error" style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                    {{vm.errorMsg}}
+                                </div>
+
+                                <div style="text-align: center; margin-top: 20px;">
+                                    <button id="" type="button" ng-disabled="form.$invalid"
+                                            class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                            aria-label="SelfCare button" ng-click="vm.createCertificate()"
+                                            data-translate="register.biometricIdentification.btn.continue">
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                        ui-sref="registerCertificate"
+                                        class="feid-button button-indigo_text button-small "
+                                        aria-label="FeID button"
+                                        data-translate="register.biometricIdentification.btn.back">Back
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row middle-xs between-xs" ui-view="languageBottom"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

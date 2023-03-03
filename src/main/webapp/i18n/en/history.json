@@ -1,0 +1,10 @@
+{
+    "history": {
+        "title": "Action History",
+        "description": "In Action History, you can view all your logins, transactions and other actions you have approved or declined with your RSSP. You can also see the time and date of each action.",
+        "lastActions": "Last actions",
+        "csign": {
+            "description": "In Action History, you can view all your logins, transactions and other actions you have approved or declined with your CSIGN. You can also see the time and date of each action."
+        }
+    }
+}

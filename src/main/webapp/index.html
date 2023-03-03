@@ -1,0 +1,387 @@
+<!doctype html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+    <head>
+        <meta charset="utf-8"/>
+        <!--    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />-->
+        <title data-translate="global.title"></title>
+        <meta name="description" content=""/>
+        <meta name="google" value="notranslate"/>
+        <!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0'/>
+        <!--    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />-->
+        <!--    <base href="/" >-->
+        <!--<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ajax.googleapis.com https://momentjs.com " />-->
+
+        <meta name="_csrf" th:content="${_csrf.token}"/>
+        <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+        <!--<meta th:value="@{ssoEnabled}" />-->
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css content/css/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css"/>
+        <!--    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />-->
+        <link rel="stylesheet" href="content/css/fontawesome.all.css"/>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.min.css"/>
+        <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css"/>
+        <!--  <link rel="stylesheet" href="bower_components/intl-tel-input/build/css/intlTelInput.css">-->
+        <!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="content/js/plugins/jquery-g-scrolling-carousel/css/jquery.gScrollingCarousel.css"/>
+        <link rel="stylesheet" href="content/js/plugins/select2/selectize.css"/>
+        <!--    <link rel="stylesheet" href="content/js/plugins/select2/select2.v3.4.5.css">-->
+        <link rel="stylesheet" href="content/js/plugins/ui-select/dist/select.css"/>
+        <!--  <link href="https://pay.vnpay.vn/lib/vnpay/vnpay.css" rel="stylesheet" />-->
+        <link rel="stylesheet" href="content/css/login.css"/>
+        <!--    <link rel="stylesheet" href="content/js/plugins/sweetalert2/dist/sweetalert2.min.css">-->
+        <!--     <link rel="shortcut icon" href="images/Gfavicon.png"> -->
+        <link href="content/css/animate.css" rel="stylesheet"/>
+        <!--    <link href="content/css/style.css" rel="stylesheet">-->
+        <!--        <link href="content/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet">-->
+        <!--<link rel="stylesheet" href="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/css/style.css">-->
+        <link href="content/css/fre.css" rel="stylesheet"/>
+        <link href="content/css/style-custom.css" rel="stylesheet"/>
+        <link href="content/css/loading.css" rel="stylesheet"/>
+
+        <!--<link href='https://unpkg.com/@popperjs/core@2' />-->
+
+        <!--logo mobile id-->
+        <link rel="shortcut icon" href="content/images/iconsim.png"/>
+        <!--/logo mobile id-->
+
+        <!--logo lca-->
+        <!--<link rel="shortcut icon" href="content/images/logo-lca/logo.png"/>-->
+        <!--/logo lca-->
+
+        <!-- endinject -->
+        <!-- endbuild -->
+        <!-- build:css content/css/main.css -->
+        <link rel="stylesheet" href="content/css/main.css"/>
+        <style>
+            [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                display: none !important;
+            }
+
+            /*            #loading, #loading-bar, .ng-animate, .ng-enter, .ng-enter-active, .overlay {
+                            display: none !important;
+                        }*/
+        </style>
+    </head>
+    <body ng-app="loginappApp" ng-strict-di class="backImage" ng-class="useLanguage" >
+        <div class="wrapper ng-cloak" ng-cloak>
+            <div ui-view="navbar"></div>
+            <div ui-view="content"></div>
+            <div ui-view="footer"></div>
+        </div>
+
+        <!-- build:js app/vendor.js -->
+        <!-- bower:js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="bower_components/jquery/dist/jquery.js?t=210503"></script>
+        <script src="content/js/core/bootstrap.min.js?t=210503"></script>
+        <script src="bower_components/messageformat/messageformat.js?t=210503"></script>
+        <script src="bower_components/json3/lib/json3.js?t=210503"></script>
+
+        <!--<script src="bower_components/angular/angular.js?t=210503"></script>-->
+
+
+        <!--        <script src="content/js/core/bootstrap.bundle.js?t=210503"></script>
+                <script src="content/js/core/bootstrap.bundle.js.map?t=210503"></script>
+                <script src="content/js/core/bootstrap.bundle.min.js?t=210503"></script>
+                <script src="content/js/core/bootstrap.bundle.min.js.map?t=210503"></script>-->
+        <script src="content/js/core/bootstrap.js?t=210503"></script>
+        <!--<script src="content/js/core/bootstrap.js.map?t=210503"></script>-->
+        <script src="content/js/core/bootstrap.min.js?t=210503"></script>
+        <!--<script src="content/js/core/bootstrap.min.js.map?t=210503"></script>-->
+        <!--        <script src="content/js/core/Popper.js?t=210503"></script>
+                <script src="content/js/core/popper.min.js?t=210503"></script>-->
+
+        <!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>-->
+
+        <script src="content/js/plugins/perfect-scrollbar.jquery.min.js?t=210503"></script>
+        <script src="content/js/plugins/bootstrap-notify.js?t=210503"></script>
+
+        <!--<link rel="stylesheet" href="content/js/plugins/sweetalert2/dist/sweetalert2.all.min.js">-->
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js?t=210503"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js?t=210503"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js?t=210503"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js?t=210503"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js?t=210503"></script>
+        <script src="content/js/plugins/ui-select/dist/select.min.js?t=210503"></script>
+        <script src="bower_components/angular-aria/angular-aria.js?t=210503"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js?t=210503"></script>
+        <script src="bower_components/angular-cache-buster/angular-cache-buster.js?t=210503"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js?t=210503"></script>
+        <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js?t=210503"></script>
+        <script src="bower_components/ngstorage/ngStorage.js?t=210503"></script>
+        <script src="bower_components/angular-loading-bar/build/loading-bar.js?t=210503"></script>
+        <script src="bower_components/angular-resource/angular-resource.js?t=210503"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js?t=210503"></script>
+        <script src="bower_components/angular-translate/angular-translate.js?t=210503"></script>
+        <script src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js?t=210503"></script>
+        <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js?t=210503"></script>
+        <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js?t=210503"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js?t=210503"></script>
+        <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js?t=210503"></script>
+        <script src="content/js/plugins/jquery-g-scrolling-carousel/js/jquery.gScrollingCarousel.js?t=210503"></script>
+        <script src="content/js/core/moment.min.js?t=210503"></script>
+        <!--<script src="bower_components/intl-tel-input/build/js/intlTelInput.js?t=210503"></script>-->
+        <!--<script src="bower_components/intl-tel-input/build/js/utils.js?t=210503"></script>-->
+        <!--<script src="bower_components/ng-intl-tel-input/dist/ng-intl-tel-input.min.js?t=210503"></script>-->
+
+        <script src="node_modules/intl-tel-input/build/js/intlTelInput.js?t=210503"></script>
+        <!--<script src="node_modules/intl-tel-input/build/js/utils.js?t=210503"></script>-->
+        <script src="bower_components/ng-intl-tel-input/dist/ng-intl-tel-input.js?t=210503"></script>
+
+        <script src="bower_components/re-tree/re-tree.min.js?t=210503"></script>
+        <script src="bower_components/ng-device-detector/ng-device-detector.min.js?t=210503"></script>
+        <script src="bower_components/ua-device-detector/ua-device-detector.min.js?t=210503"></script>
+
+        <script src="node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
+
+        <!--<script src="https://pay.vnpay.vn/lib/vnpay/vnpay.min.js?t=210503"></script>-->
+        <!-- endinject -->
+        <!-- endbuild -->
+
+        <!-- build:js app/app.js  -->
+        <!-- inject:js -->
+        <script src="app/app.module.js?t=210503"></script>
+
+        <!--//directive-->
+        <script src="app/components/util/directive.util.js?t=210503"></script>
+        <script src="app/components/util/component.util.js?t=210503"></script>        
+        <!--<script src="app/components/util/loading/loading.factory.js?t=210503"></script>-->
+        <!--<script src="app/components/util/loading/loading.js?t=210503"></script>-->
+
+
+        <script src="app/services/auth/two-factor.service.js?t=210503"></script>
+        <script src="app/services/user/user.service.js?t=210503"></script>
+        <script src="app/services/auth/register.service.js?t=210503"></script>
+        <script src="app/services/auth/principal.service.js?t=210503"></script>
+        <script src="app/services/auth/password-reset-init.service.js?t=210503"></script>
+        <script src="app/services/auth/password-reset-finish.service.js?t=210503"></script>
+        <!--<script src="app/services/auth/password.service.js?t=210503"></script>-->
+        <script src="app/services/auth/auth.service.js?t=210503"></script>
+        <script src="app/services/auth/auth.jwt.service.js?t=210503"></script>
+        <!--<script src="app/services/auth/activate.service.js?t=210503"></script>-->
+        <script src="app/services/auth/account.service.js?t=210503"></script>
+        <script src="app/services/auth/refresh.service.js?t=210503"></script>
+        <script src="app/services/auth/certificate.service.js?t=210503"></script>
+
+        <!--//// VN PAY-->
+        <!--<script src="app/services/vnpay/vnpay.factory.js?t=210503"></script>-->
+        <!--<script src="app/services/vnpay/vnpay.service.js?t=210503"></script>-->
+
+        <!--<script src="app/vnpay/vnpay.state.js?t=210503"></script>-->
+        <!--<script src="app/vnpay/vnpay.controller.js?t=210503"></script>-->
+
+        <!--<script src="app/vnpay/return/vnpay.return.state.js?t=210503"></script>-->
+        <!--<script src="app/vnpay/return/vnpay.return.controller.js?t=210503"></script>-->
+
+        <script src="app/services/tse-data/tse.data.factory.js?t=210503"></script>
+        <script src="app/services/tse-data/tse.service.js?t=210503"></script>
+        <script src="app/services/eidentity/eidentity.factory.js?t=210503"></script>
+        <script src="app/services/eidentity/eidentity.service.js?t=210503"></script>
+
+        <script src="app/services/history/owner.logging.service.js?t=210503"></script>
+        <script src="app/services/history/history.service.js?t=210503"></script>
+
+        <script src="app/services/credential/credential.factory.js?t=210503"></script>
+        <script src="app/services/credential/credential.service.js?t=210503"></script>
+        <script src="app/services/login-sso/login.sso.factory.js?t=210503"></script>
+        <script src="app/services/login-sso/login.sso.service.js?t=210503"></script>
+
+
+
+        <script src="app/layouts/navbar-top/navbar.top.controller.js?t=210503"></script>
+        <script src="app/layouts/navbar/navbar.controller.js?t=210503"></script>
+        <script src="app/layouts/navbar/active-menu.directive.js?t=210503"></script>
+        <script src="app/layouts/footer/footer.controller.js?t=210503"></script>
+
+        <script src="app/layouts/error/error.state.js?t=210503"></script>
+        <script src="app/account/profile/profile.state.js?t=210503"></script>
+        <script src="app/account/profile/profile.controller.js?t=210503"></script>
+        <script src="app/components/util/truncate-words.filter.js?t=210503"></script>
+        <script src="app/components/util/truncate-characters.filter.js?t=210503"></script>
+        <script src="app/components/util/parse-links.service.js?t=210503"></script>
+        <script src="app/components/util/date-util.service.js?t=210503"></script>
+        <script src="app/components/util/data-util.service.js?t=210503"></script>
+        <script src="app/components/util/capitalize.filter.js?t=210503"></script>
+        <script src="app/components/util/base64.service.js?t=210503"></script>
+        <script src="app/components/util/filter.config.js?t=210503"></script>
+        <script src="app/components/util/notify.service.js?t=210503"></script>
+        <script src="app/components/util/data-service.config.js?t=210503"></script>
+
+
+        <!-- approved -->
+        <script src="app/components/login/login.state.js?t=210503"></script>
+        <script src="app/components/login/login.controller.js?t=210503"></script>
+
+        <script src="app/components/register/register.state.js?t=210503" ></script>
+        <script src="app/components/register/register.controller.js?t=210503" ></script>
+        <!-- approved ends-->
+
+        <script src="app/components/language/language.service.js?t=210503"></script>
+        <script src="app/components/language/language.filter.js?t=210503"></script>
+        <script src="app/components/language/language.controller.js?t=210503"></script>
+        <script src="app/components/language/language.constants.js?t=210503"></script>
+        <script src="app/components/form/show-validation.directive.js?t=210503"></script>
+        <script src="app/components/form/minbytes.directive.js?t=210503"></script>
+        <script src="app/components/form/maxbytes.directive.js?t=210503"></script>
+        <script src="app/blocks/interceptor/errorhandler.interceptor.js?t=210503"></script>
+        <script src="app/blocks/interceptor/auth-expired.interceptor.js?t=210503"></script>
+        <script src="app/blocks/interceptor/auth.interceptor.js?t=210503"></script>
+        <script src="app/blocks/handlers/translation.handler.js?t=210503"></script>
+        <script src="app/blocks/handlers/state.handler.js?t=210503"></script>
+
+        <script src="app/blocks/config/translation-storage.provider.js?t=210503"></script>
+        <script src="app/blocks/config/translation.config.js?t=210503"></script>
+        <script src="app/blocks/config/localstorage.config.js?t=210503"></script>
+        <script src="app/blocks/config/http.config.js?t=210503"></script>
+        <script src="app/blocks/config/compile.config.js?t=210503"></script>
+        <script src="app/blocks/config/ngIntlTelInput.config.js?t=210503"></script>
+        <script src="app/app.state.js?t=210503"></script>
+        <script src="app/app.constants.js?t=210503"></script>
+
+        <script src="app/history/history.state.js?t=210503"></script>
+        <script src="app/history/history.controller.js?t=210503"></script>
+
+
+        <script src="app/credential/list/list.state.js?t=210503"></script>
+        <script src="app/credential/list/list.controller.js?t=210503"></script>
+
+        <script src="app/credential/detail/detail.state.js?t=210503"></script>
+        <script src="app/credential/detail/detail.controller.js?t=210503"></script>
+
+        <script src="app/credential/history/history.state.js?t=210503"></script>
+        <script src="app/credential/history/history.controller.js?t=210503"></script>
+
+        <script src="app/credential/credential.state.js?t=210503"></script>
+
+
+
+        <!--<script src="app/account/settings/settings.state.js?t=210503"></script>-->
+        <!--<script src="app/account/settings/settings.controller.js?t=210503"></script>-->
+        <script src="app/account/reset/request/reset.request.state.js?t=210503"></script>
+        <script src="app/account/reset/request/reset.request.controller.js?t=210503"></script>
+        <script src="app/account/reset/finish/reset.finish.state.js?t=210503"></script>
+        <script src="app/account/reset/finish/reset.finish.controller.js?t=210503"></script>
+        <script src="app/account/register/register.state.js?t=210503"></script>
+        <script src="app/account/register/register.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/biometric.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/biometric.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy1/policy1.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy1/policy1.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy2/policy2.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/policy2/policy2.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/authenticate/authenticate.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/authenticate/authenticate.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/choose-document.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/choose-document.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/passport/passport.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/passport/passport.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/idCard/idcard.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/choose-document/idCard/idcard.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/reach/reach.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/reach/reach.controller.js?t=210503"></script>
+        <script src="app/account/register/biometric/confirm/confirm.state.js?t=210503"></script>
+        <script src="app/account/register/biometric/confirm/confirm.controller.js?t=210503"></script>
+        <!--<script src="app/account/register/biometric/confirm/confirm.controller.js?t=210503"></script>-->
+        <script src="app/account/mobile/mobile.state.js?t=210503"></script>
+        <script src="app/account/mobile/mobile.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/pkicard.state.js?t=210503"></script>
+        <script src="app/account/register/pkicard/pkicard.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/pkicard.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/policy/policy.state.js?t=210503"></script>
+        <script src="app/account/register/pkicard/policy/policy.controller.js?t=210503"></script>
+
+        <script src="app/account/register/pkicard/choose-pin/choose-pin.state.js?t=210503"></script>
+        <script src="app/account/register/pkicard/choose-pin/choose-pin.controller.js?t=210503"></script>
+
+        <script src="app/account/register/certificate/certificate.state.js?t=210503"></script>
+        <script src="app/account/register/certificate/certificate.service.js?t=210503"></script>
+        <script src="app/account/register/certificate/certificate.controller.js?t=210503"></script>
+
+        <script src="app/account/register/certificate/detail/detail.state.js?t=210503"></script>
+        <script src="app/account/register/certificate/detail/detail.controller.js?t=210503"></script>
+
+        <script src="app/account/password/password-strength-bar.directive.js?t=210503"></script>
+        <!--<script src="app/account/password/password.state.js?t=210503"></script>-->
+        <!--<script src="app/account/password/password.controller.js?t=210503"></script>-->
+        <!--<script src="app/account/activate/activate.state.js?t=210503"></script>-->
+        <!--<script src="app/account/activate/activate.controller.js?t=210503"></script>-->
+        <script src="app/account/account.public.state.js?t=210503"></script>
+        <script src="app/account/account.state.js?t=210503"></script>
+
+        <!--<script type="text/javascript" src="content/factec/js/very-old-browser-check.js?t=210503"></script>-->
+        <!--<script src="app/components/facetec/core-sdk/FaceTecSDK.js/result.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/facetec.utilities.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/facetec.config.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/session.review.screen.config.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/theme.helpers.config.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/process/LivenessCheckProcessor.service.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/process/PhotoIDMatchProcessor.service.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/facetec/process/facetec.main.js?t=210503"></script>-->
+
+
+        <script type="module">
+            import { Config } from "./app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/Config.js"
+            window.Config = Config
+        </script>
+        <script src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/core-sdk/FaceTecSDK.js/FaceTecSDK_result_raw.js?t=210503"></script>
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/AuthenticateProcessor.js?t=210503"></script>-->
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/EnrollmentProcessor.js?t=210503"></script>-->
+        <script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/LivenessCheckProcessor.js?t=210503"></script>
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/PhotoIDMatchProcessor.js?t=210503"></script>-->
+        <script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/processors/PhotoIDMatchProcessor.service.js?t=210503"></script>
+        <script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/utilities/SampleAppUIFunctions.js?t=210503"></script>
+        <script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/utilities/SampleAppUtilities.js?t=210503"></script>
+        <script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/utilities/ThemeHelpers.js?t=210503"></script>
+        <!--<script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/sample-app-js/sampleAppController.js?v1"></script>-->
+        <script type="text/javascript" src="app/components/FaceTecSDK-browser-9.1.3-Mobile-ID-202104152444/facetec.main.js?t=210503"></script>
+        <script src="content/js/now-ui-dashboard.js?v=1.5.0"></script>
+
+        <script src="content/js/js-sub-file.js" ></script>
+
+        <script src="app/credential/detail/upgrade/upgrade.state.js"></script>
+        <script src="app/credential/detail/upgrade/upgrade.controller.js"></script>
+        <script src="app/services/upgrade/upgrade.data.factory.js"></script>
+        <script src="app/services/upgrade/upgrade.service.js"></script>
+
+        <script src="app/credential/detail/upgrade/resTemplate/res.state.js"></script>
+        <!--<script src="app/credential/detail/upgrade/resTemplate/res.controller.js"></script>-->
+
+        <script src="app/credential/detail/renew/renew.state.js"></script>
+        <script src="app/credential/detail/renew/renew.controller.js"></script>
+
+        <script src="app/credential/list/new-certi/new-certi.state.js" ></script>
+        <script src="app/credential/list/new-certi/new-certi.controller.js" ></script>
+
+        <script src="app/order/order.state.js"></script>
+        <script src="app/order/list/list.state.js"></script>
+        <script src="app/services/order/order.factory.js"></script>
+        <script src="app/services/order/order.service.js"></script>
+        <script src="app/order/list/list.controller.js"></script>
+
+        <script src="app/order/detail/detail.state.js"></script>
+        <script src="app/order/detail/detail.controller.js"></script>
+
+        <script src="app/credential/detail/signing-counter/signingCounter.state.js"></script>
+        <script src="app/credential/detail/signing-counter/signingCounter.controller.js"></script>
+
+
+        <script src="app/services/login-sso/login.qr.factory.js" ></script>
+        <script src="app/services/login-sso/login.qr.service.js" ></script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,248 @@
+<div class="login-container-wrapper">
+
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+
+    <div class="login-right-column-wrapper col-lg-6">
+        <div class="login-right-column-content-wrapper">
+            <div style="max-width: 400px; width: 100%; margin-top: 50px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="scrollbar-regis">
+                    <h4 class="feid-heading heading-indigo heading-center f20" style="text-transform: uppercase;"
+                        data-translate="register.create.notification.title"></h4>
+                    <div class="container">
+                        <div class="container-step">
+                            <ul class="progressbar-step register-step">
+                                <li style="width: 25%" ng-class="{
+                                            active : vm.step >= 1
+                                        }"></li>
+                                <li style="width: 25%" ng-class="{
+                                            active : vm.step >= 2
+                                        }"></li>
+                                <li style="width: 25%" ng-class="{
+                                            active : vm.step >= 3
+                                        }"></li>
+                                <li style="width: 25%" ng-class="{
+                                            active : vm.step >= 4
+                                        }"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='container'>
+                        <div class="col-lg-12" style="color: #3e3a94; padding-bottom: 20px; text-align: center;">
+                            <label ng-if="vm.step == 0" class=""  
+                                   translate="register.create.notification.step.1.1.1"></label>
+                        </div>
+                    </div>
+                    <form class="col-lg-12" name="frm" id="frm" style="height: 300px;">
+                        <div ng-if="vm.step == 0">
+                            <div class="container">
+                                <div class="form-group">
+                                    <!--<label class="required" translate="register.create.notification.step.1.mobile"></label>-->
+                                    <input required name="phoneNumber" ng-model="vm.request.phoneNumber"
+                                           placeholder="{{'register.create.step.1.mobile'| translate}}"
+                                           id="phoneNumber" type="text" class="feid-input input-medium input-default feid-input-center "/>
+                                </div>
+                                <div class="form-group">
+                                    <!--<label class="required" translate="register.create.notification.step.1.email"></label>-->
+                                    <input required name="email" ng-model="vm.request.email"
+                                           placeholder="{{'register.create.step.1.email'| translate}}"
+                                           id="email" type="email" class="feid-input input-medium input-default feid-input-center "/>
+                                </div>
+                            </div>
+                            <div class="form-group dis-flex-center" style="margin: 24px 0;">
+                                <div style="text-align: center; margin: 0 .5rem;" >
+                                    <button type="button"
+                                            ng-click="vm.getOTP();"
+                                            ng-disabled="frm.phoneNumber.$invalid || frm.email.$invalid"
+                                            class="feid-button button-green button-medium" translate="global.button.confirm">
+                                        confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if='vm.step == 1'>
+                            <div class="container">
+                                <div class="form-group">
+                                    <input required name="OTPNumber" ng-model="vm.request.OTPNumber"
+                                           placeholder="{{'register.create.OTP'| translate}}"
+                                           id="OTPNumber" type="text" class="feid-input input-medium input-default feid-input-center "/>
+                                </div>
+                            </div>
+                            <div class="form-group dis-flex-center" style="margin: 24px 0;">
+                                <div style="text-align: center; margin: 0 .5rem;" >
+                                    <button type="button"
+                                            ng-click="vm.cancelStep1();"
+                                            class="feid-button button-indigo_inverse button-medium" translate="global.button.cancel">
+                                        cancel
+                                    </button>
+                                </div>
+                                <div style="text-align: center; margin: 0 .5rem;" >
+                                    <button type="button"
+                                            ng-click="vm.confirmOTP();"
+                                            ng-disabled="frm.OTPNumber.$invalid"
+                                            class="feid-button button-green button-medium" translate="global.button.confirm">
+                                        confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if='vm.step == 2'>
+                            <div class='container'>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <div class="dropdown-group">
+
+                                            <select class="form-control" ng-init="vm.request.identity == 0" ng-model="vm.request.identity" 
+                                                    ng-placeholder="{{'register.create.notification.step.2.choose'| translate}}">
+                                                <option ng-if="vm.request.identity == 'undefined'"></option>
+                                                <option ng-value="0">{{'register.create.notification.step.2.choose'| translate}}</option>
+                                                <option ng-value="1">{{'register.create.notification.step.2.1'| translate}}</option>
+                                                <option ng-value="2">{{'register.create.notification.step.2.2'| translate}}</option>
+                                                <option ng-value="3">{{'register.create.notification.step.2.3'| translate}}</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="regis-input-img">
+                                        <label class="regis-label" for="inputFont">
+                                            <div>
+                                                <input style="display: none;" type="file" id="inputFont" name="inputFont" ng-model="vm.inputFont"/>
+                                                <div class="dis-flex-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #0A98E7;" width="160" height="160" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                                                    <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                                                    <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="dis-flex-center">
+                                                    <span class="regis-trans-img" translate="register.create.img.font"></span>
+                                                </div>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                    <div class="regis-input-img">
+                                        <label class="regis-label" for="inputBack">
+                                            <input style="display: none;" type="file" id="inputBack" name="inputBack" ng-model="vm.inputBack"/>
+                                            <div class="dis-flex-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" style="color: #0A98E7;" width="160" height="160" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                                                <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                                                <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="dis-flex-center">
+                                                <span class="regis-trans-img" translate="register.create.img.back"></span>
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group dis-flex-center" style="margin: 24px 0;">
+                                <div style="text-align: center; margin: 0 .5rem;" >
+                                    <button type="button"
+                                            ng-click="vm.cancelStep2();"
+                                            class="feid-button button-indigo_inverse button-medium" translate="global.button.cancel">
+                                        cancel
+                                    </button>
+                                </div>
+                                <div style="text-align: center; margin: 0 .5rem;" >
+                                    <button type="button"
+                                            ng-click="vm.confirmIMG();"
+                                            ng-disabled=""
+                                            class="feid-button button-green button-medium" translate="global.button.confirm">
+                                        confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="vm.step == 3">
+                            <div class="container form-group">
+                                <div class="form-group">
+                                    <label translate=""></label>
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.account"
+                                               placeholder="{{'register.create.notification.step.3.account'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.pass"
+                                               placeholder="{{'register.create.notification.step.3.pass'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.repass"
+                                               placeholder="{{'register.create.notification.step.3.repass'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.cmnd"
+                                               placeholder="{{'register.create.notification.step.3.cmnd'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.name"
+                                               placeholder="{{'register.create.notification.step.3.name'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.birthday"
+                                               placeholder="{{'register.create.notification.step.3.birthday'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.sex"
+                                               placeholder="{{'register.create.notification.step.3.sex'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input required name="" id="" ng-model="vm.request.addess"
+                                               placeholder="{{'register.create.notification.step.3.addess'| translate}}"
+                                               class="feid-input input-medium input-default feid-input-center "/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="dis-flex-center">
+                                    <div class="box">
+                                        <md-checkbox ng-model="vm.request.agree" aria-label="{{'register.create.agree'| translate}}">
+                                            {{ 'register.create.agree'| translate}}
+                                        </md-checkbox>
+                                        <a class="feid-link-external link-color-indigo" ui-sref="register.terms" >
+                                            <span class="text-uppercase feid-text text-indigo text-left" translate="register.create.terms"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group dis-flex-center" style="margin: 24px 0;">
+                                <div style="text-align: center; margin: 0 .5rem;" >
+                                    <button type="button"
+                                            ng-click="vm.cancelStep3();"
+                                            class="feid-button button-indigo_inverse button-medium" translate="global.button.cancel">
+                                        cancel
+                                    </button>
+                                </div>
+                                <div style="text-align: center; margin: 0 .5rem;" >
+                                    <button type="button"
+                                            ng-click="vm.confirmStep4();"
+                                            ng-disabled=""
+                                            class="feid-button button-green button-medium" translate="global.button.confirm">
+                                        confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div ui-view="footerLanguage" class="row middle-xs between-xs"></div>
+            </div>
+        </div>
+    </div>
+</div>

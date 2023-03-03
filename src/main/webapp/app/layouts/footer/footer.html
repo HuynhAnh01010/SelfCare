@@ -1,0 +1,66 @@
+<div class="box-wrapper" ng-if="vm.isAuthenticated()">
+    <div style="padding: 15px 10px 5px; background-color: rgb(62, 58, 148);">
+        <div class="row around-xs">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <div class="box">
+                    <div style="padding-right: 20px; display: flex;">
+                        <div style="margin: 10px 0px 10px;">
+                            <div class="feid-logo-img logo-img-medium">
+                                <img style="margin-left: -13px;width: 200px"
+                                     src="./content/images/logo/remote-signing-white.png"
+                                     alt="RSSP logo">
+                            </div>
+                        </div>
+                        <ul style="list-style-type: none; padding-left: 0px; margin-bottom: 0;">
+                            <li style="">
+                                <p style="margin: .5rem 0;" class="feid-text text-light text-left">
+                                    {{'company.name'| translate}}
+                                </p>
+                            </li>
+                            <li style="">
+                                <p style="margin: .5rem 0;" class="feid-text text-light text-left">
+                                    {{'company.address'| translate}}
+                                </p>
+                            </li>
+                            <li style=""><a
+                                    class="feid-link-external link-color-light" href="https://{{'company.website'| translate}}"
+                                    target="_blank">
+                                    <span class="feid-text text-light text-left">
+                                        {{'company.website'| translate}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="box">
+                    <h4 style="margin: 0" class="feid-heading heading-light heading-left heading-caps">
+                        {{'company.contact.title'| translate}}
+                    </h4>
+                    <ul style="list-style-type: none; padding-left: 0px;">
+                        <li style="">
+                            <a class="feid-link-external link-color-light"
+                               href="mailto:{{'company.contact.email'| translate}}"
+                               target="_blank">
+                                <span
+                                    class="feid-text text-light text-left"> {{'company.contact.email'| translate}}
+                                </span>
+                            </a>
+                        </li>
+                        <li style="max-width: 320px;">
+                            <a class="feid-link-external link-color-light"
+                               href="tel:{{'company.contact.phone'| translate}}"
+                               target="_blank">
+                                <span class="feid-text text-light text-left">
+                                    {{'company.contact.phone'| translate}}
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

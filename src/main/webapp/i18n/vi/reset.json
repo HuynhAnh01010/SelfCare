@@ -1,0 +1,24 @@
+{
+    "reset": {
+        "backToLogin": "Quay lại Đăng nhập",
+        "haveAccount": "Bạn chưa có tài khoản?",
+        "registerNow": "Đăng ký ngay",
+        "request": {
+            "title": "Tạo mới mật khẩu",
+            "name": "Tạo mới mật khẩu với",
+            "button": {
+                "reset": "Gửi yêu cầu tạo mới"
+            }
+        },
+        "finish" : {
+            "title": "Kết thúc tạo mới mật khẩu",
+            "name": "Xác nhận tạo mới mật khẩu",
+            "optCode": "Mã OTP",
+            "newPassword": "Mật khẩu mới",
+            "retypeNewPassword": "Nhập lại mật khẩu mới",
+            "button": {
+                "validate": "Xác nhận"
+            }
+        }
+    }
+}

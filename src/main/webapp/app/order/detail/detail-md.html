@@ -1,0 +1,361 @@
+<div class="box-wrapper">
+    <div>
+        <div ui-view="sideBar"></div>
+
+        <div style="margin-top: 20px; margin-bottom: 20px; padding-left: 10px; padding-right: 10px;">
+            <div class="scroll-order-detail">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="box">
+                            <h4 class="feid-heading heading-indigo heading-left heading-strong" translate="order.detail.title">
+
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div class="box">
+                            <div>
+                                <form name="frm" id="frm">
+                                    <div class="card-body bg-white">
+                                        <ul class="list-unstyled">
+                                            <li class="">
+                                                <div class="row middle-xs action-wrapper text-uppercase" style="font-size: 20px">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box font-weight-bold" translate="order.detail.item">
+                                                            Item
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold" translate="order.detail.description">
+                                                            Description
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box" translate="order.detail.info">
+                                                            Issuer To
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{vm.orderDetail.typeDesc}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box" translate="order.detail.orderUUID">
+                                                            Issuer To
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{vm.orderDetail.orderUUID}}
+                                                        </div>
+                                                        <input style="display: none;" value="{{vm.orderDetail.orderUUID}}" />
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="" ng-show="vm.orderDetail.status == 'PAID'">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box "  translate="order.detail.serialNumber">
+                                                            Serial Number
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{vm.orderDetail.certificate.credentialID}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="" ng-if="vm.orderDetail.status != 'CONFIRMED'">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box "  translate="order.detail.paymentDate">
+                                                            Valid From
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{(vm.orderDetail.paidAt| convertString2DateTime) | date:
+                                                        'dd-MM-yyyy HH:mm:ss'}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+
+                                            <li class="">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box"  translate="order.detail.certiProfile">
+                                                            Valid To
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{vm.orderDetail.certificateProfile.name}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box"  translate="order.detail.certiProfileDes">
+                                                            Valid To
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{vm.orderDetail.certificateProfile.description}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="" ng-if="vm.orderDetail.signingProfile.counter">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box"  translate="order.detail.signingCounter">
+                                                            Remaining Signing Counter
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            <span ng-if="vm.orderDetail.signingProfile.counter == -1">{{'global.notification.unlimited'| translate}}</span>
+                                                            <span ng-if="vm.orderDetail.signingProfile.counter != -1">{{vm.orderDetail.signingProfile.description}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box"  translate="order.detail.amount">
+                                                            Valid To
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{vm.orderDetail.amount| currency: '': 0}} {{vm.orderDetail.currencyCode}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li class="">
+                                                <div class="row middle-xs action-wrapper ">
+                                                    <div class="col-5 col-md-4 col-lg-4">
+                                                        <div class="box"  translate="order.detail.status">
+                                                            Valid To
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-7 col-md-8 col-lg-8">
+                                                        <div class="box font-weight-bold">
+                                                            {{vm.orderDetail.statusDesc}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bd-bottom">&nbsp;</div>
+                                            </li>
+                                            <li ng-if="vm.getPayment1" class="col-12">
+                                            <md-radio-group required name="paymentBtn" id="paymentBtn" ng-model="vm.request.item">
+                                                <table>
+                                                    <tr ng-repeat=" item in vm.getPMProvider.paymentProviders">
+                                                        <td>
+                                                            <div>
+                                                                <label for="{{item.name}}" style="cursor: pointer;">
+                                                                    <div class="payment-group">
+                                                                        <md-radio-button class="md-primary" ng-value="item"  aria-label="{{item.name}}">
+                                                                            <div style="display: flex;">
+                                                                                <div class="payment-img">
+                                                                                    <img ng-src="{{item.image}}" class="" />
+                                                                                </div>
+                                                                                <div class="form-group payment-name">
+                                                                                    <div>
+                                                                                        <span ng-model="vm.request.name">{{"order.getPayment.name"| translate}} {{item.name}}</span>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <span translate="order.getPayment.pmPro2"></span>
+                                                                                    </div>
+                                                                                    <div>
+                                                                                        <span translate="order.getPayment.pmPro3"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </md-radio-button>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </md-radio-group>
+                                            </li>
+                                            <li ng-if="vm.orderDetail.status == 'CONFIRMED'">
+                                                <div class="row middle-xs action-wrapper wrapper-deltail-menus">
+                                                    <div class="wrapper-deltail-menu">
+                                                        <div class="box col-12 col-md-12 col-lg-12" style="padding-left: 0;">
+                                                            <div style="text-align: center; margin-top: 24px;">
+                                                                <button ng-if="vm.getPaymentt" type="button" ng-click="vm.cancel();"
+                                                                        class="feid-button button-indigo_inverse button-medium" aria-label="FeID button" style="margin-right: 1rem;"
+                                                                        translate="global.button.cancel">CANCEL
+                                                                </button>
+                                                                <button ng-if="!vm.getPayment" type="button"
+                                                                        ng-click="vm.getPaymentProvider();"
+                                                                        class="feid-button button-green button-medium" translate="global.button.payment">
+                                                                    CONFIRM
+                                                                </button>
+                                                                <button ng-if="vm.getPaymentt" type="button"
+                                                                        ng-click="vm.orderCheckout()" ng-disabled="frm.paymentBtn.$invalid" style="margin: 0 1rem;"
+                                                                        class="feid-button button-green button-medium" translate="global.button.confirm">
+                                                                    CONFIRM
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ng-scope">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div class="box">
+                            <h4 class="feid-heading heading-indigo heading-left heading-strong ng-binding" translate="order.device"></h4>
+                            </dov>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ng-scope">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div class="box">
+                            <div>
+                                <div class="card-body bg-white">
+                                    <ul class="list-unstyled">
+                                        <li ng-if='vm.orderDetail.createdAt["OPERATING SYSTEM"]'>
+                                            <div class="row middle-xs action-wrapper">
+                                                <div class="col-5 col-md-4 col-lg-4">
+                                                    <div class="box" translate="order.detail.operatingSystem">
+                                                        Item
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8 col-lg-8">
+                                                    <div class="box font-weight-bold">
+                                                        {{vm.orderDetail.createdAt["OPERATING SYSTEM"]}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li ng-if='vm.orderDetail.createdAt.BROWSER'>
+                                            <div class="row middle-xs action-wrapper">
+                                                <div class="col-5 col-md-4 col-lg-4">
+                                                    <div class="box" translate="order.detail.browser">
+                                                        Item
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8 col-lg-8">
+                                                    <div class="box font-weight-bold">
+                                                        {{vm.orderDetail.createdAt.BROWSER}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li>
+                                            <div class="row middle-xs action-wrapper">
+                                                <div class="col-5 col-md-4 col-lg-4">
+                                                    <div class="box" translate="order.detail.rpName">
+                                                        Item
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8 col-lg-8">
+                                                    <div class="box font-weight-bold">
+                                                        {{vm.orderDetail.createdAt["RP NAME"]}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bd-bottom">&nbsp;</div>
+                                        </li>
+                                        <li>
+                                            <div class="row middle-xs action-wrapper">
+                                                <div class="col-5 col-md-4 col-lg-4">
+                                                    <div class="box" translate="order.detail.requestIP">
+                                                        Item
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8 col-lg-8">
+                                                    <div class="box font-weight-bold">
+                                                        {{vm.orderDetail.requestIP}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="row middle-xs action-wrapper wrapper-deltail-menus">
+                                                <div class="wrapper-deltail-menu" style="margin-bottom: 0;">
+                                                    <div class="box">
+
+                                                        <a class="feid-link-external link-color-indigo" ui-sref="order.list">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" style="margin-bottom: 5px;" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+                                                            </svg>
+                                                            {{"order.back"| translate}}
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="wrapper-deltail-menu" style="margin-bottom: 0;">
+                                                    <div class="box">
+
+                                                        <a class="feid-link-external link-color-indigo" ui-sref="credential.list.detail({id: vm.orderDetail.credentialID})">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-right" style="margin-bottom: 5px;" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z"/>
+                                                            </svg>
+                                                            {{"order.credentialDetail"| translate}}
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ng-scope">
+                    <div class="col-xs col-sm col-md col-lg">
+                        <div class="box">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

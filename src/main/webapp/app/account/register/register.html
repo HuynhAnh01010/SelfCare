@@ -1,0 +1,68 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6">
+        <div class="login-right-column-content-wrapper">
+            <div style="max-width: 400px; width: 100%; margin-top: 50px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div>
+                    <div>
+                        <h4 class="feid-heading heading-indigo heading-center f20"
+                            data-translate="register.head"></h4>
+
+                        <div class="row middle-xs between-xs">
+                            <div class="col-xs-12">
+                                <div style="margin: 15px 15px">
+                                    <div style="text-align: center; margin-top: 30px;">
+                                        <div style="text-align: center; margin-top: 30px;">
+                                            <button id="" type="button" disabled
+                                                    class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                                    aria-label="FeID button"
+                                                    data-translate="register.method.branchOffice">branch
+                                            </button>
+                                        </div>
+                                        <div style="text-align: center; margin-top: 20px;">
+                                            <button id="" type="button" disabled
+                                                    class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                                    aria-label="FeID button"
+                                                    data-translate="register.method.mobileId">mobile
+                                            </button>
+                                        </div>
+                                        <div style="text-align: center; margin-top: 20px;">
+                                            <button id="" type="button" disabled
+                                                    class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                                    aria-label="FeID button"
+                                                    data-translate="register.method.idCard">idcard
+                                            </button>
+                                        </div>
+                                        <div style="text-align: center; margin-top: 20px;margin-bottom: 30px">
+                                            <button id="" type="button" ui-sref="biometric"
+                                                    class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                                    aria-label="FeID button"
+                                                    data-translate="register.method.biometricIdentification">
+                                                biometricIdentification
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div ui-view="footerLanguage" class="row middle-xs between-xs"></div>
+
+<!--                    <div class="row middle-xs between-xs" ui-view="languageBottom"></div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+

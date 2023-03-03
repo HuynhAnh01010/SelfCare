@@ -1,0 +1,70 @@
+{
+    "login": {
+        "title": "Đăng nhập",
+        "form": {
+            "title.indentity": "ĐĂNG NHẬP VÀO TRANG RSSP SELFCARE BẰNG",
+            "title.qrcode": "QUÉT MÃ QR TRÊN ỨNG DỤNG TSE MOBILE ID ĐỂ ĐĂNG NHẬP RSSP SELFCARE",
+            "title.sso": "ĐĂNG NHẬP VÀO TRANG RSSP SELFCARE BẰNG TÀI KHOẢN SSO",
+            "password": "Mật khẩu",
+            "password.placeholder": "Mật khẩu",
+            "rememberme": "Ghi nhớ đăng nhập",
+            "button": {
+                "login": "Đăng nhập",
+                "init": "",
+                "next": "Kế tiếp",
+                "cancel": "Trở về",
+                "switch.qrcode": "Đăng nhập với mã QR",
+                "switch.sso": "Đăng nhập với tài khoản SSO",
+                "switch.indentity": "Đăng nhập với tài khoản",
+                "forgot.password": "Bạn quên mật khẩu?"
+            }
+        },
+        "method": {
+            "userName": "Tài khoản",
+            "identityCard": "CMND",
+            "passport": "Hộ Chiếu",
+            "citizenCard": "CCCD",
+            "budgetCode": "Mã Ngân Sách",
+            "taxCode": "Mã Số Thuế"
+        },
+        "vcCode": {
+            "description": "Hãy chắc chắn rằng mã xác thực giống với mã hiển thị trên màn hình điện thoại của bạn.",
+            "timeLeft": "Hết hạn sau <span class=\"timeout\">{{ time }}</span> giây"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Failed to sign in!</strong> Please check your credentials and try again."
+            },
+            "err": "Tài khoản hoặc mật khẩu không chính xác, vui lòng nhập lại."
+        },
+        "password": {
+            "forgot": "Did you forget your password?"
+        },
+        "signinfail": "<strong>Failed to sign in!</strong> Please check your credentials and try again.",
+        "regnow": "Register Now",
+        "noacnt": "You don't have an account yet?",
+        "sso": {
+            "title": "Login SSO"
+        },
+        "cmc.ca": {
+            "form": {
+                "title.indentity": "ĐĂNG NHẬP VÀO TRANG C.SIGN SELFCARE BẰNG",
+                "title.qrcode": "QUÉT MÃ QR TRÊN ỨNG DỤNG TSE MOBILE ID ĐỂ ĐĂNG NHẬP C.SIGN SELFCARE",
+                "title.sso": "ĐĂNG NHẬP VÀO TRANG C.SIGN SELFCARE BẰNG TÀI KHOẢN SSO",
+                "password": "Mật khẩu",
+                "password.placeholder": "Mật khẩu",
+                "rememberme": "Ghi nhớ đăng nhập",
+                "button": {
+                    "login": "Đăng nhập",
+                    "init": "",
+                    "next": "Kế tiếp",
+                    "cancel": "Trở về",
+                    "switch.qrcode": "Đăng nhập với mã QR",
+                    "switch.sso": "Đăng nhập với tài khoản SSO",
+                    "switch.indentity": "Đăng nhập với tài khoản",
+                    "forgot.password": "Bạn quên mật khẩu?"
+                }
+            }
+        }
+    }
+}

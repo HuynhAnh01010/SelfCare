@@ -1,0 +1,70 @@
+{
+    "login": {
+        "title": "Log in",
+        "form": {
+            "title.indentity": "CONTINUE TO YOUR RSSP<br/> SELFCARE PORTAL WITH",
+            "title.qrcode": "TO CONTINUE TO YOUR RSSP<br/> SELFCARE PORTAL SCAN WITH TSE MOBILE ID",
+            "title.sso": "CONTINUE TO YOUR RSSO<br/> SELFCARE PORTTAL SCAN WITH SSO ACCOUNT",
+            "password": "Password",
+            "password.placeholder": "Password",
+            "rememberme": "Stay signed in",
+            "button": {
+                "login": "Log in",
+                "init": "Init",
+                "next": "Next",
+                "cancel": "Cancel",
+                "switch.qrcode": "Log in with QR Code",
+                "switch.sso": "Log in with SSO account",
+                "switch.indentity": "Log in with identity",
+                "forgot.password": "Did you forget your password?"
+            }
+        },
+        "method": {
+            "userName": "Username",
+            "identityCard": "Identity Card",
+            "passport": "Passport",
+            "citizenCard": "Citizen Card",
+            "budgetCode": "Budget Code",
+            "taxCode": "Tax Code"
+        },
+        "vcCode": {
+            "description": "Make sure that the verification code matches the code displayed on your mobile phone screen",
+            "timeLeft": "Time left <span class=\"timeout\">{{ time }}</span> s "
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Failed to sign in!</strong> Please check your credentials and try again."
+            },
+            "err": "Incorrect account or password, please re-enter."
+        },
+        "password": {
+            "forgot": "Did you forget your password?"
+        },
+        "signinfail": "<strong>Failed to sign in!</strong> Please check your credentials and try again.",
+        "regnow": "Register Now",
+        "noacnt": "You don't have an account yet?",
+        "sso": {
+            "title": "Login SSO"
+        },
+        "cmc.ca": {
+            "form": {
+                "title.indentity": "CONTINUE TO YOUR C.SIGN<br/> SELFCARE PORTAL WITH",
+                "title.qrcode": "TO CONTINUE TO YOUR C.SIGN<br/> SELFCARE PORTAL SCAN WITH TSE MOBILE ID",
+                "title.sso": "CONTINUE TO YOUR C.SIGN<br/> SELFCARE PORTTAL SCAN WITH SSO ACCOUNT",
+                "password": "Password",
+                "password.placeholder": "Password",
+                "rememberme": "Stay signed in",
+                "button": {
+                    "login": "Log in",
+                    "init": "Init",
+                    "next": "Next",
+                    "cancel": "Cancel",
+                    "switch.qrcode": "Log in with QR Code",
+                    "switch.sso": "Log in with SSO account",
+                    "switch.indentity": "Log in with identity",
+                    "forgot.password": "Did you forget your password?"
+                }
+            }
+        }
+    }
+}

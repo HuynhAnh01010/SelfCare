@@ -1,0 +1,29 @@
+<md-dialog aria-label="Change Auth Mode">
+    <md-toolbar layout="row" layout-align="center center" style="min-width: 600px">
+        <div class="md-toolbar-tools">
+            <h5 class="feid-heading" style="font-weight: 600;" translate="register.create.terms"></h5>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <div class="form-group dis-flex-center" style="margin: 24px 0;">
+            <div style="text-align: center; margin: 0 1rem;">
+                <div id="iframecontainer" class="form-group">
+                    <div id="iframe">
+                        <div id="iframewrapper">
+                            <iframe class="iframe-regis" type="text/html" ng-src="{{vm.srcTerms}}" frameborder="0" allowfullscreen>
+
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="feid-modal-confirm-cancel-button" type="button" ng-click="vm.hide()"
+                            class="feid-button button-indigo_inverse button-medium" aria-label="FeID button"
+                            translate="global.button.cancel">CANCEL
+                    </button>
+                </div>
+            </div>
+        </div>
+    </md-dialog-content>
+</md-dialog>

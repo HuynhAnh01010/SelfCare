@@ -1,0 +1,152 @@
+{
+    "register": {
+        "title": "Registration",
+        "head": "CHOOSE AUTHENTICATION METHOD",
+        "method": {
+            "branchOffice": "BRANCH OFFICE",
+            "mobileId": "MOBILE-ID",
+            "idCard": "PKI CARD/TOKEN",
+            "biometricIdentification": "BIOMETRIC IDENTIFICATION"
+        },
+        "biometricIdentification": {
+            "head": "AUTHENTICATION VIA BIOMETRIC IDENTIFICATION",
+            "desc": {
+                "step1": "CAPTURE THE PHOTOS OF YOUR ID DOCUMENT",
+                "step2": "SCAN YOUR ID DOCUMENT BY HOLDING YOUR SMART DEVICE AGAINST IT",
+                "step3": "SCAN YOUR FACE FOR COMPARISON  WITH YOUR ID DOCUMENT PHOTO"
+            },
+            "btn": {
+                "watchVideo": "WATCH VIDEO",
+                "continue": "CONTINUE",
+                "back": " BACK"
+            },
+            "messagesKyc": {
+                "sessionNotComplete": "Session was not completed successfully, cancelling. Session Status: ",
+                "cantConnect": "Can't connect to Server, please try again.",
+                "livenessConfirm": "Liveness Confirmed",
+                "stillUpload": "Still Uploading...",
+                "idScanNotComplete": "ID Scan was not completed successfully",
+                "your3dMatched": "Your 3D Face\nMatched Your ID",
+                "cantMatchPhotoWithLiveness": "Can't matching photo \n with your liveness",
+                "imagePoorQuality": "The image is of poor quality (blur,dark/bright)"
+            },
+            "policy1": {
+                "head": "CONSENT TO PROCESS PERSONAL DATA VIA AUTOMATED BIOMETRIC IDENTITY VERIFICATION",
+                "desc": "<p> AS YOU HAVE CHOSEN AUTOMATED BIOMETRIC IDENTITY VERIFICATION FOR AUTHENTICATION METHOD, PLEASE READ THE FOLLOWING CONDITIONS VERY CAREFULLY AND PROCEED ONLY IF YOU HAVE FULLY UNDERSTOOD AND AGREED WITH THE CONDITIONS. </p> <p> IF YOU DO NOT AGREE WITH THE PROCESSING OF YOUR BIOMETRIC PERSONAL DATA (YOUR FACIAL IMAGE) AND THE MAKING OF AUTOMATED DECISIONS BASED ON THIS DATA FOR IDENTIFICATION PURPOSES, PLEASE CHOOSE ANOTHER AUTHENTICATION METHOD FOR REGISTRATION </p> <p> PLEASE BE AWARE THAT YOU HAVE THE RIGHT TO WITHDRAW YOUR CONSENT AT ANY TIME. NOTE THAT AS TRUST SERVICE PROVIDER WE ARE UNDER LEGAL OBLIGATION TO STORE YOUR PERSONAL DATA WITHIN THE PERIOD PRESCRIBED IN THE LAW </p> <ul> <li> <strong>I CONFIRM THAT I AM AT LEAST 18 YEARS OLD</strong></li> <li>  <strong>I CONFIRM THAT MOBILE-ID MAY PROCESS MY BIOMETRIC PERSONAL DATA (FACIAL IMAGE) AND CARRY OUT AUTOMATED DECISION-MAKING BASED ON THIS DATA TO IDENTIFY ME FOR REMOTE SIGNING ACCOUNT REGISTION PURPOSES</strong></li><li><strong>I CONFIRM THAT MOBILE-ID MAY PERFORM VERIFICATION BASED ON MY BIOMETRIC PERSONAL DATA IN ORDER TO ENSURE THE SECURITY OF MY ELECTRONIC IDENTITY AND TEST THE QUALITY OF THE TECHNICAL SOLUTIONS THAT ARE USED</strong></li>\n </ul> <p> SHOULD YOU HAVE ANY QUESTIONS RELATING TO THE PROCESSING OF YOUR PERSONAL DATA, PLEASE DO NOT HESITATE TO CONTACT US </p> <p> MOBILE-ID TECHNOLOGIES AND SERVICE JSC (DATA CONTROLLER, HEREAFTER \"MOBILE-ID\") </p> <p><strong>ADDRESS:</strong> 19 DANG TIEN DONG STREET, AN PHU WARD, THU DUC CITY, HO CHI MINH CITY, VIET NAM </p> <p><strong>REGISTRY CODE:</strong> 0313994173</p> <p><strong>EMAIL:</strong> INFO@MOBILE-ID.VN</p> <p><strong>HOTLINE:</strong> 1900 6884</p>",
+                "btn": {
+                    "iAgree": "I AGREE",
+                    "iNotAgree": "I DON'T AGREE",
+                    "back": "BACK"
+                }
+            },
+            "policy2": {
+                "head": "TERMS AND CONDITIONS FOR USE OF CERTIFICATES OF QUALIFIED REMOTE SIGNING",
+                "desc": "<p> I AGREE THAT MY PERSONAL DATA WHICH I HAVE PRESENTED IS USED FOR GENERATING MY REMOTE SIGNING ACCOUNT AND CERTIFICATES. I AGREE THAT MY REMOTE SIGNING ACCOUNT AND CERTIFICATES ARE USED TO IDENTIFY ME IN E-SERVICES AND IN ELECTRONIC SIGNATURES. </p> <p> I AM AWARE THAT BY ENTERING MY PINCODE/TAPPING MY FINGERYTIP EITHER FOR AUTHENTICATION OF FOR CREATING ELECTRONIC SIGNATURES </p> <p> - I VERIFY THAT I HAVE INITIATED A SESSION, AGREE WITH IT AND THAT I AM RESPONSIBLE FOR ITS CONESEQUENCES </p> <p> - I VERIFY THAT I HAVE MADE SURE THAT THE VERIFICATION CODE SENT TO ME, IS CORRECT </p> <p> - I ALLOW MY NAME AND PERSONAL CODE TO BE SENT TO THE E-SERVICE PROVIDER </p> <p> I AM ALSO AWARE THAT IF I HAVE LOST MY DEVICE OR MY PINCODES HAVE BECOME KNOWN TO THIRD PARTIES, I AM OBLIGED TO IMMEDIATELY REVOKE MY REMOTE SIGNING CERTIFICATES </p> <p> INFORMATION ON DELETING REMOTE SIGNING ACCOUNT OR REVOCATION OF THE CERTIFICATES IS AVAILABLE AT <a href=\"https://rssp.mobile-id.vn\">HTTPS://RSSP.MOBILE-ID.VN</a>\n </p> <p> I AM AWARE THAT USE OF THE REMOTE SIGNING APPLICATION IS DESCRIBED IN THE REMOTE SIGNING END-USER LICENSE AGREEMENT </p> <p> FULL VERSION OF THE TERMS AND CONDITIONS ON THE USE OF THE REMOTE SIGNING CERTIFICATES IS AVAILABLE AT <a href=\"https://rssp.mobile-id.vn/en/terms\">HTTPS://RSSP.MOBILE-ID.VN/TERMS</a> </p> <p> FULL VERSION OF THE END-USER LICENSE AGREEMENT IS AVAILABLE AT <a href=\"https://rssp.mobile-id.vn/en/privacy\">HTTPS://RSSP.MOBILE-ID.VN/PRIVACY</a> </p> <p> I AM AWARE THAT BY CHOOSING 'I AGREE' I CONFIRM THAT I AM FAMILIAR AND AGREE WITH THE TERMS AND CONDITIONS ON THE USE OF REMOTE SIGNING CERTIFICATES AND WITH THE REMOTE SIGNING END-USER LICENSE AGREEMENT </p>",
+                "btn": {
+                    "iAgree": "I AGREE",
+                    "iNotAgree": "I DON'T AGREE",
+                    "back": "BACK"
+                }
+            },
+            "authenticateEmailPhone": {
+                "head": "AUTHENTICATE WITH CONTACT DETAILS",
+                "desc": "WE RECOMMEND AUTHENTICATING WITH YOUR E-MAIL ADDRESS / PHONE NUMBER, AND PLEASE ENTER YOUR PHONE NUMBER / E-MAIL ADDRESS IN CASE WE NEED TO CONTACT YOU",
+                "btn": {
+                    "emailOrSms": "E-MAIL OR SMS",
+                    "back": "BACK"
+                }
+            },
+            "reachEmailPhone": {
+                "head": "HOW CAN WE REACH YOU?",
+                "desc": "PLEASE ENTER YOUR PHONE NUMBER / EMAIL ADDRESS IN CASE WE NEED TO CONTACT YOU",
+                "btn": {
+                    "ok": "OK",
+                    "back": "BACK"
+                },
+                "input": {
+                    "email": "E-mail",
+                    "pattern": "Invalid email",
+                    "phone": "Phone number"
+                },
+                "verify": {
+                    "desc": "Enter <strong>OTP</strong> that received from <strong> {{ phone}} </strong>",
+                    "clickResend": "Click re-send ",
+                    "clickResendRetrievingOtp": " for retrieving new <strong>OTP</strong>",
+                    "timeLeft": "Time left <span class=\"timeout\">{{time}}</span> s",
+                    "btn": {
+                        "cancel": "CANCEL",
+                        "verifyOtp": "VERIFY OTP"
+                    },
+                    "success": "SUCCESSFULLY"
+                }
+            },
+            "confirm": {
+                "head": "CONFIRM YOUR INFORMATION",
+                "username": "Username",
+                "phone": "Phone number",
+                "email": "Email",
+                "identification": "Identification",
+                "fullname": "Full name",
+                "gender": "Sex",
+                "location": "Address",
+                "dob": "Date of birth",
+                "btn": {
+                    "tryIt": "TRY IT FOR FREE"
+                }
+            }
+        },
+        "pkicard": {
+            "head": "REGISTERING WITH PKI CARD/TOKEN",
+            "btn.watch.video": "WATCH VIDEO",
+            "btn.continue": "CONTINUE",
+            "btn.back": " Back",
+            "policy": {
+                "head": "TERMS AND CONDITIONS FOR USE OF CERTIFICATES OF QUALIFIED REMOTE SIGNING"
+            },
+            "choosepin": {
+                "head": "CHOOSE PIN CODES"
+            },
+            "authenticateEmailPhone": {
+                "head": "AUTHENTICATE WITH CONTACT DETAILS"
+            },
+            "reachEmailPhone": {
+                "head": "HOW CAN WE REACH YOU?"
+            }
+        },
+        "create": {
+            "notification": {
+                "title": "Register for an account RSSP",
+                "step.1": {
+                    "1.1": "Please enter your phone number and email in case we need to contact you"
+                },
+                "step.2": {
+                    "1": "PERSONAL ID",
+                    "2": "CITIZEN IDENTITY",
+                    "3": "PASSPORT",
+                    "choose": "Please choose "
+                },
+                "step.3": {
+                    "account": "Account",
+                    "pass": "Password",
+                    "repass": "Enter the password",
+                    "name": "First and last name",
+                    "birthday": "Date of birth",
+                    "sex": "Sex",
+                    "cmnd": "Identifiers",
+                    "addess": "Addess"
+                }
+            },
+            "terms": "Terms of use",
+            "OTP": "OTP Code",
+            "step.1": {
+                "mobile": "Phone Number",
+                "email": "Email"
+            },
+            "img": {
+                "font": "Font side of identity card",
+                "back": "Back side of identity card"
+            },
+            "agree": "I agree with "
+        }
+    }
+}

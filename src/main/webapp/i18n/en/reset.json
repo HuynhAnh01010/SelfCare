@@ -1,0 +1,24 @@
+{
+    "reset": {
+        "backToLogin": "Back to login",
+        "haveAccount": "You don't have an account yet?",
+        "registerNow": "Register Now",
+        "request": {
+            "title": "Reset password",
+            "name": "Reset password with",
+            "button": {
+                "reset": "Reset password"
+            }
+        },
+        "finish" : {
+            "title": "Finish reset password",
+            "name": "Validate new password",
+            "optCode": "OTP Code",
+            "newPassword": "New password",
+            "retypeNewPassword": "Re-type New Password",
+            "button": {
+                "validate": "Validate new password"
+            }
+        }
+    }
+}

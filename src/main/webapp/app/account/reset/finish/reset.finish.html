@@ -1,0 +1,144 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+
+    <div class="login-right-column-wrapper col-lg-6">
+        <div class="login-right-column-content-wrapper">
+            <div style="max-width: 400px; width: 100%; margin-top: 31px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <h5 class="feid-heading heading-indigo heading-center">{{'reset.finish.name'| translate}}</h5>
+                <div style="min-height: 278px;">
+                    <div class="row center-xs">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="box">
+                                <div style="min-height: 260px;margin-top:24px">
+                                    <form class="form form-signin" name="form" role="form" novalidate
+                                          ng-submit="vm.finishReset()"
+                                          show-validation autocomplete="off">
+                                        <div class="form-group input-group-lg">
+                                            <div class="feid-label-warning">
+                                                
+                                            </div>
+                                            <input type="text" class="feid-input input-medium input-default feid-input-center" name="otpCode" id="otpCode" required
+                                                   ng-minlength=4 ng-maxlength=50  autocomplete="off"
+                                                   onkeyup="this.value=this.value.replace(/\s/,'')"
+                                                   placeholder="{{'reset.finish.optCode'| translate}}"
+                                                   ng-model="vm.resetAccount.otpCode" autocomplete="new-password">
+                                            <div class="feid-label-warning"
+                                                 ng-show="form.otpCode.$dirty && form.otpCode.$invalid">
+                                                <span class="help-block"
+                                                      ng-show="form.otpCode.$error.required"
+                                                      translate="global.validate.isRequired"
+                                                      translate-values='{ field: "reset.finish.optCode" }'>OTP Code is required
+                                                </span>
+                                                <span class="help-block"
+                                                      ng-show="form.otpCode.$error.minlength"
+                                                      translate="global.validate.minlength"
+                                                      translate-values='{ field: "reset.finish.optCode" , length: 4}'>
+                                                    OTP Code is required to be at least 4 characters
+                                                </span>
+                                                <span class="help-block"
+                                                      ng-show="form.otpCode.$error.maxlength"
+                                                      translate="global.validate.maxlength"
+                                                      translate-values='{ field: "reset.finish.optCode" , length: 12}'>
+                                                    OTP Code cannot be longer than 50 characters.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-group-lg">
+                                            <input type="password" class="feid-input input-medium input-default feid-input-center" name="password"
+                                                   required="required" value=""
+                                                   onkeyup="this.value=this.value.replace(/\s/,'')"
+                                                   placeholder="{{'reset.finish.newPassword'| translate}}"
+                                                   minlength="2" maxlength="50"
+                                                   ng-model="vm.resetAccount.password"
+                                                   autocomplete="new-password">
+                                            <password-strength-bar
+                                                password-to-check="vm.resetAccount.password"></password-strength-bar>
+                                            <div class="feid-label-warning"
+                                                 ng-show="form.password.$dirty && form.password.$invalid">
+                                                <span class="help-block" ng-show="form.password.$error.required"
+                                                      translate="global.validate.isRequired"
+                                                      translate-values='{ field: "reset.finish.newPassword" }'>
+                                                    Your password is required
+                                                </span>
+                                                <span class="help-block"
+                                                      ng-show="form.password.$error.minlength"
+                                                      translate="global.validate.minlength"
+                                                      translate-values='{ field: "reset.finish.newPassword" , length: 2}'>
+                                                    Your password is required to be at least 4 characters
+                                                </span>
+                                                <span class="help-block"
+                                                      ng-show="form.password.$error.maxlength"
+                                                      translate="global.validate.maxlength"
+                                                      translate-values='{ field: "reset.finish.newPassword" , length: 50}'>
+                                                    Your password cannot be longer than 50 characters
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group input-group-lg">
+
+                                            <input type="password" class="feid-input input-medium input-default feid-input-center" name="confirmPassword"
+                                                   required="required"  autocomplete="off"
+                                                   value=""
+                                                   onkeyup="this.value=this.value.replace(/\s/,'')"
+                                                   placeholder="{{'reset.finish.retypeNewPassword'| translate}}"
+                                                   ng-model="vm.resetAccount.confirmPassword">
+                                            <div class="feid-label-warning"
+                                                 ng-show="(form.confirmPassword.$dirty && form.confirmPassword.$invalid) || vm.resetAccount.confirmPassword != vm.resetAccount.password">
+                                                <span class="help-block"
+                                                      ng-show="form.confirmPassword.$error.required"
+                                                      translate="global.validate.isRequired"
+                                                      translate-values='{ field: "reset.finish.retypeNewPassword" }'>
+                                                    Your password confirmation is required.
+                                                </span>
+                                                <span class="help-block"
+                                                      ng-show="form.confirmPassword.$error.minlength"
+                                                      translate="global.validate.minlength"
+                                                      translate-values='{ field: "reset.finish.retypeNewPassword" , length: 2}'>
+                                                    Your password confirmation is required to be at least 4 characters.
+                                                </span>
+                                                <span class="help-block"
+                                                      ng-show="form.confirmPassword.$error.maxlength"
+                                                      translate="global.validate.maxlength"
+                                                      translate-values='{ field: "reset.finish.retypeNewPassword" , length: 50}'>
+                                                    Your password confirmation cannot be longer than 50 characters.
+                                                </span>
+                                                <span class="help-block"
+                                                      ng-show="vm.resetAccount.confirmPassword != vm.resetAccount.password && !(form.confirmPassword.$error.required || form.confirmPassword.$error.minlength || form.confirmPassword.$error.maxlength)"
+                                                      translate="global.validate.notMatch"
+                                                      translate-values='{ field: "reset.finish.retypeNewPassword", focus: "reset.finish.newPassword" }'>
+                                                    match
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button type="submit" class="btn button-primary   btn-lg"
+                                                    ng-disabled="form.$invalid || vm.resetAccount.confirmPassword != vm.resetAccount.password"
+                                                    style="width: 290px;border-radius: 36px">
+                                                {{'reset.finish.button.validate'| translate}}
+                                            </button>
+                                        </div>
+
+                                        <message-dialog style="text-transform: uppercase;" obj="vm.dialogMessage"></message-dialog>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div ui-view="footerLanguage" class="row middle-xs between-xs" style="margin-top: 24px"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

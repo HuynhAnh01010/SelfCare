@@ -1,0 +1,121 @@
+<md-dialog aria-label="Change Auth Mode">
+
+    <md-toolbar layout="row" layout-align="center center" style="min-width: 300px">
+        <div class="md-toolbar-tools">
+            <h5 class="feid-heading" style="font-weight: 600;" translate="accountProfile.changePhone.title"></h5>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <form class="" id="frm" name="frm">
+            <div class="col-sm-12">
+                <div class="container">
+                    <!--                    <div class="container-step">
+                                            <ul class="progressbar-step">
+                                                <li style="width: 50%" ng-class="{active : ctrl.step >=1 }">{{'global.notification.initRequest' | translate}}</li>
+                                                <li style="width: 50%" ng-class="{active : ctrl.step >=2 }">{{'global.notification.confirmRequest' | translate}}</li>
+                                            </ul>
+                                        </div>-->
+
+
+                    <!--                    <fieldset ng-disabled="ctrl.disabled" style="padding-bottom: 0px">-->
+                    <!--                    <div class="intiRequest" ng-if="ctrl.initRequest">
+                                            <div class="form-group">
+                                                <label class="required" translate="credential.detail.changeEmail.currentEmail"></label>
+                                                <input name="currentEmail" id="currentEmail" type="text"
+                                                       class="feid-input input-medium input-default feid-input-center "
+                                                       placeholder="OTP" readonly ng-model="ctrl.data.authorizationEmail"
+                                                       aria-invalid="false" style="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="required" translate="credential.detail.changeEmail.newEmail"></label>
+                                                <input name="newEmail" id="newEmail" type="text"
+                                                       required
+                                                       pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+                                                       class="feid-input input-medium input-default feid-input-center "
+                                                       ng-model="ctrl.request.newEmail"
+                                                       aria-invalid="false" style="">
+                                                <label class="feid-label feid-label-default feid-label-warning"
+                                                       ng-class="{'feid-label-hidden' : !(frm.newEmail.$dirty && frm.newEmail.$invalid)}">
+                                                             <span class="help-block "
+                                                                   ng-show="frm.newEmail.$error.required"
+                                                                   translate="global.validate.isRequired"
+                                                                   translate-values='{ field: "credential.detail.changeEmail.newEmail" }'>
+                                                          Invalid
+                                                            </span>
+                    
+                                                    <span class="help-block"
+                                                          ng-show="frm.newEmail.$error.pattern"
+                                                          translate="credential.detail.changeEmail.emailInvalid">
+                                                             50 characters
+                                                            </span>
+                                                </label>
+                                            </div>
+                                        </div>-->
+
+                    <div style="margin-top: 15px;">
+
+                        <!--                        <div class="form-group">
+                                                    <label class="required" translate="credential.detail.changeEmail.otpCurrentEmail"></label>
+                                                    <input name="otpCurrentEmail" id="otpCurrentEmail" type="text" required="true"
+                                                           class="feid-input input-medium input-default feid-input-center "
+                                                           placeholder="" ng-model="ctrl.request.otpCurrentEmail" minlength="1" maxlength="20"
+                                                           value=""
+                                                           aria-invalid="false" style="">
+                                                    <label class="feid-label feid-label-default feid-label-warning"
+                                                           ng-class="{'feid-label-hidden' : !(frm.otpCurrentEmail.$dirty && frm.otpCurrentEmail.$invalid)}">
+                                                        <span class="help-block"
+                                                              ng-show="frm.otpCurrentEmail.$invalid"
+                                                              translate="global.validate.isRequired"
+                                                              translate-values='{ field: "credential.detail.changeEmail.otpCurrentEmail" }'>
+                                                                 Invalid
+                                                            </span>
+                                                    </label>
+                                                </div>-->
+                        <div class="form-group text-center" style="text-transform: uppercase;">
+                            <label class="required" translate="accountProfile.changePhone.message" style="color: red;"></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center" style="margin-bottom: 0px;text-transform: uppercase;">
+                        <div class="alert alert-danger" ng-show="ctrl.msgType == 1"
+                             style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                            {{ctrl.msg}}
+                        </div>
+                        <div class="alert alert-success" ng-show="ctrl.msgType == 0"
+                             style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                            {{ctrl.msg}}
+                        </div>
+                        <!--                        <div style=";text-align: center; margin-top: 24px;" ng-if="ctrl.initRequest">
+                                                    <button id="feid-modal-confirm-confirm-button" type="button"
+                                                            ng-click="ctrl.initRequestChangeEmail()" ng-disabled="frm.$invalid"
+                                                            class="feid-button button-green button-medium" translate="global.button.init">
+                                                        RESET
+                                                    </button>
+                                                </div>-->
+<!--                        <div style="text-align: center; margin-top: 24px;">
+                            <button id="feid-modal-confirm-confirm-button" type="button" ng-disabled="frm.$invalid || ctrl.step == 2"
+
+                                    ng-click=""
+                                    class="feid-button button-green button-medium" translate="global.button.confirm">
+                                CONFIRM
+                            </button>
+                        </div>-->
+                    </div>
+                    <!--                    </fieldset>-->
+                    <div class="form-group text-center">
+                        <div style="text-align: center; margin-top: 24px;">
+                            <button id="feid-modal-confirm-cancel-button" type="button" ng-click="ctrl.hide()"
+                                    class="feid-button button-indigo_inverse button-medium" aria-label="FeID button"
+                                    translate="global.button.confirm">CANCEL
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </md-dialog-content>
+
+
+</md-dialog>

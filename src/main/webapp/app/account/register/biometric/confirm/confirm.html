@@ -1,0 +1,281 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="overflow-y: scroll;">
+        <div class="login-right-column-content-wrapper" >
+            <div style="max-width: 400px; width: 100%; margin-top: 50px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                    <div class="col-xs-12">
+                        <div style="margin: 15px 15px">
+                            <h4 class="feid-heading heading-indigo heading-center f20"
+                            >{{'register.biometricIdentification.confirm.head' | translate}}</h4>
+                            <div style="margin-top: 30px;">
+                                <form id="confirmForm" name="confirmForm">
+                                    <table class="table table-confirm">
+                                        <tr ng-if="!vm.editUsername">
+                                            <td>{{'register.biometricIdentification.confirm.username' | translate}}</td>
+                                            <th><i class="fa fa-edit" ng-click="vm.editUsername = true"></i>
+                                                {{vm.registerCertificateObject.username}}
+                                            </th>
+                                        </tr>
+                                        <tr ng-if="vm.editUsername">
+                                            <td colspan="2" style="padding: 0px">
+                                                <label class="feid-label feid-label-default feid-label-warning"
+                                                       ng-class="{'feid-label-hidden' : !(confirmForm.username.$dirty && confirmForm.username.$invalid)}">
+
+                                         <span class="help-block "
+                                               ng-show="confirmForm.username.$error.required"
+                                               translate="global.validate.isRequired"
+                                               translate-values='{ field: "register.biometricIdentification.confirm.username" }'>
+                                      Invalid
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.username.$error.minlength"
+                                                          translate="global.validate.minlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.username" , length: 4}'>
+                                        at least 4 characters
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.username.$error.maxlength"
+                                                          translate="global.validate.maxlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.username" , length: 20}'>
+                                        cannot be longer than 50 characters
+                                        </span>
+                                                </label>
+                                                <input type="text" name="username" id="username" minlength="4"
+                                                       input-letter-number
+                                                       maxlength="20" auto-focus="{{vm.editUsername}}"
+                                                       required="required"
+                                                       ng-blur=" !(confirmForm.username.$dirty && confirmForm.username.$invalid) ? vm.editUsername = false : ''"
+                                                       class="form-control"
+                                                       ng-model="vm.registerCertificateObject.username">
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td> {{'register.biometricIdentification.confirm.phone' | translate}}</td>
+                                            <th>
+                                                {{vm.registerCertificateObject.phone}}
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>{{'register.biometricIdentification.confirm.email' | translate}}</td>
+                                            <th>{{vm.registerCertificateObject.email}}</th>
+                                        </tr>
+                                        <tr ng-if="!vm.editIdentification">
+                                            <td>{{'register.biometricIdentification.confirm.identification' | translate}}</td>
+                                            <th><i class="fa fa-edit" ng-click="vm.editIdentification = true"></i>
+                                                {{vm.registerCertificateObject.identification}}
+                                            </th>
+                                        </tr>
+                                        <tr ng-if="vm.editIdentification">
+                                            <td colspan="2" style="padding: 0px">
+                                                <label class="feid-label feid-label-default feid-label-warning"
+                                                       ng-class="{'feid-label-hidden' : !(confirmForm.identification.$dirty && confirmForm.identification.$invalid)}">
+
+                                         <span class="help-block "
+                                               ng-show="confirmForm.identification.$error.required"
+                                               translate="global.validate.isRequired"
+                                               translate-values='{ field: "register.biometricIdentification.confirm.identification" }'>
+                                      Invalid
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.identification.$error.minlength"
+                                                          translate="global.validate.minlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.identification" , length: 2}'>
+                                        at least 4 characters
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.identification.$error.maxlength"
+                                                          translate="global.validate.maxlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.identification" , length: 20}'>
+                                        cannot be longer than 50 characters
+                                        </span>
+                                                </label>
+                                                <input type="text" name="identification" id="identification"
+                                                       minlength="2" input-letter-number
+                                                       maxlength="20" auto-focus="{{vm.editIdentification}}"
+                                                       required="required"
+                                                       ng-blur=" !(confirmForm.identification.$dirty && confirmForm.identification.$invalid) ? vm.editIdentification = false : ''"
+                                                       class="form-control"
+                                                       ng-model="vm.registerCertificateObject.identification">
+                                            </td>
+
+                                        </tr>
+                                        <tr ng-if="!vm.editFullname">
+                                            <td>{{'register.biometricIdentification.confirm.fullname' | translate}}</td>
+                                            <th><i class="fa fa-edit" ng-click="vm.editFullname = true"></i>
+                                                {{vm.registerCertificateObject.fullname}}
+                                            </th>
+                                        </tr>
+                                        <tr ng-if="vm.editFullname">
+                                            <td colspan="2" style="padding: 0px">
+                                                <label class="feid-label feid-label-default feid-label-warning"
+                                                       ng-class="{'feid-label-hidden' : !(confirmForm.fullname.$dirty && confirmForm.fullname.$invalid)}">
+
+                                         <span class="help-block "
+                                               ng-show="confirmForm.fullname.$error.required"
+                                               translate="global.validate.isRequired"
+                                               translate-values='{ field: "register.biometricIdentification.confirm.fullname" }'>
+                                      Invalid
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.fullname.$error.minlength"
+                                                          translate="global.validate.minlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.fullname" , length: 2}'>
+                                        at least 4 characters
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.fullname.$error.maxlength"
+                                                          translate="global.validate.maxlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.fullname" , length: 40}'>
+                                        cannot be longer than 50 characters
+                                        </span>
+                                                </label>
+                                                <input type="text" name="fullname" id="fullname" minlength="2"
+                                                       maxlength="40" auto-focus="{{vm.editFullname}}"
+                                                       required="required"
+                                                       ng-blur=" !(confirmForm.fullname.$dirty && confirmForm.fullname.$invalid) ? vm.editFullname = false : ''"
+                                                       class="form-control"
+                                                       ng-model="vm.registerCertificateObject.fullname">
+                                            </td>
+
+                                        </tr>
+                                        <tr ng-if="!vm.editGender">
+                                            <td>{{'register.biometricIdentification.confirm.gender' | translate}}</td>
+                                            <th><i class="fa fa-edit" ng-click="vm.editGender = true"></i>
+                                                {{vm.registerCertificateObject.gender}}
+                                            </th>
+                                        </tr>
+                                        <tr ng-if="vm.editGender">
+                                            <td colspan="2" style="padding: 0px">
+                                                <div class="form-group" style="margin-top: 15px">
+                                                    <md-radio-group layout="row"  auto-focus="{{vm.editGender}}"
+                                                                    ng-change="vm.editGender = !vm.editGender"
+                                                                    ng-model="vm.registerCertificateObject.gender"
+                                                                    aria-labelledby="favoriteFruit">
+                                                        <md-radio-button value="M" class="md-primary">M
+                                                        </md-radio-button>
+                                                        <md-radio-button value="F" class="md-primary">F
+                                                        </md-radio-button>
+                                                        <md-radio-button value="N/A" class="md-primary">N/A
+                                                        </md-radio-button>
+                                                    </md-radio-group>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr ng-if="!vm.editDob">
+                                            <td>{{'register.biometricIdentification.confirm.dob' | translate}}</td>
+                                            <th><i class="fa fa-edit" ng-click="vm.editDob = true"></i>
+                                                {{vm.registerCertificateObject.dob}}
+                                            </th>
+                                        </tr>
+                                        <tr ng-if="vm.editDob">
+                                            <td colspan="2" style="padding: 0px">
+                                                <label class="feid-label feid-label-default feid-label-warning"
+                                                       ng-class="{'feid-label-hidden' : !(confirmForm.dob.$dirty && confirmForm.dob.$invalid)}">
+                                         <span class="help-block "
+                                               ng-show="confirmForm.dob.$error.required"
+                                               translate="global.validate.isRequired"
+                                               translate-values='{ field: "register.biometricIdentification.confirm.dob" }'>
+                                      Invalid
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.dob.$error.date"
+                                                          translate="global.validate.notMatchFormat"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.dob" }'>
+                                        at least 4 characters
+                                        </span>
+                                                </label>
+                                                <input type="text" class="form-control" name="dob"
+                                                       auto-focus="{{vm.editDob}}"
+                                                       required="required"
+                                                       ng-blur=" !(confirmForm.dob.$dirty && confirmForm.dob.$invalid) ? vm.editDob = false : ''"
+                                                       ng-model="vm.registerCertificateObject.dob"
+                                                       ui-date-mask="DD-MM-YYYY"
+                                                       parse="false">
+                                            </td>
+
+                                        </tr>
+                                        <tr ng-if="!vm.editLocation">
+                                            <td>{{'register.biometricIdentification.confirm.location' | translate}}</td>
+                                            <th><i class="fa fa-edit" ng-click="vm.editLocation = true"></i>
+                                                {{vm.registerCertificateObject.location}}
+                                            </th>
+                                        </tr>
+                                        <tr ng-if="vm.editLocation">
+                                            <td colspan="2" style="padding: 0px">
+                                                <label class="feid-label feid-label-default feid-label-warning"
+                                                       ng-class="{'feid-label-hidden' : !(confirmForm.location.$dirty && confirmForm.location.$invalid)}">
+
+                                         <span class="help-block "
+                                               ng-show="confirmForm.location.$error.required"
+                                               translate="global.validate.isRequired"
+                                               translate-values='{ field: "register.biometricIdentification.confirm.location" }'>
+                                      Invalid
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.location.$error.minlength"
+                                                          translate="global.validate.minlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.location" , length: 2}'>
+                                        at least 4 characters
+                                        </span>
+                                                    <span class="help-block"
+                                                          ng-show="confirmForm.location.$error.maxlength"
+                                                          translate="global.validate.maxlength"
+                                                          translate-values='{ field: "register.biometricIdentification.confirm.location" , length: 100}'>
+                                        cannot be longer than 50 characters
+                                        </span>
+                                                </label>
+                                                <textarea type="text" name="location" id="location" minlength="2"
+                                                          maxlength="100" auto-focus="{{vm.editLocation}}"
+                                                          required="required"
+                                                          ng-blur=" !(confirmForm.location.$dirty && confirmForm.location.$invalid) ? vm.editLocation = false : ''"
+                                                          class="form-control"
+                                                          ng-model="vm.registerCertificateObject.location"></textarea>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                            <message-dialog obj="vm.dialogMessage"></message-dialog>
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="id-scan-button" type="button"
+                                        ng-disabled="confirmForm.$invalid || vm.editDob || vm.editLocation || vm.editUsername || vm.editIdentification || vm.editFullname"
+                                        ng-click="vm.tryIt()"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+
+                                >{{'register.biometricIdentification.confirm.btn.tryIt' | translate}}
+                                </button>
+                            </div>
+
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                        ui-sref="policy2"
+                                        class="feid-button button-indigo_text button-small "
+                                        aria-label="FeID button"
+                                        data-translate="register.biometricIdentification.btn.back">Back
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row middle-xs between-xs" ui-view="footerLanguage"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

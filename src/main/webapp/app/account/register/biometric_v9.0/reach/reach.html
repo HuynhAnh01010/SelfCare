@@ -1,0 +1,153 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="">
+        <div class="login-right-column-content-wrapper" style="align-items:flex-start;">
+            <div style="max-width: 400px; width: 100%;padding-top: 10px;padding-bottom: 30px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                    <div class="col-xs-12">
+                        <div style="margin: 15px 15px">
+                            <h4 class="feid-heading heading-indigo heading-center f20"
+                                data-translate="register.biometricIdentification.reachEmailPhone.head"></h4>
+
+
+                            <div ng-if="!vm.isVerifyOtp">
+                                <div style="text-align: justify; margin-top: 30px;">
+                                <p>
+                                    PLEASE ENTER YOUR PHONE NUMBER AND/OR EMAIL ADDRESS IN CASE WE NEED TO CONTACT YOU
+                                </p>
+
+                            </div>
+                                <form id="contactForm" name="contactForm">
+                                    <div>
+                                        <label class="feid-label feid-label-default feid-label-warning"
+                                               ng-class="{'feid-label-hidden' : !(contactForm.contactTel.$dirty && contactForm.contactTel.$invalid)}">
+
+                                            <span class="help-block"
+                                                  ng-show="contactForm.contactTel.$error.minlength">
+                                         Phone Number is required to be at least 4 characters
+                                    </span>
+                                            <span class="help-block"
+                                                  ng-show="contactForm.contactTel.$invalid">
+                                         Phone Number is Invalid
+                                    </span>
+                                        </label>
+                                        <input type="text" name="contactTel" id="contactTel"  ng-disabled="!vm.initializedSuccessfully" required
+                                               class="feid-input input-medium input-default feid-input-center"
+                                               ng-model="vm.registerCertificateObject.phone" ng-intl-tel-input>
+                                    </div>
+                                    <div>
+                                        <label class="feid-label feid-label-default feid-label-warning"
+                                               ng-class="{'feid-label-hidden' : !(contactForm.contactEmail.$dirty && contactForm.contactEmail.$invalid)}">
+
+                                         <span class="help-block "
+                                               ng-show="contactForm.contactEmail.$error.email">
+                                       E-mail is Invalid
+                                        </span>
+                                            <span class="help-block"
+                                                  ng-show="contactForm.contactEmail.$error.minlength">
+                                        E-mail is required to be at least 4 characters
+                                        </span>
+                                            <span class="help-block"
+                                                  ng-show="contactForm.contactEmail.$error.maxlength">
+                                        E-mail cannot be longer than 50 characters
+                                        </span>
+                                        </label>
+                                        <input name="contactEmail" id="contactEmail" type="email" ng-disabled="!vm.initializedSuccessfully" required
+                                               class="feid-input input-medium input-default feid-input-center"
+                                               placeholder="E-mail"
+                                               ng-model="vm.registerCertificateObject.email" minlength="4"
+                                               maxlength="50"
+                                               value="">
+                                    </div>
+
+
+                                </form>
+                                <div class="alert alert-danger" ng-show="vm.error" style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                    {{vm.errorMsg}}
+                                </div>
+                                <div style="text-align: center; margin-top: 24px;">
+
+                                    <button id="id-scan-button"  ng-disabled="contactForm.$invalid " type="button" ng-click="vm.sendOtp()"
+                                            class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                            aria-label="FeID button"
+                                            data-translate="register.button.ok">
+                                    </button>
+                                </div>
+                                <div style="text-align: center; margin-top: 15px;">
+                                    <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                            ui-sref="policy2"
+                                            class="feid-button button-indigo_text button-small "
+                                            aria-label="FeID button"
+                                            data-translate="register.biometricIdentification.btn.back">Back
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" center-xs" ng-if="vm.isVerifyOtp">
+                                <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="box" style="max-width: 400px;">
+                                        <div class="text-center">
+                                            <p style="margin: 24px 20px" class="f15">
+                                                Enter <strong>OTP</strong> that received from <strong>{{vm.registerCertificateObject.phone.replace("+84", '0')}}</strong>
+                                            </p>
+
+                                            <div class="mobile-signature-login-info-v2__block__timer">
+                                                <input ng-disabled="vm.successOtp" type="text" ng-model="vm.otp" style="width: 104px;text-align: center;border-radius: 27px;border-color: #545454;">
+
+                                                <div id="circularG">
+                                                    <div id="circularG_1" class="circularG"></div>
+                                                    <div id="circularG_2" class="circularG"></div>
+                                                    <div id="circularG_3" class="circularG"></div>
+                                                    <div id="circularG_4" class="circularG"></div>
+                                                    <div id="circularG_5" class="circularG"></div>
+                                                    <div id="circularG_6" class="circularG"></div>
+                                                    <div id="circularG_7" class="circularG"></div>
+                                                    <div id="circularG_8" class="circularG"></div>
+                                                </div>
+                                                <span class="feid-text">Time left <span class="timeout">{{vm.validityPeriod}}</span> s</span>
+                                            </div>
+                                            <p>
+                                                Click <button style="border: none;background-color: transparent;" type="button" class=" btn-link" ng-click="vm.resendOtp()" ng-disabled="vm.successOtp">re-send</button>
+                                                for retrieving new <strong>OTP</strong>
+                                            </p>
+                                            <div class="alert alert-danger" ng-show="vm.errorOtp" style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                                {{vm.errorMsgOtp}}
+                                            </div>
+                                            <div class="alert alert-success" ng-show="vm.successOtp" style="margin-top: 24px;margin-bottom: 0px;text-align: center">
+                                                SUCCESSFULLY
+                                            </div>
+                                            <button type="button" style="margin:24px 0px" ng-disabled=" (!vm.otp||vm.blockOtp) ?  true : false"
+                                                    class="feid-button button-primary button-medium"
+                                                    ng-click="vm.verifyOtp()"
+                                            >VERIFY OTP
+                                            </button>
+                                            <div style="text-align: center; margin-top: 15px;">
+                                                <button id="LoginForm_LogInWithUsernameButton" type="button" ng-click="vm.expiredOtp()"
+                                                        class="feid-button button-indigo_text button-small "
+                                                        aria-label="FeID button"
+                                                        data-translate="register.biometricIdentification.btn.cancel">Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row middle-xs between-xs" ui-view="languageBottom"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

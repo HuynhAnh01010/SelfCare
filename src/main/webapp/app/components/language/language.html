@@ -1,0 +1,19 @@
+<md-dialog aria-label="Language"  ng-controller="LanguageController as languageVm">
+    <form ng-cloak style="overflow: hidden;">
+        <md-toolbar layout="row" layout-align="center center" style="min-width: 300px">
+            <div class="md-toolbar-tools" >
+                <h5 class="feid-heading" style="font-weight: 600;margin-bottom: 0px" data-translate="global.selectLanguage">Select your language</h5>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <md-list-item ng-repeat="language in languageVm.languages"  ng-click="languageVm.changeLanguage(language);" active-menu="{{language}}">
+                <p style="text-align: left">{{(language | findLanguageFromKey).desc}}</p>
+                <div class="img-flag">
+                    <img ng-src="./content/images/flags/{{(language | findLanguageFromKey).img}}" alt="{{ language}}" class="rounded-circle" style="width: 32px;height: 32px">
+                </div>
+            </md-list-item>
+        </md-dialog-content>
+
+    </form>
+</md-dialog>

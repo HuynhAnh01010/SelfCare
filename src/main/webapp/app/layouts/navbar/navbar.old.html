@@ -1,0 +1,46 @@
+<div class="sidebar" data-color="blue" ng-if="vm.isAuthenticated() && !vm.$state.includes('public')">
+    <div class="logo">
+        <a href="" class="simple-text logo-mini">
+            ID
+        </a>
+        <a href="" class="simple-text logo-normal">
+            SeflCare
+        </a>
+    </div>
+    <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+            <li ui-sref-active="active">
+                <a ui-sref="account.profile" ng-click="vm.collapseNavbar()">
+                    <i class="fab fa fa-user"></i>
+                    <p>User detail</p>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="history" ng-click="vm.collapseNavbar()">
+                    <i class="fab fa fa-history"></i>
+                    <p>Action history</p>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="credential.list" ng-click="vm.collapseNavbar()">
+                    <i class="fab fa fa-history"></i>
+                    <p>Credentials List</p>
+                </a>
+            </li>
+            <li >
+                <a href=""  my-language>
+                    <i class="fas fa-globe"></i>
+                    <p>Language</p>
+                </a>
+            </li>
+            <li>
+                <a href="" confirmed-click="vm.logout()"
+                   ng-confirm-click="{{global.messages.logout | translate}}">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>Logout</p>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>

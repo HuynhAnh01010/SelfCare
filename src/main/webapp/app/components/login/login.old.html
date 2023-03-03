@@ -1,0 +1,86 @@
+<div class="bgImg">
+	<div class="container loginColumns animated fadeInDown" >
+		<div class="row">
+			<div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+				<div class="card card-signin my-5">
+					<div class="card-body">
+						<form class="form-signin"  ng-submit="vm.get2Factor($event)">
+							<div class="text-center">
+								<img src="./content/images/remote-signing.png" alt="LOGO" style="width: 80%">
+							</div>
+							<h5 class="card-title text-center">Sign In</h5>
+							<div class="alert alert-danger" ng-show="vm.error">
+								{{vm.errorMsg}}
+							</div>
+							<div ng-if="!vm.showVc" >
+								<div class="form-group">
+									<label>User Type</label>
+									<select class="form-control" id="userType" name="userType" ng-model="vm.userType">
+										<option value="USERNAME">Username</option>
+										<option value="PERSONAL-ID">Personal Identity Card</option>
+										<option value="PASSPORT-ID">Passport Identity Card</option>
+										<option value="CITIZEN-IDENTITY-CARD">Citizen Identity Card</option>
+										<option value="BUDGET-CODE">Budget Code</option>
+										<option value="TAX-CODE">Tax Code</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>User ID</label>
+									<input type="text" class="form-control" name="ssoId" required="" value="" placeholder="User Name"
+
+										   ng-model="vm.username">
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									<input type="password" class="form-control" name="password"  value=""  placeholder="Password"
+
+										   ng-model="vm.password">
+								</div>
+								<div class="form-group">
+									<md-checkbox ng-model="vm.rememberMe" aria-label="Remember Me">
+										Remember me
+									</md-checkbox>
+								</div>
+								<button type="submit" class="btn btn-primary block full-width m-b agility-fieldtech"
+								>Sign in</button>
+								<p>
+									<a class="alert-link" ui-sref="resetPass" ><span>Did you forget your password?</span></a>
+									<br/>
+									<span >You don't have an account yet?</span>
+									<a class="alert-link" href="" ng-click="vm.register()"><span>Register Now</span></a>
+								</p>
+							</div>
+							<div ng-if="vm.showVc">
+								<div class="text-center">
+									<p style="margin: 15px 20px">
+										Make sure that the verification code matches the code displayed on your mobile phone screen
+									</p>
+									<div class="mobile-signature-login-info-v2__block__timer">
+										<span class="btn-verification">{{vm.vc}}</span>
+										<!--<i class="fa fa-spinner fa-spin"></i>-->
+										<div id="circularG">
+											<div id="circularG_1" class="circularG"></div>
+											<div id="circularG_2" class="circularG"></div>
+											<div id="circularG_3" class="circularG"></div>
+											<div id="circularG_4" class="circularG"></div>
+											<div id="circularG_5" class="circularG"></div>
+											<div id="circularG_6" class="circularG"></div>
+											<div id="circularG_7" class="circularG"></div>
+											<div id="circularG_8" class="circularG"></div>
+										</div>
+										Time left <span class="timeout">{{vm.validityPeriod}}</span> s
+									</div>
+									<button type="button" class="btn btn-primary block full-width m-b agility-fieldtech" ng-click="vm.cancelLogin()"
+									>Cancel</button>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+

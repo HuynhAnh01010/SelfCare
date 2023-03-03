@@ -1,0 +1,69 @@
+<md-dialog aria-label="Change Auth Mode">
+
+    <md-toolbar layout="row" layout-align="center center" style="min-width: 300px">
+        <div class="md-toolbar-tools">
+            <h5 class="feid-heading" style="font-weight: 600;" translate="accountProfile.changeFullName.title"></h5>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <form class="" id="frm" name="frm">
+            <div class="col-sm-12 container-720">
+                <div class="container">
+
+                    <div style="margin-top: 15px;">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label class="required" translate="accountProfile.changeFullName.newFullName"></label>
+                            <input name="otpNewEmail" id="otpNewEmail" type="text" required="true"
+                                   class="feid-input input-medium input-default feid-input-center "
+                                   placeholder="" ng-model="ctrl.request.fullname" minlength="1" maxlength="256"
+                                   value=""
+                                   aria-invalid="false" style="">
+                            <label class="feid-label feid-label-default feid-label-warning"
+                                   ng-class="{'feid-label-show' : !(frm.request.fullname.$dirty && frm.request.fullname.$invalid)}">
+                                <span class="help-block"
+                                      ng-show="frm.fullname.$invalid"
+                                      translate="global.validate.isRequired"
+                                      translate-values='{ field: "accountProfile.changeFullName.newFullName" }'>
+                                    Invalid
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center dis-flex-center" style="text-transform: uppercase;" >
+                        <div class="alert alert-danger width-max-content margin-left-right" ng-show="ctrl.msgType == 1"
+                             style="text-align: center; margin-top: 24px;">
+                            {{ctrl.msg}}
+                        </div>
+                        <div class="alert alert-success width-max-content margin-left-right" ng-show="ctrl.msgType == 0"
+                             style="text-align: center; margin-top: 24px;">
+                            {{ctrl.msg}}
+                        </div>
+
+                    </div>
+                    <!--                    </fieldset>-->
+                    <div class="form-group dis-flex-center" style="margin: 24px 0">
+                        <div style="text-align: center;margin: 0 1rem;">
+                            <button id="feid-modal-confirm-cancel-button" type="button" ng-click="ctrl.hide()"
+                                    class="feid-button button-indigo_inverse button-medium" aria-label="FeID button"
+                                    translate="global.button.cancel">CANCEL
+                            </button>
+                        </div>
+                        <div style="text-align: center; margin: 0 1rem;">
+                            <button id="feid-modal-confirm-confirm-button" type="button" ng-disabled="frm.$invalid || ctrl.step == 2"
+                                    ng-click="ctrl.confirmChangeFullName()"
+                                    class="feid-button button-green button-medium" translate="global.button.confirm">
+                                CONFIRM
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </md-dialog-content>
+
+
+</md-dialog>

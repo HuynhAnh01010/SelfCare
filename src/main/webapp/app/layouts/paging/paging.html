@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<div style="margin-top: 20px;" ng-if="vm.size <= numberToDisplay || vm.count <= 5">
+    <div class="row center-xs">
+        <div class="">
+            <div class="box">
+<!--                {{'global.notification.noData' | translate}}-->
+            </div>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 20px;" ng-if="!(vm.size <= numberToDisplay || vm.count <= 5)">
+    <div class="row center-xs">
+        <div class="">
+            <div class="box">
+                <button type="button" class="feid-button button-indigo_inverse button-medium"
+                        aria-label="SelfCare button" ng-click="nextPage()" style="text-transform: uppercase;"
+                        translate="global.button.loadMore">Load more
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

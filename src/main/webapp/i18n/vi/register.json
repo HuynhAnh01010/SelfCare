@@ -1,0 +1,152 @@
+{
+    "register": {
+        "title": "Đăng ký",
+        "head": "CHỌN PHƯƠNG THỨC XÁC THỰC",
+        "method": {
+            "branchOffice": "VĂN PHÒNG CHI NHÁNH",
+            "mobileId": "MOBILE-ID",
+            "idCard": "PKI CARD/TOKEN",
+            "biometricIdentification": "NHẬN DẠNG SINH TRẮC HỌC"
+        },
+        "biometricIdentification": {
+            "head": "XÁC THỰC QUA NHẬN DẠNG SINH TRẮC HỌC",
+            "desc": {
+                "step1": "CHỤP ẢNH CHỨNG MINH NHÂN DÂN CỦA BẠN",
+                "step2": "QUÉT CHỨNG MINH NHÂN DÂN BẰNG CÁCH ĐỂ THIẾT BỊ ĐỐI DIỆN THẺ",
+                "step3": "QUÉT KHUÔN MẶT ĐỂ SO SÁNH VỚI ẢNH CHỨNG MINH NHÂN DÂN"
+            },
+            "btn": {
+                "watchVideo": "XEM VIDEO",
+                "continue": "TIẾP TỤC",
+                "back": " QUAY LẠI"
+            },
+            "messagesKyc": {
+                "sessionNotComplete": "Phiên làm việc chưa sẵn sàng.  Trạng thái: ",
+                "cantConnect": "Không có kết nối tới Server, hãy thử lại",
+                "livenessConfirm": "Xác nhận đúng khuôn mặt người",
+                "stillUpload": "Vẫn đang tải dữ liệu lên..",
+                "idScanNotComplete": "Quét tài liệu chưa sẵn sàng",
+                "your3dMatched": "Hình ảnh 3D khuôn mặt giống với trên tài liệu",
+                "cantMatchPhotoWithLiveness": "Hình ảnh trên video không giống với trên tài liệu",
+                "imagePoorQuality": "Hình ảnh chất lượng kém (bị mờ, nhèo, hoặc quá sáng/tối)"
+            },
+            "policy1": {
+                "head": "ĐỒNG Ý XỬ LÝ DỮ LIỆU CÁ NHÂN QUA XÁC NHẬN NHẬN DẠNG SINH TRẮC HỌC TỰ ĐỘNG",
+                "desc": "<p> KHI BẠN ĐÃ CHỌN XÁC NHẬN NHẬN DẠNG SINH TRẮC HỌC TỰ ĐỘNG CHO PHƯƠNG PHÁP XÁC THỰC, VUI LÒNG ĐỌC KỸ CÁC ĐIỀU KIỆN SAU ĐÂY VÀ CHỈ THỰC HIỆN NẾU BẠN ĐÃ HIỂU HOÀN TOÀN VÀ ĐỒNG Ý VỚI CÁC ĐIỀU KIỆN. </p> <p> NẾU BẠN KHÔNG ĐỒNG Ý VỚI QUÁ TRÌNH CỦA BẠN DỮ LIỆU CÁ NHÂN SINH TRẮC HỌC (HÌNH ẢNH KHUÔN MẶT CỦA BẠN) VÀ THỰC HIỆN CÁC QUYẾT ĐỊNH TỰ ĐỘNG DỰA TRÊN DỮ LIỆU NÀY CHO MỤC ĐÍCH NHẬN DẠNG, VUI LÒNG CHỌN LỰA PHƯƠNG THỨC XÁC THỰC KHÁC CHO ĐĂNG KÝ </p> <p> VUI LÒNG BIẾT RẰNG BẠN CÓ QUYỀN THU HỒI SỰ ĐỒNG Ý CỦA BẠN BẤT CỨ LÚC NÀO. LƯU Ý RẰNG LÀ NHÀ CUNG CẤP DỊCH VỤ UY TÍNH CHÚNG TÔI CHỊU TRÁCH NHIỆM LƯU TRỮ DỮ LIỆU CÁ NHÂN CỦA BẠN TRONG GIAI ĐOẠN ĐƯỢC QUY ĐỊNH DƯỚI PHÁP LUẬT </p> <ul> <li> <strong>TÔI XÁC NHẬN TÔI ĐỦ 18 TUỔI TRỞ LÊN</strong></li> <li> <strong>TÔI XÁC NHẬN RẰNG MOBILE-ID CÓ THỂ XỬ LÝ DỮ LIỆU SINH HỌC CÁ NHÂN CỦA TÔI (HÌNH ẢNH KHUÔN MẶT) VÀ THỰC HIỆN QUYẾT ĐỊNH TỰ ĐỘNG DỰA TRÊN DỮ LIỆU NÀY ĐỂ XÁC ĐỊNH TÔI CHO MỤC ĐÍCH ĐĂNG KÝ TÀI KHOẢN</strong> </li> <li> <strong>TÔI XÁC NHẬN RẰNG MOBILE-ID CÓ THỂ THỰC HIỆN VIỆC XÁC NHẬN DỰA TRÊN DỮ LIỆU CÁ NHÂN SINH HỌC CỦA TÔI ĐỂ ĐẢM BẢO TÍNH BẢO MẬT CỦA VIỆC NHẬN DẠNG ĐIỆN TỬ CỦA TÔI VÀ KIỂM TRA CHẤT LƯỢNG CỦA CÁC GIẢI PHÁP KỸ THUẬT ĐƯỢC SỬ DỤNG</strong> </li>\n </ul> <p> NẾU BẠN CÓ BẤT KỲ CÂU HỎI NÀO LIÊN QUAN ĐẾN VIỆC XỬ LÝ DỮ LIỆU CÁ NHÂN CỦA MÌNH, XIN VUI LÒNG LIÊN HỆ VỚI CHÚNG TÔI </p> <p> CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ DỊCH VỤ MOBILE-ID (DATA CONTROLLER, HEREAFTER \"MOBILE-ID\") </p> <p> <strong>ĐỊA CHỈ:</strong> 19 ĐẶNG TIẾN ĐÔNG, PHƯỜNG AN PHÚ, THÀNH PHỐ THỦ ĐỨC, THÀNH PHỐ HỒ CHÍ MINH, VIỆT NAM </p> <p><strong>MÃ SỐ THUẾ:</strong> 0313994173</p> <p><strong>EMAIL:</strong> INFO@MOBILE-ID.VN</p> <p><strong>HOTLINE:</strong> 1900 6884</p>",
+                "btn": {
+                    "iAgree": "TÔI ĐỒNG Ý",
+                    "iNotAgree": "TÔI KHÔNG ĐỒNG Ý",
+                    "back": "QUAY LẠI"
+                }
+            },
+            "policy2": {
+                "head": "ĐIỀU KHOẢN VÀ ĐIỀU KIỆN SỬ DỤNG CHỨNG THƯ SỐ CỦA QUALIFIED REMOTE SIGNING",
+                "desc": "<p> TÔI ĐỒNG Ý RẰNG DỮ LIỆU CÁ NHÂN MÀ TÔI ĐÃ TRÌNH LÊN ĐƯỢC SỬ DỤNG CHO VIỆC TẠO TÀI KHOẢN VÀ CHỨNG NHẬN ĐĂNG KÝ TỪ XA CỦA TÔI. TÔI ĐỒNG Ý RẰNG TÀI KHOẢN VÀ CHỨNG NHẬN ĐĂNG KÝ TỪ XA CỦA TÔI ĐƯỢC SỬ DỤNG ĐỂ XÁC ĐỊNH TÔI TRONG DỊCH VỤ ĐIỆN TỬ VÀ TRONG CHỮ KÝ ĐIỆN TỬ. </p> <p> TÔI BIẾT RẰNG BẰNG VIỆC NHẬP MÃ PIN HOẶC SỬ DỤNG VÂN TAY ĐỂ XÁC THỰC CHO VIỆC TẠO CHỮ KÝ ĐIỆN TỬ </p> <p> - TÔI XÁC NHẬN TÔI ĐÃ BẮT ĐẦU MỘT PHIÊN LÀM VIỆC, ĐỒNG Ý VỚI NÓ VÀ TÔI CHỊU TRÁCH NHIỆM CHO CÁC HỆ QUẢ CỦA NÓ </p> <p> - TÔI XÁC NHẬN CHẮC CHẮN RẰNG MÃ ĐẢM BẢO GỬI ĐẾN TÔI, LÀ CHÍNH XÁC </p> <p> - TÔI CHO PHÉP TÊN VÀ MÃ CÁ NHÂN CỦA TÔI ĐƯỢC GỬI ĐẾN NHÀ CUNG CẤP DỊCH VỤ ĐIỆN TỬ </p> <p> TÔI CŨNG BIẾT RẰNG NẾU TÔI MẤT THIẾT BỊ HOẶC MÃ PIN CỦA TÔI MÀ ĐƯỢC BIẾT ĐẾN BÊN THỨ BA, TÔI CÓ NGHĨA VỤ THU HỒI NGAY LẬP TƯCS CHỨNG THƯ SỐ ĐĂNG KÝ TỪ XA CỦA TÔI </p> <p> THÔNG TIN VỀ XÓA HOẶC THU HỒI TÀI KHOẢN ĐĂNG KÝ TỪ XA CỦA CHỨNG THƯ SỐ CÓ TẠI <a href=\"https://rssp.mobile-id.vn\">HTTPS://RSSP.MOBILE-ID.VN</a>\n </p> <p> TÔI BIẾT RẰNG VIỆC SỬ DỤNG ỨNG DỤNG REMOTE SIGNING ĐƯỢC MÔ TẢ TRONG HỢP ĐỒNG CẤP PHÉP NGƯỜI DÙNG CUỐI CỦA REMOTE SIGNING </p> <p> PHIÊN BẢN ĐẦY ĐỦ CÁC ĐIỀU KHOẢN VÀ ĐIỀU KIỆN VỀ VIỆC SỬ DỤNG CỦA CHỨNG THƯ SỐ REMOTE SIGNING CÓ TẠI <a href=\"https://rssp.mobile-id.vn/en/terms\">HTTPS://RSSP.MOBILE-ID.VN/TERMS</a> </p> <p> PHIÊN BẢN ĐẦY ĐỦ CỦA HỢP ĐỒNG CẤP PHÉP NGƯỜI DÙNG CUỐI CÙNG ĐÃ CÓ TẠI <a href=\"https://rssp.mobile-id.vn/en/privacy\">HTTPS://RSSP.MOBILE-ID.VN/PRIVACY</a> </p> <p> TÔI BIẾT RẰNG KHI CHỌN 'TÔI ĐỒNG Ý' TÔI XÁC NHẬN ĐÃ NẮM RÕ VÀ ĐỒNG Ý VỚI ĐIỀU KHOẢN VÀ ĐIỀU KIỆN VỀ VIỆC SỬ DỤNG CHỨNG THƯ SỐ REMOTE SIGNING VÀ VỚI HỢP ĐỒNG CẤP PHÉP NGƯỜI DÙNG CUỐI REMOTE SIGNING </p>",
+                "btn": {
+                    "iAgree": "TÔI ĐỒNG Ý",
+                    "iNotAgree": "TÔI KHÔNG ĐỒNG Ý",
+                    "back": "QUAY LẠI"
+                }
+            },
+            "authenticateEmailPhone": {
+                "head": "XÁC THỰC VỚI CHI TIẾT LIÊN HỆ",
+                "desc": "CHÚNG TÔI ĐỀ NGHỊ XÁC THỰC VỚI ĐỊA CHỈ EMAIL VÀ/HOẶC SỐ ĐIỆN THOẠI CỦA BẠN, VÀ VUI LÒNG NHẬP SỐ ĐIỆN THOẠI VÀ/HOẶC EMAIL CỦA BẠN TRONG TRƯỜNG HỢP CHÚNG TÔI CẦN LIÊN HỆ",
+                "btn": {
+                    "emailOrSms": "E-MAIL HOẶC SMS",
+                    "back": "QUAY LẠI"
+                }
+            },
+            "reachEmailPhone": {
+                "head": "CHÚNG TÔI CÓ THỂ LIÊN LẠC VỚI BẠN BẰNG CÁCH NÀO?",
+                "desc": "VUI LÒNG NHẬP SỐ ĐIỆN THOẠI VÀ/HOẶC EMAIL CỦA BẠN TRONG TRƯỜNG HỢP CHÚNG TÔI CẦN LIÊN HỆ",
+                "btn": {
+                    "ok": "CHẤP NHẬN",
+                    "back": "QUAY LẠI"
+                },
+                "input": {
+                    "email": "E-mail",
+                    "pattern": "Email không hợp lệ",
+                    "phone": "Số điện thoại"
+                },
+                "verify": {
+                    "desc": "Nhập mã <strong>OTP</strong> đã nhận từ số điện thoại <strong> {{ phone}} </strong>",
+                    "clickResend": "Bấm gửi lại ",
+                    "clickResendRetrievingOtp": " để nhận mã <strong>OTP</strong> mới",
+                    "timeLeft": "Hết hạn sau <span class=\"timeout\">{{time}}</span> giây",
+                    "btn": {
+                        "cancel": "HỦY BỎ",
+                        "verifyOtp": "XÁC MINH OTP"
+                    },
+                    "success": "THÀNH CÔNG"
+                }
+            },
+            "confirm": {
+                "head": "XÁC NHẬN THÔNG TIN",
+                "username": "Tên tài khoản",
+                "phone": "Số điện thoại",
+                "email": "Email",
+                "identification": "Định danh",
+                "fullname": "Họ và tên",
+                "gender": "Giới tính",
+                "location": "Địa chỉ",
+                "dob": "Ngày sinh",
+                "btn": {
+                    "tryIt": "DÙNG THỬ MIỄN PHÍ"
+                }
+            }
+        },
+        "pkicard": {
+            "head": "ĐĂNG KÝ VỚI THẺ PKI / TOKEN",
+            "btn.watch.video": "XEM VIDEO",
+            "btn.continue": "TIẾP TỤC",
+            "btn.back": "QUAY LẠI",
+            "policy": {
+                "head": "ĐIỀU KHOẢN VÀ ĐIỀU KIỆN SỬ DỤNG CHỨNG THƯ SỐ CỦA QUALIFIED REMOTE SIGNING"
+            },
+            "choosepin": {
+                "head": "CHỌN MÃ PIN"
+            },
+            "authenticateEmailPhone": {
+                "head": "XÁC THỰC VỚI CHI TIẾT LIÊN HỆ"
+            },
+            "reachEmailPhone": {
+                "head": "CHÚNG TÔI CÓ THỂ LIÊN LẠC VỚI BẠN BẰNG CÁCH NÀO?"
+            }
+        },
+        "create": {
+            "notification": {
+                "title": "Đăng ký tài khoản RSSP",
+                "step.1": {
+                    "1.1": "Vui lòng nhập số điện thoại và email của bạn trong trường hợp chúng tôi cần liên hệ"
+                },
+                "step.2": {
+                    "1": "CHỨNG MINH NHÂN DÂN",
+                    "2": "CĂN CƯỚC CÔNG DÂN",
+                    "3": "HỘ CHIẾU",
+                    "choose": "Mời chọn"
+                },
+                "step.3": {
+                    "account": "Tên tài khoản",
+                    "pass": "Mật khẩu",
+                    "repass": "Nhập lại mật khẩu",
+                    "name": "Họ và tên",
+                    "birthday": "Ngày sinh",
+                    "sex": "Giới tính",
+                    "cmnd": "Mã định danh",
+                    "addess": "Địa chỉ"
+                }
+            },
+            "terms": "Điều khoản sử dụng",
+            "OTP": "Mã OTP",
+            "step.1": {
+                "mobile": "Số điện thoại",
+                "email": "Email"
+            },
+            "img": {
+                "font": "Mặt trước thẻ định danh",
+                "back": "Mặt sau thẻ định danh"
+            },
+            "agree": "Tôi đồng ý với"
+        }
+    }
+}

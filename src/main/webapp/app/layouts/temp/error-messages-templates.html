@@ -1,0 +1,38 @@
+<label ng-messages='field.$error' ng-show='field.$invalid'
+       class='feid-label feid-label-default feid-label-warning' style="display: block">
+    <span ng-message='required'>
+            Not null
+    </span>
+    <span ng-message='minlength'>
+        Length must be MORE than {{minlength}} character
+    </span>
+    <span ng-message='maxlength' >
+        Length must be LESS than {{maxlength}} character
+    </span>
+    <span ng-message='email'>
+        Invalid email
+    </span>
+    <span ng-message='url'>
+       Invalid url
+    </span>
+    <span ng-message='number'>
+       Invalid number
+    </span>
+    <span ng-message='min' >
+       Must be GREATER than or equal {{minlength}}
+    </span>
+    <span ng-message='max'>
+       Must be LESS than or equal {{maxlength}}
+    </span>
+    <span ng-message='pattern'  >
+        {{regex}}
+    </span>
+    <span ng-message='unique'  >
+        Unique
+    </span>
+</label>
+<small ng-messages='field.$pending' ng-show='field.$pending'  class='text-warning' style="display: block">
+    <span ng-message='unique'  >
+        {{scope.unique}}
+    </span>
+</small>

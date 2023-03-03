@@ -1,0 +1,171 @@
+<div class="login-container-wrapper">
+    <div ui-view="leftContent" class="login-left-column-wrapper col-lg-6 d-none d-md-block d-lg-block"></div>
+    <div class="login-right-column-wrapper col-lg-6" style="overflow: scroll;overflow-x: hidden">
+        <div class="login-right-column-content-wrapper" style="align-items:flex-start;">
+            <div style="max-width: 400px; width: 100%;padding-top: 50px;padding-bottom: 30px;">
+                <a href="https://rssp.mobile-id.vn" target="_blank" rel="noopener noreferrer"
+                   style="text-align: center; margin-top: 15px;">
+                    <div class="feid-logo-img logo-img-large">
+                        <img src="./content/images/remote-signing.png"
+                             alt="SelfCare mID logo">
+                    </div>
+                </a>
+                <div class="row middle-xs between-xs">
+                    <div class="col-xs-12">
+                        <div style="margin: 15px 15px">
+                            <h4 class="feid-heading heading-indigo heading-center f20"
+                            >Certificate Info</h4>
+
+                            <div style="text-align: left; margin-top: 30px;">
+                                <form id="form" name="form">
+
+                                    <div style="" class="form-group">
+
+                                        <error-messages field="form.email" minlength="2" maxlength="100"></error-messages>
+                                        <input type="text" name="email" required
+                                               ng-model="vm.registerCertificateObject.email" minlength="4"
+                                               maxlength="50" tooltip-input
+                                               class="form-control form-control-lg"
+                                               placeholder="Email">
+                                    </div>
+                                    <div style="" class="form-group">
+                                        <error-messages field="form.phone" minlength="2" maxlength="100"></error-messages>
+                                        <input type="tel" name="phone" id="phone" required tooltip-input
+                                               class="form-control form-control-lg" placeholder="Phone"
+                                               ng-model="vm.registerCertificateObject.phone" ng-intl-tel-input>
+                                    </div>
+                                    <div class="form-group">
+                                        <md-radio-group layout="row" ng-model="vm.registerCertificateObject.type"
+                                                        aria-labelledby="TYPE" ng-change="vm.registerCertificateObject.certificateProfile = undefined">
+                                            <md-radio-button value="PERSONAL">Personal</md-radio-button>
+                                            <md-radio-button value="ENTERPRISE">Corporate</md-radio-button>
+                                            <md-radio-button value="STAFF">Staff</md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                    <div class="form-group">
+                                        <error-messages field="form.certificateAuthority" ></error-messages>
+
+                                        <ui-select name="certificateAuthority" ng-model="vm.registerCertificateObject.certificateAuthority" required ng-change="vm.changeCertificateAuthority()"
+                                                   tooltip-input placeholder="Select Certificate Authority in the list..." theme="selectize" >
+                                            <ui-select-match  placeholder="Select Certificate Authority  in the list...">
+                                                {{$select.selected.name}}
+                                            </ui-select-match>
+                                            <ui-select-choices
+                                                    repeat="item.name as item in vm.certificateAuthorities | filter: $select.search track by $index">
+                                                <div ng-bind-html="item.name| highlight: $select.search"></div>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                    <div class="form-group">
+                                        <error-messages field="form.certificateProfile" ></error-messages>
+                                        <ui-select name="certificateProfile" id="certificateProfile"
+                                                   ng-model="vm.registerCertificateObject.certificateProfile"
+                                                   required  tooltip-input placeholder="Select Certificate Profiles in the list..."
+                                                   theme="selectize" >
+                                            <ui-select-match  placeholder="Select Certificate Profiles in the list...">
+                                                {{$select.selected.name}}
+                                            </ui-select-match>
+                                            <ui-select-choices
+                                                    repeat="item in vm.certificateProfiles | filter: {type: vm.registerCertificateObject.type} | filter: $select.search track by $index">
+                                                <div ng-bind-html="item.name | highlight: $select.search"></div>
+                                                <small ng-bind-html="item.description| highlight: $select.search"></small>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                    <div class="form-group">
+                                        <error-messages field="form.sharedMode" ></error-messages>
+                                        <ui-select name="sharedMode" id="sharedMode"  tooltip-input placeholder="Select Shared Mode in the list..."
+                                                   ng-model="vm.registerCertificateObject.sharedMode"
+                                                   required
+                                                   theme="selectize" >
+                                            <ui-select-match  placeholder="Select Shared Mode in the list...">
+                                                {{$select.selected.name}}
+                                            </ui-select-match>
+                                            <ui-select-choices
+                                                    repeat="item.value as item in vm.sharedModes | filter: $select.search track by $index">
+                                                <div ng-bind-html="item.name| highlight: $select.search"></div>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                    <div class="form-group">
+                                        <error-messages field="form.authMode" ></error-messages>
+                                        <ui-select name="authMode" id="authMode"  tooltip-input placeholder="Select Auth Mode in the list..."
+                                                   ng-disabled="vm.registerCertificateObject.scal ==2"
+                                                   ng-model="vm.registerCertificateObject.authMode"
+                                                   required
+                                                   theme="selectize" >
+                                            <ui-select-match  placeholder="Select Auth Mode in the list...">
+                                                {{$select.selected.name}}
+                                            </ui-select-match>
+                                            <ui-select-choices
+                                                    repeat="item.value as item in vm.authModes | filter: $select.search track by $index">
+                                                <div disabled ng-bind-html="item.name| highlight: $select.search"></div>
+                                            </ui-select-choices>
+                                        </ui-select>
+
+                                    </div>
+                                    <div class="form-group">
+
+                                        <md-radio-group layout="row" ng-model="vm.registerCertificateObject.scal"
+
+                                                        required aria-labelledby="favoriteFruit">
+                                            <md-radio-button value="1">Scal 1</md-radio-button>
+                                            <md-radio-button value="2" ng-disabled="vm.registerCertificateObject.authMode != 'IMPLICIT/TSE'">Scal 2</md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                    <div class="form-group">
+                                        <error-messages field="form.signingProfile" ></error-messages>
+                                        <ui-select name="signingProfile" id="signingProfile"  tooltip-input placeholder="Select Signing Profile in the list..."
+                                                   ng-model="vm.registerCertificateObject.signingProfile"
+                                                   required
+                                                   theme="selectize" >
+                                            <ui-select-match  placeholder="Select Signing Profile in the list...">
+                                                {{$select.selected.description}}
+                                            </ui-select-match>
+                                            <ui-select-choices
+                                                    repeat="item in vm.profiles | filter: $select.search track by $index">
+                                                <div disabled ng-bind-html="item.description| highlight: $select.search"></div>
+                                            </ui-select-choices>
+                                        </ui-select>
+
+                                    </div>
+                                    <div style="" class="form-group">
+                                        <error-messages field="form.multiSign" ></error-messages>
+                                        <input type="number" name="multiSign" id="multiSign" required min="1"
+                                               max="99999999999999999"  tooltip-input
+                                               class="form-control form-control-lg"
+                                               placeholder="MULTI SIGNATURE IN BULK SIGNING"
+                                               ng-model="vm.registerCertificateObject.multisign">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div style="text-align: center; margin-top: 20px;">
+                                <button id="" type="button" ui-sref="registerCertificateDetail"  ng-disabled="form.$invalid"
+                                        class="feid-button button-indigo_inverse button-small btn-fix-width"
+                                        aria-label="SelfCare button"
+                                        data-translate="register.biometricIdentification.btn.continue">
+                                </button>
+                            </div>
+
+
+                            <div style="text-align: center; margin-top: 15px;">
+                                <button id="LoginForm_LogInWithUsernameButton" type="button"
+                                        ui-sref="register"
+                                        class="feid-button button-indigo_text button-small "
+                                        aria-label="FeID button"
+                                        data-translate="register.biometricIdentification.btn.back">Back
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row middle-xs between-xs" ui-view="languageBottom"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

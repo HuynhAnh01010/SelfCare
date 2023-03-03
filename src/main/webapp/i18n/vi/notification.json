@@ -1,0 +1,11 @@
+{
+    "notification": {
+        "login": {
+            "success": "Đăng nhập thành công",
+            "error": "Tài khoản người dùng hoặc mật khẩu không chính xác. Vui lòng nhập lại"
+        },
+        "forgot.password": {
+            "suscess": "Thay đổi mật khẩu thành công"
+        }
+    }
+}

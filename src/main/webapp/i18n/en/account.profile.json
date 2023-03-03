@@ -1,0 +1,74 @@
+{
+    "accountProfile": {
+        "title": "User Detail",
+        "description": "Control how you use RSSP. Manage additional emails, phone numbers or devices that you may connect to your RSSP account. Also, there is an overview of the data you have registered in RSSP.",
+        "nav": {
+            "title": "User Profile"
+        },
+        "profile": {
+            "title": "Profile",
+            "userName": "User name",
+            "password": "Password",
+            "fullName": "Full Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "identification": "Identification",
+            "twoFactorAuthentication": "Two Factor Authentication",
+            "btnChange": "Change"
+        },
+        "devices": {
+            "title": "My Devices",
+            "about": "About Device",
+            "osType": "OS Type:",
+            "osVersion": "OS Version:",
+            "uafEnabled": "UAF Enabled:",
+            "deviceUuid": "Device UUID:"
+        },
+        "changePassword": {
+            "title": "Change Password",
+            "oldPassword": "Old Password",
+            "newPassword": "New Password",
+            "retypeNewPassword": "Re-type New Password",
+            "error": "The new password must not be the same as the old password"
+        },
+        "changeEmail": {
+            "title": "Change Email",
+            "newEmail": "New Email",
+            "currentEmail": "Current Email",
+            "otpCurrentEmail": "OTP Current Email",
+            "otpNewEmail": "OTP new Email",
+            "emailInvalid": "Email is invalid",
+            "error": {
+                "invalid": "Email format is invalid"
+            }
+        },
+        "changeFullName": {
+            "title": "Change Full Name",
+            "newFullName": "New Full Name"
+        },
+        "changeIdentifi": {
+            "title": "Change Identification",
+            "newIdentifi": "New Identification",
+            "oldIdentifi": "Old Identification",
+            "identificationType": "Identification Type",
+            "identificationTypes": {
+                "PERSONAL-ID": "PERSONAL ID",
+                "CITIZEN-IDENTITY-CARD": "CITIZEN IDENTITY CARD",
+                "PASSPORT-ID": "PASSPORT ID",
+                "BUDGET-CODE": "BUDGET CODE",
+                "TAX-CODE": "TAX CODE"
+            }
+        },
+        "changeTwoFactor": {
+            "title": "Change Two Factor Method",
+            "option": "Authentication Two Factor"
+        },
+        "changePhone": {
+            "title": "Change Phone",
+            "message": "This function is not supported yet"
+        },
+        "csign": {
+            "description": "Control how you use CSIGN. Manage additional emails, phone numbers or devices that you may connect to your CSIGN account. Also, there is an overview of the data you have registered in CSIGN."
+        }
+    }
+}
